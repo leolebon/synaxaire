@@ -1,6 +1,7 @@
 package org.synaxaire.calendrier.widget
 
 import android.content.Context
+import android.content.Intent
 import android.graphics.Bitmap
 import androidx.compose.runtime.Composable
 import androidx.compose.ui.graphics.Color
@@ -16,7 +17,8 @@ import androidx.glance.action.clickable
 import androidx.glance.appwidget.GlanceAppWidget
 import androidx.glance.appwidget.GlanceAppWidgetReceiver
 import androidx.glance.appwidget.SizeMode
-import androidx.glance.action.actionStartActivity
+import androidx.glance.action.Action
+import androidx.glance.appwidget.action.actionStartActivity
 import androidx.glance.appwidget.cornerRadius
 import androidx.glance.appwidget.provideContent
 import androidx.glance.appwidget.updateAll
@@ -207,7 +209,9 @@ private fun FastPill(d: WidgetDay, compact: Boolean) {
     }
 }
 
-private val openApp = actionStartActivity<MainActivity>()
+/** Ouvre l'application quand on touche le widget. */
+private fun openApp(context: Context): Action =
+    actionStartActivity(Intent(context, MainActivity::class.java).addFlags(Intent.FLAG_ACTIVITY_NEW_TASK))
 
 // ---------------------------------------------------------------------------
 // Widget « Synaxaire » : petit, moyen, grand (s'adapte à la taille)
@@ -224,15 +228,16 @@ class SynaxaireWidget : GlanceAppWidget() {
 
     override suspend fun provideGlance(context: Context, id: GlanceId) {
         val data = WidgetData.load(context, heroImage = true, galleryCount = 0)
-        provideContent { SynaxaireContent(data) }
+        val open = openApp(context)
+        provideContent { SynaxaireContent(data, open) }
     }
 }
 
 @Composable
-private fun SynaxaireContent(d: WidgetDay) {
+private fun SynaxaireContent(d: WidgetDay, open: Action) {
     val size = LocalSize.current
     Box(
-        GlanceModifier.fillMaxSize().cornerRadius(18.dp).background(PARCHMENT).clickable(openApp).padding(12.dp),
+        GlanceModifier.fillMaxSize().cornerRadius(18.dp).background(PARCHMENT).clickable(open).padding(12.dp),
     ) {
         when {
             size.height >= 240.dp && size.width >= 240.dp -> LargeContent(d)
@@ -335,15 +340,16 @@ class SaintsWidget : GlanceAppWidget() {
 
     override suspend fun provideGlance(context: Context, id: GlanceId) {
         val data = WidgetData.load(context, heroImage = false, galleryCount = 6)
-        provideContent { SaintsContent(data) }
+        val open = openApp(context)
+        provideContent { SaintsContent(data, open) }
     }
 }
 
 @Composable
-private fun SaintsContent(d: WidgetDay) {
+private fun SaintsContent(d: WidgetDay, open: Action) {
     val large = LocalSize.current.height >= 240.dp
     val tiles = d.gallery.take(if (large) 6 else 3)
-    Column(GlanceModifier.fillMaxSize().cornerRadius(18.dp).background(PARCHMENT).clickable(openApp).padding(12.dp)) {
+    Column(GlanceModifier.fillMaxSize().cornerRadius(18.dp).background(PARCHMENT).clickable(open).padding(12.dp)) {
         Row(GlanceModifier.fillMaxWidth(), verticalAlignment = Alignment.CenterVertically) {
             Text(d.dateLine, style = style(BURGUNDY, 12, FontWeight.Bold), maxLines = 1, modifier = GlanceModifier.defaultWeight())
             FastPill(d, compact = true)
