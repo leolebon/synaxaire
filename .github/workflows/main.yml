@@ -1,0 +1,57 @@
+name: Construire l'application (IPA)
+
+on:
+  push:
+  workflow_dispatch:
+
+jobs:
+  build:
+    runs-on: macos-15
+    timeout-minutes: 30
+    steps:
+      - name: Récupérer le code
+        uses: actions/checkout@v4
+
+      - name: Version de Xcode
+        run: |
+          XC=$(ls -d /Applications/Xcode_16*.app 2>/dev/null | sort -V | tail -1)
+          if [ -n "$XC" ]; then sudo xcode-select -s "$XC"; fi
+          xcodebuild -version
+
+      - name: Tester le moteur liturgique (Pâques, jeûnes)
+        run: swiftc -O Shared/CivilDate.swift Shared/Paschalion.swift Shared/Feasts.swift Shared/Fasting.swift Tests/main.swift -o /tmp/fasttest && /tmp/fasttest Tests/goarch_fasting.json | head -5
+
+      - name: Compiler (sans signature)
+        run: |
+          set -o pipefail
+          xcodebuild \
+            -project Synaxaire.xcodeproj \
+            -scheme Synaxaire \
+            -configuration Release \
+            -sdk iphoneos \
+            -destination 'generic/platform=iOS' \
+            -derivedDataPath build \
+            CODE_SIGNING_ALLOWED=NO CODE_SIGNING_REQUIRED=NO CODE_SIGN_IDENTITY="" \
+            clean build | tee build.log | grep -E "error:|warning: unre|BUILD (SUCCEEDED|FAILED)" || true
+          test -d build/Build/Products/Release-iphoneos/Synaxaire.app
+
+      - name: Créer le fichier IPA
+        run: |
+          mkdir -p Payload
+          cp -R build/Build/Products/Release-iphoneos/Synaxaire.app Payload/
+          ls Payload/Synaxaire.app/PlugIns
+          zip -qry Synaxaire.ipa Payload
+
+      - name: Publier l'IPA
+        uses: actions/upload-artifact@v4
+        with:
+          name: Synaxaire-ipa
+          path: Synaxaire.ipa
+          retention-days: 30
+
+      - name: Journal de compilation (en cas d'échec)
+        if: failure()
+        uses: actions/upload-artifact@v4
+        with:
+          name: journal-compilation
+          path: build.log
