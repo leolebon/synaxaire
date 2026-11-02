@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="widget_desc">Saint of the day with icon, feast and fast.</string>
+    <string name="widget_saints_name">Saints of the day</string>
+    <string name="widget_saints_desc">Icons of today\'s saints.</string>
+</resources>

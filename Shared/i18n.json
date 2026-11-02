@@ -1,0 +1,2559 @@
+{
+"languages": [
+{
+"code": "fr",
+"name": "Français"
+},
+{
+"code": "en",
+"name": "English"
+},
+{
+"code": "el",
+"name": "Ελληνικά"
+},
+{
+"code": "ru",
+"name": "Русский"
+},
+{
+"code": "ro",
+"name": "Română"
+},
+{
+"code": "ar",
+"name": "العربية",
+"rtl": true
+}
+],
+"strings": {
+"month.1": {
+"fr": "janvier",
+"en": "January",
+"el": "Ιανουαρίου",
+"ru": "января",
+"ro": "ianuarie",
+"ar": "كانون الثاني"
+},
+"month.2": {
+"fr": "février",
+"en": "February",
+"el": "Φεβρουαρίου",
+"ru": "февраля",
+"ro": "februarie",
+"ar": "شباط"
+},
+"month.3": {
+"fr": "mars",
+"en": "March",
+"el": "Μαρτίου",
+"ru": "марта",
+"ro": "martie",
+"ar": "آذار"
+},
+"month.4": {
+"fr": "avril",
+"en": "April",
+"el": "Απριλίου",
+"ru": "апреля",
+"ro": "aprilie",
+"ar": "نيسان"
+},
+"month.5": {
+"fr": "mai",
+"en": "May",
+"el": "Μαΐου",
+"ru": "мая",
+"ro": "mai",
+"ar": "أيار"
+},
+"month.6": {
+"fr": "juin",
+"en": "June",
+"el": "Ιουνίου",
+"ru": "июня",
+"ro": "iunie",
+"ar": "حزيران"
+},
+"month.7": {
+"fr": "juillet",
+"en": "July",
+"el": "Ιουλίου",
+"ru": "июля",
+"ro": "iulie",
+"ar": "تموز"
+},
+"month.8": {
+"fr": "août",
+"en": "August",
+"el": "Αυγούστου",
+"ru": "августа",
+"ro": "august",
+"ar": "آب"
+},
+"month.9": {
+"fr": "septembre",
+"en": "September",
+"el": "Σεπτεμβρίου",
+"ru": "сентября",
+"ro": "septembrie",
+"ar": "أيلول"
+},
+"month.10": {
+"fr": "octobre",
+"en": "October",
+"el": "Οκτωβρίου",
+"ru": "октября",
+"ro": "octombrie",
+"ar": "تشرين الأول"
+},
+"month.11": {
+"fr": "novembre",
+"en": "November",
+"el": "Νοεμβρίου",
+"ru": "ноября",
+"ro": "noiembrie",
+"ar": "تشرين الثاني"
+},
+"month.12": {
+"fr": "décembre",
+"en": "December",
+"el": "Δεκεμβρίου",
+"ru": "декабря",
+"ro": "decembrie",
+"ar": "كانون الأول"
+},
+"monthN.1": {
+"fr": "Janvier",
+"en": "January",
+"el": "Ιανουάριος",
+"ru": "Январь",
+"ro": "Ianuarie",
+"ar": "كانون الثاني"
+},
+"monthN.2": {
+"fr": "Février",
+"en": "February",
+"el": "Φεβρουάριος",
+"ru": "Февраль",
+"ro": "Februarie",
+"ar": "شباط"
+},
+"monthN.3": {
+"fr": "Mars",
+"en": "March",
+"el": "Μάρτιος",
+"ru": "Март",
+"ro": "Martie",
+"ar": "آذار"
+},
+"monthN.4": {
+"fr": "Avril",
+"en": "April",
+"el": "Απρίλιος",
+"ru": "Апрель",
+"ro": "Aprilie",
+"ar": "نيسان"
+},
+"monthN.5": {
+"fr": "Mai",
+"en": "May",
+"el": "Μάιος",
+"ru": "Май",
+"ro": "Mai",
+"ar": "أيار"
+},
+"monthN.6": {
+"fr": "Juin",
+"en": "June",
+"el": "Ιούνιος",
+"ru": "Июнь",
+"ro": "Iunie",
+"ar": "حزيران"
+},
+"monthN.7": {
+"fr": "Juillet",
+"en": "July",
+"el": "Ιούλιος",
+"ru": "Июль",
+"ro": "Iulie",
+"ar": "تموز"
+},
+"monthN.8": {
+"fr": "Août",
+"en": "August",
+"el": "Αύγουστος",
+"ru": "Август",
+"ro": "August",
+"ar": "آب"
+},
+"monthN.9": {
+"fr": "Septembre",
+"en": "September",
+"el": "Σεπτέμβριος",
+"ru": "Сентябрь",
+"ro": "Septembrie",
+"ar": "أيلول"
+},
+"monthN.10": {
+"fr": "Octobre",
+"en": "October",
+"el": "Οκτώβριος",
+"ru": "Октябрь",
+"ro": "Octombrie",
+"ar": "تشرين الأول"
+},
+"monthN.11": {
+"fr": "Novembre",
+"en": "November",
+"el": "Νοέμβριος",
+"ru": "Ноябрь",
+"ro": "Noiembrie",
+"ar": "تشرين الثاني"
+},
+"monthN.12": {
+"fr": "Décembre",
+"en": "December",
+"el": "Δεκέμβριος",
+"ru": "Декабрь",
+"ro": "Decembrie",
+"ar": "كانون الأول"
+},
+"weekday.1": {
+"fr": "dimanche",
+"en": "Sunday",
+"el": "Κυριακή",
+"ru": "воскресенье",
+"ro": "duminică",
+"ar": "الأحد"
+},
+"weekday.2": {
+"fr": "lundi",
+"en": "Monday",
+"el": "Δευτέρα",
+"ru": "понедельник",
+"ro": "luni",
+"ar": "الاثنين"
+},
+"weekday.3": {
+"fr": "mardi",
+"en": "Tuesday",
+"el": "Τρίτη",
+"ru": "вторник",
+"ro": "marți",
+"ar": "الثلاثاء"
+},
+"weekday.4": {
+"fr": "mercredi",
+"en": "Wednesday",
+"el": "Τετάρτη",
+"ru": "среда",
+"ro": "miercuri",
+"ar": "الأربعاء"
+},
+"weekday.5": {
+"fr": "jeudi",
+"en": "Thursday",
+"el": "Πέμπτη",
+"ru": "четверг",
+"ro": "joi",
+"ar": "الخميس"
+},
+"weekday.6": {
+"fr": "vendredi",
+"en": "Friday",
+"el": "Παρασκευή",
+"ru": "пятница",
+"ro": "vineri",
+"ar": "الجمعة"
+},
+"weekday.7": {
+"fr": "samedi",
+"en": "Saturday",
+"el": "Σάββατο",
+"ru": "суббота",
+"ro": "sâmbătă",
+"ar": "السبت"
+},
+"wd.short.1": {
+"fr": "D",
+"en": "S",
+"el": "Κ",
+"ru": "Вс",
+"ro": "D",
+"ar": "ح"
+},
+"wd.short.2": {
+"fr": "L",
+"en": "M",
+"el": "Δ",
+"ru": "Пн",
+"ro": "L",
+"ar": "ن"
+},
+"wd.short.3": {
+"fr": "M",
+"en": "T",
+"el": "Τ",
+"ru": "Вт",
+"ro": "Ma",
+"ar": "ث"
+},
+"wd.short.4": {
+"fr": "M",
+"en": "W",
+"el": "Τ",
+"ru": "Ср",
+"ro": "Mi",
+"ar": "ر"
+},
+"wd.short.5": {
+"fr": "J",
+"en": "T",
+"el": "Π",
+"ru": "Чт",
+"ro": "J",
+"ar": "خ"
+},
+"wd.short.6": {
+"fr": "V",
+"en": "F",
+"el": "Π",
+"ru": "Пт",
+"ro": "V",
+"ar": "ج"
+},
+"wd.short.7": {
+"fr": "S",
+"en": "S",
+"el": "Σ",
+"ru": "Сб",
+"ro": "S",
+"ar": "س"
+},
+"date.long": {
+"fr": "{w} {d} {m} {y}",
+"en": "{w}, {m} {d}, {y}",
+"el": "{w} {d} {m} {y}",
+"ru": "{w}, {d} {m} {y}",
+"ro": "{w}, {d} {m} {y}",
+"ar": "{w} {d} {m} {y}"
+},
+"date.dayMonth": {
+"fr": "{d} {m}",
+"en": "{m} {d}",
+"el": "{d} {m}",
+"ru": "{d} {m}",
+"ro": "{d} {m}",
+"ar": "{d} {m}"
+},
+"date.first": {
+"fr": "1er",
+"en": "1",
+"el": "1",
+"ru": "1",
+"ro": "1",
+"ar": "1"
+},
+"cal.new": {
+"fr": "Nouveau calendrier",
+"en": "New Calendar",
+"el": "Νέο ημερολόγιο",
+"ru": "Новый стиль",
+"ro": "Calendarul nou",
+"ar": "التقويم الجديد"
+},
+"cal.old": {
+"fr": "Ancien calendrier",
+"en": "Old Calendar",
+"el": "Παλαιό ημερολόγιο",
+"ru": "Старый стиль",
+"ro": "Calendarul vechi",
+"ar": "التقويم القديم"
+},
+"cal.new.explain": {
+"fr": "Julien révisé : Église de Grèce, Patriarcat œcuménique, Chypre, Roumanie… Noël le 25 décembre.",
+"en": "Revised Julian: Church of Greece, Ecumenical Patriarchate, Cyprus, Romania… Christmas on December 25.",
+"el": "Αναθεωρημένο Ιουλιανό: Εκκλησία της Ελλάδος, Οικουμενικό Πατριαρχείο, Κύπρος, Ρουμανία… Χριστούγεννα στις 25 Δεκεμβρίου.",
+"ru": "Новоюлианский: Элладская Церковь, Константинопольский патриархат, Кипр, Румыния… Рождество 25 декабря.",
+"ro": "Iulian îndreptat: Biserica Greciei, Patriarhia Ecumenică, Cipru, România… Crăciunul pe 25 decembrie.",
+"ar": "اليولياني المعدَّل: كنيسة اليونان، البطريركية المسكونية، قبرص، رومانيا، أنطاكية… الميلاد في 25 كانون الأول."
+},
+"cal.old.explain": {
+"fr": "Julien : Mont Athos, Jérusalem, Russie, Serbie, vieux-calendaristes grecs… Noël le 7 janvier.",
+"en": "Julian: Mount Athos, Jerusalem, Russia, Serbia, Greek Old Calendarists… Christmas on January 7.",
+"el": "Ιουλιανό: Άγιον Όρος, Ιεροσόλυμα, Ρωσία, Σερβία, Παλαιοημερολογίτες… Χριστούγεννα στις 7 Ιανουαρίου.",
+"ru": "Юлианский: Афон, Иерусалим, Россия, Сербия, греческие старостильники… Рождество 7 января.",
+"ro": "Iulian: Muntele Athos, Ierusalim, Rusia, Serbia, stiliștii greci… Crăciunul pe 7 ianuarie.",
+"ar": "اليولياني: جبل آثوس، أورشليم، روسيا، صربيا… الميلاد في 7 كانون الثاني."
+},
+"cal.julianSuffix": {
+"fr": "(calendrier julien)",
+"en": "(Julian calendar)",
+"el": "(Ιουλιανό ημερολόγιο)",
+"ru": "(по юлианскому календарю)",
+"ro": "(calendarul iulian)",
+"ar": "(التقويم اليولياني)"
+},
+"fast.noFast.title": {
+"fr": "Pas de jeûne",
+"en": "No fast",
+"el": "Κατάλυσις εις πάντα",
+"ru": "Поста нет",
+"ro": "Fără post",
+"ar": "لا صوم"
+},
+"fast.fastFree.title": {
+"fr": "Sans jeûne",
+"en": "Fast-free",
+"el": "Αρτύσιμο",
+"ru": "Сплошная седмица",
+"ro": "Harți (fără post)",
+"ar": "إفطار عام"
+},
+"fast.dairy.title": {
+"fr": "Jeûne de la viande",
+"en": "Meat fast",
+"el": "Αποχή κρέατος",
+"ru": "Мясопуст",
+"ro": "Dezlegare la lactate",
+"ar": "صوم عن اللحم"
+},
+"fast.fish.title": {
+"fr": "Poisson permis",
+"en": "Fish allowed",
+"el": "Κατάλυσις ιχθύος",
+"ru": "Разрешается рыба",
+"ro": "Dezlegare la pește",
+"ar": "يُسمح بالسمك"
+},
+"fast.wineOil.title": {
+"fr": "Vin et huile permis",
+"en": "Wine and oil allowed",
+"el": "Οίνος και έλαιον",
+"ru": "Разрешается вино и елей",
+"ro": "Dezlegare la vin și untdelemn",
+"ar": "يُسمح بالخمر والزيت"
+},
+"fast.strict.title": {
+"fr": "Jeûne strict",
+"en": "Strict fast",
+"el": "Αυστηρή νηστεία",
+"ru": "Строгий пост",
+"ro": "Post aspru",
+"ar": "صوم قاطع"
+},
+"fast.noFast.short": {
+"fr": "Pas de jeûne",
+"en": "No fast",
+"el": "Κατάλυση",
+"ru": "Нет поста",
+"ro": "Fără post",
+"ar": "لا صوم"
+},
+"fast.fastFree.short": {
+"fr": "Sans jeûne",
+"en": "Fast-free",
+"el": "Αρτύσιμο",
+"ru": "Сплошная",
+"ro": "Harți",
+"ar": "إفطار"
+},
+"fast.dairy.short": {
+"fr": "Sans viande",
+"en": "No meat",
+"el": "Χωρίς κρέας",
+"ru": "Без мяса",
+"ro": "Fără carne",
+"ar": "بلا لحم"
+},
+"fast.fish.short": {
+"fr": "Poisson",
+"en": "Fish",
+"el": "Ψάρι",
+"ru": "Рыба",
+"ro": "Pește",
+"ar": "سمك"
+},
+"fast.wineOil.short": {
+"fr": "Vin & huile",
+"en": "Wine & oil",
+"el": "Λάδι & κρασί",
+"ru": "Вино и елей",
+"ro": "Vin & ulei",
+"ar": "خمر وزيت"
+},
+"fast.strict.short": {
+"fr": "Strict",
+"en": "Strict",
+"el": "Αυστηρή",
+"ru": "Строгий",
+"ro": "Aspru",
+"ar": "قاطع"
+},
+"fast.noFast.explain": {
+"fr": "Aucune restriction alimentaire aujourd'hui.",
+"en": "No dietary restrictions today.",
+"el": "Καμία διατροφική απαγόρευση σήμερα.",
+"ru": "Сегодня нет пищевых ограничений.",
+"ro": "Nicio restricție alimentară astăzi.",
+"ar": "لا قيود غذائية اليوم."
+},
+"fast.fastFree.explain": {
+"fr": "Période sans jeûne : tout est permis, y compris le mercredi et le vendredi.",
+"en": "Fast-free period: everything is allowed, even on Wednesday and Friday.",
+"el": "Περίοδος καταλύσεως: επιτρέπονται όλα, ακόμη και Τετάρτη και Παρασκευή.",
+"ru": "Сплошная седмица: разрешается всё, даже в среду и пятницу.",
+"ro": "Perioadă fără post: totul este îngăduit, chiar și miercurea și vinerea.",
+"ar": "فترة إفطار: كل شيء مسموح، حتى يومي الأربعاء والجمعة."
+},
+"fast.dairy.explain": {
+"fr": "On s'abstient de viande. Laitages, œufs, poisson, vin et huile sont permis.",
+"en": "Abstain from meat. Dairy, eggs, fish, wine and oil are allowed.",
+"el": "Απέχουμε από κρέας. Επιτρέπονται γαλακτοκομικά, αυγά, ψάρι, οίνος και έλαιον.",
+"ru": "Воздерживаемся от мяса. Разрешаются молочные продукты, яйца, рыба, вино и елей.",
+"ro": "Ne abținem de la carne. Sunt îngăduite lactatele, ouăle, peștele, vinul și untdelemnul.",
+"ar": "نمتنع عن اللحم. يُسمح بالألبان والبيض والسمك والخمر والزيت."
+},
+"fast.fish.explain": {
+"fr": "On s'abstient de viande, de laitages et d'œufs. Le poisson, le vin et l'huile sont permis.",
+"en": "Abstain from meat, dairy and eggs. Fish, wine and oil are allowed.",
+"el": "Απέχουμε από κρέας, γαλακτοκομικά και αυγά. Επιτρέπονται ψάρι, οίνος και έλαιον.",
+"ru": "Воздерживаемся от мяса, молочного и яиц. Разрешаются рыба, вино и елей.",
+"ro": "Ne abținem de la carne, lactate și ouă. Sunt îngăduite peștele, vinul și untdelemnul.",
+"ar": "نمتنع عن اللحم والألبان والبيض. يُسمح بالسمك والخمر والزيت."
+},
+"fast.wineOil.explain": {
+"fr": "On s'abstient de viande, de laitages, d'œufs et de poisson. Le vin et l'huile d'olive sont permis.",
+"en": "Abstain from meat, dairy, eggs and fish. Wine and olive oil are allowed.",
+"el": "Απέχουμε από κρέας, γαλακτοκομικά, αυγά και ψάρι. Επιτρέπονται οίνος και ελαιόλαδο.",
+"ru": "Воздерживаемся от мяса, молочного, яиц и рыбы. Разрешаются вино и растительное масло.",
+"ro": "Ne abținem de la carne, lactate, ouă și pește. Sunt îngăduite vinul și untdelemnul.",
+"ar": "نمتنع عن اللحم والألبان والبيض والسمك. يُسمح بالخمر وزيت الزيتون."
+},
+"fast.strict.explain": {
+"fr": "Xérophagie : on s'abstient de viande, laitages, œufs, poisson, mais aussi d'huile et de vin. Légumes, légumineuses, fruits, pain.",
+"en": "Xerophagy: abstain from meat, dairy, eggs, fish, and also oil and wine. Vegetables, legumes, fruit, bread.",
+"el": "Ξηροφαγία: απέχουμε από κρέας, γαλακτοκομικά, αυγά, ψάρι, αλλά και από λάδι και κρασί. Λαχανικά, όσπρια, φρούτα, ψωμί.",
+"ru": "Сухоядение: воздерживаемся от мяса, молочного, яиц, рыбы, а также от масла и вина. Овощи, бобовые, фрукты, хлеб.",
+"ro": "Mâncare uscată: ne abținem de la carne, lactate, ouă, pește, dar și de la untdelemn și vin. Legume, leguminoase, fructe, pâine.",
+"ar": "يابسات: نمتنع عن اللحم والألبان والبيض والسمك، وكذلك عن الزيت والخمر. خضار وبقول وفواكه وخبز."
+},
+"food.meat": {
+"fr": "Viande",
+"en": "Meat",
+"el": "Κρέας",
+"ru": "Мясо",
+"ro": "Carne",
+"ar": "لحم"
+},
+"food.dairy": {
+"fr": "Laitages",
+"en": "Dairy",
+"el": "Γαλακτοκομικά",
+"ru": "Молочное",
+"ro": "Lactate",
+"ar": "ألبان"
+},
+"food.eggs": {
+"fr": "Œufs",
+"en": "Eggs",
+"el": "Αυγά",
+"ru": "Яйца",
+"ro": "Ouă",
+"ar": "بيض"
+},
+"food.fish": {
+"fr": "Poisson",
+"en": "Fish",
+"el": "Ψάρι",
+"ru": "Рыба",
+"ro": "Pește",
+"ar": "سمك"
+},
+"food.oil": {
+"fr": "Huile",
+"en": "Oil",
+"el": "Λάδι",
+"ru": "Масло",
+"ro": "Ulei",
+"ar": "زيت"
+},
+"food.wine": {
+"fr": "Vin",
+"en": "Wine",
+"el": "Κρασί",
+"ru": "Вино",
+"ro": "Vin",
+"ar": "خمر"
+},
+"food.shellfish": {
+"fr": "Fruits de mer",
+"en": "Shellfish",
+"el": "Θαλασσινά",
+"ru": "Морепродукты",
+"ro": "Fructe de mare",
+"ar": "ثمار البحر"
+},
+"food.allowed": {
+"fr": "permis",
+"en": "allowed",
+"el": "επιτρέπεται",
+"ru": "разрешено",
+"ro": "îngăduit",
+"ar": "مسموح"
+},
+"food.forbidden": {
+"fr": "non",
+"en": "not allowed",
+"el": "όχι",
+"ru": "нет",
+"ro": "nu",
+"ar": "غير مسموح"
+},
+"season.ordinary": {
+"fr": "Temps ordinaire",
+"en": "Ordinary time",
+"el": "Συνήθεις ημέρες",
+"ru": "Обычное время",
+"ro": "Timp obișnuit",
+"ar": "الزمن العادي"
+},
+"season.wednesdayFriday": {
+"fr": "Jeûne du mercredi et du vendredi",
+"en": "Wednesday and Friday fast",
+"el": "Νηστεία Τετάρτης και Παρασκευής",
+"ru": "Пост в среду и пятницу",
+"ro": "Postul de miercuri și vineri",
+"ar": "صوم الأربعاء والجمعة"
+},
+"season.paschalSeason": {
+"fr": "Temps pascal",
+"en": "Paschal season",
+"el": "Περίοδος Πεντηκοσταρίου",
+"ru": "Пасхальный период",
+"ro": "Perioada pascală",
+"ar": "الزمن الفصحي"
+},
+"season.christmastide": {
+"fr": "Dodécaémeron (de Noël à la Théophanie)",
+"en": "Twelve Days (Christmas to Theophany)",
+"el": "Δωδεκαήμερο",
+"ru": "Святки",
+"ro": "Cele douăsprezece zile (Crăciun – Bobotează)",
+"ar": "الأيام الاثنا عشر (من الميلاد إلى الظهور الإلهي)"
+},
+"season.publicanWeek": {
+"fr": "Semaine du Publicain et du Pharisien",
+"en": "Week of the Publican and Pharisee",
+"el": "Εβδομάδα Τελώνου και Φαρισαίου",
+"ru": "Седмица мытаря и фарисея",
+"ro": "Săptămâna Vameșului și Fariseului",
+"ar": "أسبوع الفريسي والعشار"
+},
+"season.brightWeek": {
+"fr": "Semaine radieuse",
+"en": "Bright Week",
+"el": "Διακαινήσιμος εβδομάδα",
+"ru": "Светлая седмица",
+"ro": "Săptămâna Luminată",
+"ar": "أسبوع التجديدات"
+},
+"season.trinityWeek": {
+"fr": "Semaine de la Pentecôte",
+"en": "Week after Pentecost",
+"el": "Εβδομάδα μετά την Πεντηκοστή",
+"ru": "Троицкая седмица",
+"ro": "Săptămâna după Rusalii",
+"ar": "أسبوع العنصرة"
+},
+"season.cheesefare": {
+"fr": "Semaine de la Tyrophagie",
+"en": "Cheesefare Week",
+"el": "Εβδομάδα της Τυρινής",
+"ru": "Сырная седмица (Масленица)",
+"ro": "Săptămâna brânzei",
+"ar": "أسبوع مرفع الجبن"
+},
+"season.greatLent": {
+"fr": "Grand Carême",
+"en": "Great Lent",
+"el": "Μεγάλη Τεσσαρακοστή",
+"ru": "Великий пост",
+"ro": "Postul Mare",
+"ar": "الصوم الكبير"
+},
+"season.holyWeek": {
+"fr": "Semaine sainte",
+"en": "Holy Week",
+"el": "Μεγάλη Εβδομάδα",
+"ru": "Страстная седмица",
+"ro": "Săptămâna Patimilor",
+"ar": "الأسبوع العظيم المقدس"
+},
+"season.apostles": {
+"fr": "Carême des Apôtres",
+"en": "Apostles' Fast",
+"el": "Νηστεία των Αγίων Αποστόλων",
+"ru": "Петров пост",
+"ro": "Postul Sfinților Apostoli",
+"ar": "صوم الرسل"
+},
+"season.dormition": {
+"fr": "Carême de la Dormition",
+"en": "Dormition Fast",
+"el": "Νηστεία του Δεκαπενταυγούστου",
+"ru": "Успенский пост",
+"ro": "Postul Adormirii Maicii Domnului",
+"ar": "صوم السيدة"
+},
+"season.nativity": {
+"fr": "Carême de la Nativité",
+"en": "Nativity Fast",
+"el": "Νηστεία των Χριστουγέννων",
+"ru": "Рождественский пост",
+"ro": "Postul Nașterii Domnului",
+"ar": "صوم الميلاد"
+},
+"season.strictDay": {
+"fr": "Jour de jeûne strict",
+"en": "Strict fast day",
+"el": "Ημέρα αυστηρής νηστείας",
+"ru": "День строгого поста",
+"ro": "Zi de post aspru",
+"ar": "يوم صوم قاطع"
+},
+"note.cheesefareLast": {
+"fr": "Dernier jour des laitages avant le Carême",
+"en": "Last day of dairy before Lent",
+"el": "Τελευταία ημέρα γαλακτοκομικών πριν τη Σαρακοστή",
+"ru": "Последний день молочной пищи перед постом",
+"ro": "Ultima zi de lactate înainte de Post",
+"ar": "آخر يوم للألبان قبل الصوم"
+},
+"note.annunciation": {
+"fr": "Annonciation",
+"en": "Annunciation",
+"el": "Ευαγγελισμός",
+"ru": "Благовещение",
+"ro": "Buna Vestire",
+"ar": "البشارة"
+},
+"note.annunciationFish": {
+"fr": "Annonciation : poisson permis",
+"en": "Annunciation: fish allowed",
+"el": "Ευαγγελισμός: κατάλυσις ιχθύος",
+"ru": "Благовещение: разрешается рыба",
+"ro": "Buna Vestire: dezlegare la pește",
+"ar": "البشارة: يُسمح بالسمك"
+},
+"note.holySat": {
+"fr": "Un peu de vin est d'usage après la Liturgie de saint Basile",
+"en": "A little wine is customary after the Liturgy of St Basil",
+"el": "Λίγος οίνος μετά τη Θεία Λειτουργία του Μεγάλου Βασιλείου",
+"ru": "После литургии святителя Василия принято немного вина",
+"ro": "Puțin vin este obișnuit după Liturghia Sfântului Vasile",
+"ar": "يُؤخذ قليل من الخمر بعد قداس القديس باسيليوس"
+},
+"note.holyFri": {
+"fr": "Abstinence totale recommandée jusqu'à la mise au tombeau",
+"en": "Total abstinence recommended until the Burial service",
+"el": "Συνιστάται πλήρης αποχή έως τον Επιτάφιο",
+"ru": "До выноса Плащаницы рекомендуется полное воздержание",
+"ro": "Se recomandă ajunare totală până la Prohod",
+"ar": "يُستحسن الانقطاع التام حتى صلاة جناز المسيح"
+},
+"note.holyThu": {
+"fr": "Jeudi de la Cène : vin et huile",
+"en": "Holy Thursday: wine and oil",
+"el": "Μεγάλη Πέμπτη: οίνος και έλαιον",
+"ru": "Великий четверг: вино и елей",
+"ro": "Joia Mare: vin și untdelemn",
+"ar": "الخميس العظيم: خمر وزيت"
+},
+"note.palm": {
+"fr": "Rameaux : poisson permis",
+"en": "Palm Sunday: fish allowed",
+"el": "Κυριακή των Βαΐων: κατάλυσις ιχθύος",
+"ru": "Вход Господень: разрешается рыба",
+"ro": "Floriile: dezlegare la pește",
+"ar": "الشعانين: يُسمح بالسمك"
+},
+"note.lazarus": {
+"fr": "Samedi de Lazare : œufs de poisson (tarama) permis",
+"en": "Lazarus Saturday: fish roe allowed",
+"el": "Σάββατο του Λαζάρου: επιτρέπεται ο ταραμάς",
+"ru": "Лазарева суббота: разрешается рыбная икра",
+"ro": "Sâmbăta lui Lazăr: dezlegare la icre",
+"ar": "سبت لعازر: يُسمح ببطارخ السمك"
+},
+"note.cleanMonday": {
+"fr": "Lundi pur : abstinence complète recommandée jusqu'au soir",
+"en": "Clean Monday: total abstinence recommended until evening",
+"el": "Καθαρά Δευτέρα: συνιστάται πλήρης αποχή έως το βράδυ",
+"ru": "Чистый понедельник: рекомендуется полное воздержание до вечера",
+"ro": "Lunea curată: se recomandă ajunare totală până seara",
+"ar": "الاثنين النظيف: يُستحسن الانقطاع التام حتى المساء"
+},
+"note.greatCanon": {
+"fr": "Grand Canon : vin et huile",
+"en": "Great Canon: wine and oil",
+"el": "Μέγας Κανών: οίνος και έλαιον",
+"ru": "Великий канон: вино и елей",
+"ro": "Canonul cel Mare: vin și untdelemn",
+"ar": "القانون الكبير: خمر وزيت"
+},
+"note.feastWineOil": {
+"fr": "Fête : vin et huile permis",
+"en": "Feast: wine and oil allowed",
+"el": "Εορτή: οίνος και έλαιον",
+"ru": "Праздник: разрешается вино и елей",
+"ro": "Sărbătoare: dezlegare la vin și untdelemn",
+"ar": "عيد: يُسمح بالخمر والزيت"
+},
+"note.feastFish": {
+"fr": "Fête : poisson permis",
+"en": "Feast: fish allowed",
+"el": "Εορτή: κατάλυσις ιχθύος",
+"ru": "Праздник: разрешается рыба",
+"ro": "Sărbătoare: dezlegare la pește",
+"ar": "عيد: يُسمح بالسمك"
+},
+"note.transfiguration": {
+"fr": "Transfiguration : poisson permis",
+"en": "Transfiguration: fish allowed",
+"el": "Μεταμόρφωσις: κατάλυσις ιχθύος",
+"ru": "Преображение: разрешается рыба",
+"ro": "Schimbarea la Față: dezlegare la pește",
+"ar": "التجلي: يُسمح بالسمك"
+},
+"note.forerunner": {
+"fr": "Nativité du Prodrome : poisson permis",
+"en": "Nativity of the Forerunner: fish allowed",
+"el": "Γενέθλιον του Προδρόμου: κατάλυσις ιχθύος",
+"ru": "Рождество Предтечи: разрешается рыба",
+"ro": "Nașterea Înaintemergătorului: dezlegare la pește",
+"ar": "مولد السابق: يُسمح بالسمك"
+},
+"note.paramoni": {
+"fr": "Veille de Noël (Paramoni)",
+"en": "Christmas Eve (Paramony)",
+"el": "Παραμονή των Χριστουγέννων",
+"ru": "Сочельник",
+"ro": "Ajunul Crăciunului",
+"ar": "برامون الميلاد"
+},
+"note.entryFish": {
+"fr": "Entrée au Temple : poisson permis",
+"en": "Entry of the Theotokos: fish allowed",
+"el": "Εισόδια της Θεοτόκου: κατάλυσις ιχθύος",
+"ru": "Введение: разрешается рыба",
+"ro": "Intrarea în Biserică: dezlegare la pește",
+"ar": "دخول السيدة: يُسمح بالسمك"
+},
+"ferial": {
+"fr": "Férie",
+"en": "Weekday",
+"el": "Καθημερινή",
+"ru": "Будний день",
+"ro": "Zi de rând",
+"ar": "يوم عادي"
+},
+"george.suffix": {
+"fr": " (fête transférée au lundi de Pâques)",
+"en": " (feast moved to Bright Monday)",
+"el": " (η εορτή μετατίθεται τη Δευτέρα της Διακαινησίμου)",
+"ru": " (празднование переносится на Светлый понедельник)",
+"ro": " (sărbătoarea se mută în Lunea Luminată)",
+"ar": " (يُنقل العيد إلى إثنين الفصح)"
+},
+"george.title": {
+"fr": "Saint Georges, grand martyr (fête transférée)",
+"en": "St George the Great Martyr (transferred feast)",
+"el": "Άγιος Γεώργιος ο Μεγαλομάρτυς (μετάθεση εορτής)",
+"ru": "Великомученик Георгий Победоносец (перенесённое празднование)",
+"ro": "Sfântul Mare Mucenic Gheorghe (sărbătoare mutată)",
+"ar": "القديس جاورجيوس العظيم في الشهداء (عيد منقول)"
+},
+"mov.-70": {
+"fr": "Dimanche du Publicain et du Pharisien — début du Triode",
+"en": "Sunday of the Publican and the Pharisee — the Triodion begins",
+"el": "Κυριακή του Τελώνου και του Φαρισαίου — αρχή του Τριωδίου",
+"ru": "Неделя о мытаре и фарисее — начало Триоди",
+"ro": "Duminica Vameșului și a Fariseului — începutul Triodului",
+"ar": "أحد الفريسي والعشار — بداية التريودي"
+},
+"mov.-63": {
+"fr": "Dimanche du Fils prodigue",
+"en": "Sunday of the Prodigal Son",
+"el": "Κυριακή του Ασώτου",
+"ru": "Неделя о блудном сыне",
+"ro": "Duminica Fiului risipitor",
+"ar": "أحد الابن الشاطر"
+},
+"mov.-57": {
+"fr": "Samedi des âmes — commémoration de tous les défunts",
+"en": "Saturday of Souls — commemoration of the departed",
+"el": "Ψυχοσάββατο — μνήμη πάντων των κεκοιμημένων",
+"ru": "Вселенская родительская суббота",
+"ro": "Sâmbăta morților (Moșii de iarnă)",
+"ar": "سبت الأموات — تذكار جميع الراقدين"
+},
+"mov.-56": {
+"fr": "Dimanche du Jugement dernier — dimanche de l'Apocréo (adieu à la viande)",
+"en": "Sunday of the Last Judgment — Meatfare Sunday",
+"el": "Κυριακή της Απόκρεω — της Δευτέρας Παρουσίας",
+"ru": "Неделя мясопустная, о Страшном суде",
+"ro": "Duminica Înfricoșătoarei Judecăți (a Lăsatului sec de carne)",
+"ar": "أحد مرفع اللحم — أحد الدينونة"
+},
+"mov.-50": {
+"fr": "Samedi de la Tyrophagie — saints moines et moniales",
+"en": "Cheesefare Saturday — holy monastics",
+"el": "Σάββατο της Τυρινής — μνήμη των Οσίων",
+"ru": "Суббота сыропустная — память преподобных",
+"ro": "Sâmbăta brânzei — pomenirea Cuvioșilor",
+"ar": "سبت مرفع الجبن — تذكار الآباء الأبرار"
+},
+"mov.-49": {
+"fr": "Dimanche de la Tyrophagie — dimanche du Pardon, expulsion d'Adam du Paradis",
+"en": "Cheesefare Sunday — Forgiveness Sunday, expulsion of Adam from Paradise",
+"el": "Κυριακή της Τυρινής — της Συγχωρήσεως, εξορία του Αδάμ",
+"ru": "Неделя сыропустная — Прощёное воскресенье, изгнание Адама из рая",
+"ro": "Duminica Izgonirii lui Adam din Rai (a Iertării)",
+"ar": "أحد مرفع الجبن — أحد الغفران وطرد آدم من الفردوس"
+},
+"mov.-48": {
+"fr": "Lundi pur — début du Grand Carême",
+"en": "Clean Monday — Great Lent begins",
+"el": "Καθαρά Δευτέρα — αρχή της Μεγάλης Τεσσαρακοστής",
+"ru": "Чистый понедельник — начало Великого поста",
+"ro": "Lunea curată — începutul Postului Mare",
+"ar": "الاثنين النظيف — بداية الصوم الكبير"
+},
+"mov.-43": {
+"fr": "Samedi de saint Théodore le Tiron — miracle des colyves",
+"en": "Saturday of St Theodore the Recruit — miracle of the kollyva",
+"el": "Σάββατο του Αγίου Θεοδώρου του Τήρωνος — θαύμα των κολλύβων",
+"ru": "Суббота святого Феодора Тирона — чудо о коливе",
+"ro": "Sâmbăta Sfântului Teodor Tiron — minunea colivei",
+"ar": "سبت القديس ثيودوروس التيروني — أعجوبة القمح المسلوق"
+},
+"mov.-42": {
+"fr": "Dimanche de l'Orthodoxie — triomphe des saintes icônes",
+"en": "Sunday of Orthodoxy — triumph of the holy icons",
+"el": "Κυριακή της Ορθοδοξίας",
+"ru": "Неделя Торжества Православия",
+"ro": "Duminica Ortodoxiei",
+"ar": "أحد الأرثوذكسية — انتصار الأيقونات"
+},
+"mov.-36": {
+"fr": "Samedi des âmes (2e samedi du Carême)",
+"en": "Saturday of Souls (2nd Saturday of Lent)",
+"el": "Β΄ Ψυχοσάββατο",
+"ru": "Родительская суббота 2-й седмицы",
+"ro": "Sâmbăta morților (a doua din Post)",
+"ar": "سبت الأموات (السبت الثاني من الصوم)"
+},
+"mov.-35": {
+"fr": "Dimanche de saint Grégoire Palamas",
+"en": "Sunday of St Gregory Palamas",
+"el": "Κυριακή του Αγίου Γρηγορίου του Παλαμά",
+"ru": "Неделя святителя Григория Паламы",
+"ro": "Duminica Sfântului Grigorie Palama",
+"ar": "أحد القديس غريغوريوس بالاماس"
+},
+"mov.-29": {
+"fr": "Samedi des âmes (3e samedi du Carême)",
+"en": "Saturday of Souls (3rd Saturday of Lent)",
+"el": "Γ΄ Ψυχοσάββατο",
+"ru": "Родительская суббота 3-й седмицы",
+"ro": "Sâmbăta morților (a treia din Post)",
+"ar": "سبت الأموات (السبت الثالث من الصوم)"
+},
+"mov.-28": {
+"fr": "Dimanche de la Vénération de la sainte Croix",
+"en": "Sunday of the Veneration of the Holy Cross",
+"el": "Κυριακή της Σταυροπροσκυνήσεως",
+"ru": "Неделя Крестопоклонная",
+"ro": "Duminica Sfintei Cruci",
+"ar": "أحد السجود للصليب"
+},
+"mov.-22": {
+"fr": "Samedi des âmes (4e samedi du Carême)",
+"en": "Saturday of Souls (4th Saturday of Lent)",
+"el": "Δ΄ Ψυχοσάββατο",
+"ru": "Родительская суббота 4-й седмицы",
+"ro": "Sâmbăta morților (a patra din Post)",
+"ar": "سبت الأموات (السبت الرابع من الصوم)"
+},
+"mov.-21": {
+"fr": "Dimanche de saint Jean Climaque",
+"en": "Sunday of St John Climacus",
+"el": "Κυριακή του Αγίου Ιωάννου της Κλίμακος",
+"ru": "Неделя преподобного Иоанна Лествичника",
+"ro": "Duminica Sfântului Ioan Scărarul",
+"ar": "أحد القديس يوحنا السلمي"
+},
+"mov.-18": {
+"fr": "Mercredi du Grand Canon de saint André de Crète (office du soir)",
+"en": "Wednesday of the Great Canon of St Andrew of Crete (evening)",
+"el": "Τετάρτη του Μεγάλου Κανόνος (εσπέρας)",
+"ru": "Среда Великого канона (вечером)",
+"ro": "Miercurea Canonului cel Mare (seara)",
+"ar": "أربعاء القانون الكبير (مساءً)"
+},
+"mov.-17": {
+"fr": "Jeudi du Grand Canon de saint André de Crète",
+"en": "Thursday of the Great Canon of St Andrew of Crete",
+"el": "Πέμπτη του Μεγάλου Κανόνος",
+"ru": "Четверг Великого канона (Мариино стояние)",
+"ro": "Joia Canonului cel Mare",
+"ar": "خميس القانون الكبير"
+},
+"mov.-16": {
+"fr": "Vendredi de l'Hymne acathiste (office du soir)",
+"en": "Friday of the Akathist Hymn (evening)",
+"el": "Παρασκευή του Ακαθίστου Ύμνου (εσπέρας)",
+"ru": "Пятница Акафиста (вечером)",
+"ro": "Vinerea Acatistului (seara)",
+"ar": "جمعة المديح الذي لا يُجلس فيه (مساءً)"
+},
+"mov.-15": {
+"fr": "Samedi de l'Acathiste",
+"en": "Saturday of the Akathist",
+"el": "Σάββατο του Ακαθίστου",
+"ru": "Суббота Акафиста (Похвала Богородицы)",
+"ro": "Sâmbăta Acatistului",
+"ar": "سبت المديح"
+},
+"mov.-14": {
+"fr": "Dimanche de sainte Marie l'Égyptienne",
+"en": "Sunday of St Mary of Egypt",
+"el": "Κυριακή της Οσίας Μαρίας της Αιγυπτίας",
+"ru": "Неделя преподобной Марии Египетской",
+"ro": "Duminica Cuvioasei Maria Egipteanca",
+"ar": "أحد القديسة مريم المصرية"
+},
+"mov.-8": {
+"fr": "Samedi de Lazare — résurrection de Lazare",
+"en": "Lazarus Saturday — raising of Lazarus",
+"el": "Σάββατο του Λαζάρου",
+"ru": "Лазарева суббота",
+"ro": "Sâmbăta lui Lazăr",
+"ar": "سبت لعازر — إقامة لعازر"
+},
+"mov.-7": {
+"fr": "Dimanche des Rameaux — entrée du Seigneur à Jérusalem",
+"en": "Palm Sunday — Entry of the Lord into Jerusalem",
+"el": "Κυριακή των Βαΐων — Είσοδος του Κυρίου εις Ιεροσόλυμα",
+"ru": "Вход Господень в Иерусалим (Вербное воскресенье)",
+"ro": "Intrarea Domnului în Ierusalim (Floriile)",
+"ar": "أحد الشعانين — دخول الرب إلى أورشليم"
+},
+"mov.-6": {
+"fr": "Grand et Saint Lundi — Joseph le Très-Beau, le figuier desséché",
+"en": "Holy and Great Monday — Joseph the All-Comely, the barren fig tree",
+"el": "Μεγάλη Δευτέρα — Ιωσήφ ο Πάγκαλος, η άκαρπος συκή",
+"ru": "Великий понедельник — Иосиф Прекрасный, иссохшая смоковница",
+"ro": "Sfânta și Marea Luni — Iosif cel prea frumos, smochinul neroditor",
+"ar": "الاثنين العظيم المقدس — يوسف الصدِّيق والتينة اليابسة"
+},
+"mov.-5": {
+"fr": "Grand et Saint Mardi — parabole des dix vierges",
+"en": "Holy and Great Tuesday — parable of the ten virgins",
+"el": "Μεγάλη Τρίτη — παραβολή των δέκα παρθένων",
+"ru": "Великий вторник — притча о десяти девах",
+"ro": "Sfânta și Marea Marți — pilda celor zece fecioare",
+"ar": "الثلاثاء العظيم المقدس — مثل العذارى العشر"
+},
+"mov.-4": {
+"fr": "Grand et Saint Mercredi — la femme pécheresse, saint Office des Huiles",
+"en": "Holy and Great Wednesday — the sinful woman, Holy Unction",
+"el": "Μεγάλη Τετάρτη — η πόρνη γυνή, Ευχέλαιον",
+"ru": "Великая среда — грешная жена, Соборование",
+"ro": "Sfânta și Marea Miercuri — femeia păcătoasă, Sfântul Maslu",
+"ar": "الأربعاء العظيم المقدس — المرأة الخاطئة، سر الزيت المقدس"
+},
+"mov.-3": {
+"fr": "Grand et Saint Jeudi — la Cène mystique, le lavement des pieds",
+"en": "Holy and Great Thursday — the Mystical Supper, washing of the feet",
+"el": "Μεγάλη Πέμπτη — ο Μυστικός Δείπνος, ο Νιπτήρ",
+"ru": "Великий четверг — Тайная вечеря, умовение ног",
+"ro": "Sfânta și Marea Joi — Cina cea de Taină, spălarea picioarelor",
+"ar": "الخميس العظيم المقدس — العشاء السري وغسل الأرجل"
+},
+"mov.-2": {
+"fr": "Grand et Saint Vendredi — la Passion du Seigneur, l'Épitaphios",
+"en": "Holy and Great Friday — the Passion of the Lord, the Epitaphios",
+"el": "Μεγάλη Παρασκευή — τα Άγια Πάθη, ο Επιτάφιος",
+"ru": "Великая пятница — Страсти Господни, Плащаница",
+"ro": "Sfânta și Marea Vineri — Patimile Domnului, Prohodul",
+"ar": "الجمعة العظيمة المقدسة — آلام الرب والإبيتافيون"
+},
+"mov.-1": {
+"fr": "Grand et Saint Samedi — la mise au tombeau et la descente aux enfers",
+"en": "Holy and Great Saturday — the Burial and Descent into Hades",
+"el": "Μέγα Σάββατο — η Ταφή και η εις Άδου κάθοδος",
+"ru": "Великая суббота — погребение и сошествие во ад",
+"ro": "Sfânta și Marea Sâmbătă — îngroparea și pogorârea la iad",
+"ar": "السبت العظيم المقدس — الدفن والانحدار إلى الجحيم"
+},
+"mov.0": {
+"fr": "Sainte et Grande Pâque — la Résurrection du Christ",
+"en": "Holy Pascha — the Resurrection of Christ",
+"el": "Το Άγιον Πάσχα — η Ανάστασις του Χριστού",
+"ru": "Светлое Христово Воскресение — Пасха",
+"ro": "Învierea Domnului — Sfintele Paști",
+"ar": "الفصح المقدس — قيامة المسيح"
+},
+"mov.1": {
+"fr": "Lundi radieux — Semaine du Renouveau",
+"en": "Bright Monday",
+"el": "Δευτέρα της Διακαινησίμου",
+"ru": "Светлый понедельник",
+"ro": "Lunea Luminată",
+"ar": "إثنين التجديدات"
+},
+"mov.2": {
+"fr": "Mardi radieux — Semaine du Renouveau",
+"en": "Bright Tuesday",
+"el": "Τρίτη της Διακαινησίμου",
+"ru": "Светлый вторник",
+"ro": "Marțea Luminată",
+"ar": "ثلاثاء التجديدات"
+},
+"mov.3": {
+"fr": "Mercredi radieux — Semaine du Renouveau",
+"en": "Bright Wednesday",
+"el": "Τετάρτη της Διακαινησίμου",
+"ru": "Светлая среда",
+"ro": "Miercurea Luminată",
+"ar": "أربعاء التجديدات"
+},
+"mov.4": {
+"fr": "Jeudi radieux — Semaine du Renouveau",
+"en": "Bright Thursday",
+"el": "Πέμπτη της Διακαινησίμου",
+"ru": "Светлый четверг",
+"ro": "Joia Luminată",
+"ar": "خميس التجديدات"
+},
+"mov.5": {
+"fr": "Vendredi radieux — Notre-Dame de la Source vivifiante (Zoodochos Pigi)",
+"en": "Bright Friday — the Theotokos, Life-giving Spring",
+"el": "Ζωοδόχος Πηγή",
+"ru": "Светлая пятница — икона Богородицы «Живоносный Источник»",
+"ro": "Vinerea Luminată — Izvorul Tămăduirii",
+"ar": "جمعة التجديدات — والدة الإله ينبوع الحياة"
+},
+"mov.6": {
+"fr": "Samedi radieux — Semaine du Renouveau",
+"en": "Bright Saturday",
+"el": "Σάββατο της Διακαινησίμου",
+"ru": "Светлая суббота",
+"ro": "Sâmbăta Luminată",
+"ar": "سبت التجديدات"
+},
+"mov.7": {
+"fr": "Dimanche de Thomas (Antipascha)",
+"en": "Thomas Sunday (Antipascha)",
+"el": "Κυριακή του Θωμά (Αντίπασχα)",
+"ru": "Антипасха, Фомино воскресенье",
+"ro": "Duminica Tomii",
+"ar": "أحد توما الرسول"
+},
+"mov.14": {
+"fr": "Dimanche des saintes Femmes myrrhophores",
+"en": "Sunday of the Myrrh-bearing Women",
+"el": "Κυριακή των Μυροφόρων",
+"ru": "Неделя жён-мироносиц",
+"ro": "Duminica Mironosițelor",
+"ar": "أحد حاملات الطيب"
+},
+"mov.21": {
+"fr": "Dimanche du Paralytique",
+"en": "Sunday of the Paralytic",
+"el": "Κυριακή του Παραλύτου",
+"ru": "Неделя о расслабленном",
+"ro": "Duminica Slăbănogului",
+"ar": "أحد المخلّع"
+},
+"mov.24": {
+"fr": "Mi-Pentecôte",
+"en": "Mid-Pentecost",
+"el": "Μεσοπεντηκοστή",
+"ru": "Преполовение Пятидесятницы",
+"ro": "Înjumătățirea Praznicului",
+"ar": "منتصف الخمسين"
+},
+"mov.28": {
+"fr": "Dimanche de la Samaritaine",
+"en": "Sunday of the Samaritan Woman",
+"el": "Κυριακή της Σαμαρείτιδος",
+"ru": "Неделя о самаряныне",
+"ro": "Duminica Samarinencei",
+"ar": "أحد السامرية"
+},
+"mov.35": {
+"fr": "Dimanche de l'Aveugle-né",
+"en": "Sunday of the Man Born Blind",
+"el": "Κυριακή του Τυφλού",
+"ru": "Неделя о слепом",
+"ro": "Duminica Orbului",
+"ar": "أحد الأعمى"
+},
+"mov.38": {
+"fr": "Apodose (clôture) de Pâques",
+"en": "Leave-taking of Pascha",
+"el": "Απόδοσις του Πάσχα",
+"ru": "Отдание Пасхи",
+"ro": "Odovania Paștilor",
+"ar": "وداع الفصح"
+},
+"mov.39": {
+"fr": "Ascension de notre Seigneur Jésus-Christ",
+"en": "Ascension of our Lord Jesus Christ",
+"el": "Η Ανάληψις του Κυρίου",
+"ru": "Вознесение Господне",
+"ro": "Înălțarea Domnului",
+"ar": "صعود ربنا يسوع المسيح"
+},
+"mov.42": {
+"fr": "Dimanche des saints Pères du Ier concile œcuménique (Nicée, 325)",
+"en": "Sunday of the Holy Fathers of the First Ecumenical Council (Nicaea, 325)",
+"el": "Κυριακή των Αγίων Πατέρων της Α΄ Οικουμενικής Συνόδου",
+"ru": "Неделя святых отцов I Вселенского Собора",
+"ro": "Duminica Sfinților Părinți de la Sinodul I Ecumenic",
+"ar": "أحد آباء المجمع المسكوني الأول"
+},
+"mov.48": {
+"fr": "Samedi des âmes avant la Pentecôte",
+"en": "Saturday of Souls before Pentecost",
+"el": "Ψυχοσάββατο της Πεντηκοστής",
+"ru": "Троицкая родительская суббота",
+"ro": "Moșii de vară",
+"ar": "سبت الأموات قبل العنصرة"
+},
+"mov.49": {
+"fr": "Sainte Pentecôte — descente du Saint-Esprit",
+"en": "Holy Pentecost — descent of the Holy Spirit",
+"el": "Αγία Πεντηκοστή",
+"ru": "День Святой Троицы — Пятидесятница",
+"ro": "Pogorârea Sfântului Duh (Rusaliile)",
+"ar": "العنصرة المقدسة — حلول الروح القدس"
+},
+"mov.50": {
+"fr": "Lundi du Saint-Esprit",
+"en": "Monday of the Holy Spirit",
+"el": "Δευτέρα του Αγίου Πνεύματος",
+"ru": "День Святого Духа",
+"ro": "Lunea Sfântului Duh",
+"ar": "إثنين الروح القدس"
+},
+"mov.56": {
+"fr": "Dimanche de Tous les Saints",
+"en": "Sunday of All Saints",
+"el": "Κυριακή των Αγίων Πάντων",
+"ru": "Неделя всех святых",
+"ro": "Duminica Tuturor Sfinților",
+"ar": "أحد جميع القديسين"
+},
+"mov.63": {
+"fr": "Dimanche de tous les saints de Grèce",
+"en": "Sunday of All Saints of Greece",
+"el": "Κυριακή των Αγίων Πάντων της Ελλάδος",
+"ru": "Неделя всех святых, в земле Греческой просиявших",
+"ro": "Duminica Sfinților greci",
+"ar": "أحد جميع قديسي اليونان"
+},
+"mov.lentWeek": {
+"fr": "{n}e semaine du Grand Carême",
+"en": "Week {n} of Great Lent",
+"el": "{n}η εβδομάδα της Μεγάλης Τεσσαρακοστής",
+"ru": "{n}-я седмица Великого поста",
+"ro": "Săptămâna a {n}-a din Postul Mare",
+"ar": "الأسبوع {n} من الصوم الكبير"
+},
+"mov.paschal": {
+"fr": "Temps pascal — « Le Christ est ressuscité ! »",
+"en": "Paschal season — “Christ is risen!”",
+"el": "Πεντηκοστάριο — «Χριστός Ανέστη!»",
+"ru": "Пасхальное время — «Христос воскресе!»",
+"ro": "Perioada pascală — „Hristos a înviat!”",
+"ar": "الزمن الفصحي — «المسيح قام!»"
+},
+"sun.fathers4": {
+"fr": "Dimanche des saints Pères du IVe concile œcuménique (Chalcédoine)",
+"en": "Sunday of the Holy Fathers of the Fourth Ecumenical Council (Chalcedon)",
+"el": "Κυριακή των Αγίων Πατέρων της Δ΄ Οικουμενικής Συνόδου",
+"ru": "Неделя святых отцов IV Вселенского Собора",
+"ro": "Duminica Sfinților Părinți de la Sinodul IV Ecumenic",
+"ar": "أحد آباء المجمع المسكوني الرابع"
+},
+"sun.fathers7": {
+"fr": "Dimanche des saints Pères du VIIe concile œcuménique (Nicée II, 787)",
+"en": "Sunday of the Holy Fathers of the Seventh Ecumenical Council (Nicaea II, 787)",
+"el": "Κυριακή των Αγίων Πατέρων της Ζ΄ Οικουμενικής Συνόδου",
+"ru": "Неделя святых отцов VII Вселенского Собора",
+"ro": "Duminica Sfinților Părinți de la Sinodul VII Ecumenic",
+"ar": "أحد آباء المجمع المسكوني السابع"
+},
+"sun.forefathers": {
+"fr": "Dimanche des saints Ancêtres du Christ",
+"en": "Sunday of the Holy Forefathers",
+"el": "Κυριακή των Αγίων Προπατόρων",
+"ru": "Неделя святых праотец",
+"ro": "Duminica Sfinților Strămoși",
+"ar": "أحد الأجداد القديسين"
+},
+"sun.genealogy": {
+"fr": "Dimanche avant la Nativité — de la Généalogie",
+"en": "Sunday before Nativity — of the Genealogy",
+"el": "Κυριακή προ της Χριστού Γεννήσεως — των Αγίων Πατέρων",
+"ru": "Неделя святых отец, пред Рождеством Христовым",
+"ro": "Duminica dinaintea Nașterii Domnului — a Sfinților Părinți",
+"ar": "الأحد الذي قبل الميلاد — أحد النسبة"
+},
+"sun.afterNativity": {
+"fr": "Dimanche après la Nativité — saints Joseph, David et Jacques",
+"en": "Sunday after Nativity — Sts Joseph, David and James",
+"el": "Κυριακή μετά την Χριστού Γέννησιν — Ιωσήφ, Δαβίδ, Ιάκωβος",
+"ru": "Неделя по Рождестве Христовом — Иосиф, Давид, Иаков",
+"ro": "Duminica după Nașterea Domnului — Sfinții Iosif, David și Iacov",
+"ar": "الأحد الذي بعد الميلاد — يوسف وداود ويعقوب"
+},
+"sun.beforeTheophany": {
+"fr": "Dimanche avant la Théophanie",
+"en": "Sunday before Theophany",
+"el": "Κυριακή προ των Φώτων",
+"ru": "Неделя пред Богоявлением",
+"ro": "Duminica dinaintea Botezului Domnului",
+"ar": "الأحد الذي قبل الظهور الإلهي"
+},
+"sun.afterTheophany": {
+"fr": "Dimanche après la Théophanie",
+"en": "Sunday after Theophany",
+"el": "Κυριακή μετά τα Φώτα",
+"ru": "Неделя по Богоявлении",
+"ro": "Duminica după Botezul Domnului",
+"ar": "الأحد الذي بعد الظهور الإلهي"
+},
+"sun.beforeCross": {
+"fr": "Dimanche avant l'Exaltation de la Croix",
+"en": "Sunday before the Exaltation of the Cross",
+"el": "Κυριακή προ της Υψώσεως",
+"ru": "Неделя пред Воздвижением",
+"ro": "Duminica dinaintea Înălțării Sfintei Cruci",
+"ar": "الأحد الذي قبل رفع الصليب"
+},
+"sun.afterCross": {
+"fr": "Dimanche après l'Exaltation de la Croix",
+"en": "Sunday after the Exaltation of the Cross",
+"el": "Κυριακή μετά την Ύψωσιν",
+"ru": "Неделя по Воздвижении",
+"ro": "Duminica după Înălțarea Sfintei Cruci",
+"ar": "الأحد الذي بعد رفع الصليب"
+},
+"feast.09-08": {
+"fr": "Nativité de la très sainte Mère de Dieu",
+"en": "Nativity of the Most Holy Theotokos",
+"el": "Το Γενέθλιον της Υπεραγίας Θεοτόκου",
+"ru": "Рождество Пресвятой Богородицы",
+"ro": "Nașterea Maicii Domnului",
+"ar": "ميلاد سيدتنا والدة الإله"
+},
+"feast.09-14": {
+"fr": "Exaltation universelle de la précieuse et vivifiante Croix",
+"en": "Universal Exaltation of the Precious and Life-giving Cross",
+"el": "Η Παγκόσμιος Ύψωσις του Τιμίου και Ζωοποιού Σταυρού",
+"ru": "Воздвижение Честного и Животворящего Креста Господня",
+"ro": "Înălțarea Sfintei Cruci",
+"ar": "رفع الصليب الكريم المحيي"
+},
+"feast.11-21": {
+"fr": "Entrée au Temple de la très sainte Mère de Dieu",
+"en": "Entry of the Most Holy Theotokos into the Temple",
+"el": "Τα Εισόδια της Θεοτόκου",
+"ru": "Введение во храм Пресвятой Богородицы",
+"ro": "Intrarea în Biserică a Maicii Domnului",
+"ar": "دخول سيدتنا والدة الإله إلى الهيكل"
+},
+"feast.12-25": {
+"fr": "Nativité selon la chair de notre Seigneur Jésus-Christ",
+"en": "Nativity according to the flesh of our Lord Jesus Christ",
+"el": "Η κατά σάρκα Γέννησις του Κυρίου ημών Ιησού Χριστού",
+"ru": "Рождество Господа нашего Иисуса Христа",
+"ro": "Nașterea Domnului (Crăciunul)",
+"ar": "ميلاد ربنا يسوع المسيح بالجسد"
+},
+"feast.01-06": {
+"fr": "Sainte Théophanie — Baptême du Christ",
+"en": "Holy Theophany — Baptism of Christ",
+"el": "Τα Άγια Θεοφάνεια",
+"ru": "Крещение Господне — Богоявление",
+"ro": "Botezul Domnului (Boboteaza)",
+"ar": "الظهور الإلهي — معمودية المسيح"
+},
+"feast.02-02": {
+"fr": "Hypapante — Présentation du Seigneur au Temple",
+"en": "Meeting of the Lord in the Temple",
+"el": "Η Υπαπαντή του Κυρίου",
+"ru": "Сретение Господне",
+"ro": "Întâmpinarea Domnului",
+"ar": "دخول السيد إلى الهيكل"
+},
+"feast.03-25": {
+"fr": "Annonciation de la très sainte Mère de Dieu",
+"en": "Annunciation of the Most Holy Theotokos",
+"el": "Ο Ευαγγελισμός της Θεοτόκου",
+"ru": "Благовещение Пресвятой Богородицы",
+"ro": "Buna Vestire",
+"ar": "بشارة والدة الإله"
+},
+"feast.08-06": {
+"fr": "Transfiguration de notre Seigneur Jésus-Christ",
+"en": "Transfiguration of our Lord Jesus Christ",
+"el": "Η Μεταμόρφωσις του Σωτήρος",
+"ru": "Преображение Господне",
+"ro": "Schimbarea la Față a Domnului",
+"ar": "تجلي ربنا يسوع المسيح"
+},
+"feast.08-15": {
+"fr": "Dormition de la très sainte Mère de Dieu",
+"en": "Dormition of the Most Holy Theotokos",
+"el": "Η Κοίμησις της Θεοτόκου",
+"ru": "Успение Пресвятой Богородицы",
+"ro": "Adormirea Maicii Domnului",
+"ar": "رقاد والدة الإله"
+},
+"feast.09-01": {
+"fr": "Début de l'année ecclésiastique (Indiction) — saint Syméon le Stylite",
+"en": "Church New Year (Indiction) — St Symeon the Stylite",
+"el": "Αρχή της Ινδίκτου — Άγιος Συμεών ο Στυλίτης",
+"ru": "Начало индикта (церковное новолетие) — преподобный Симеон Столпник",
+"ro": "Începutul anului bisericesc — Sfântul Simeon Stâlpnicul",
+"ar": "رأس السنة الكنسية — القديس سمعان العمودي"
+},
+"feast.01-01": {
+"fr": "Circoncision du Seigneur — saint Basile le Grand",
+"en": "Circumcision of the Lord — St Basil the Great",
+"el": "Περιτομή του Κυρίου — Άγιος Βασίλειος ο Μέγας",
+"ru": "Обрезание Господне — святитель Василий Великий",
+"ro": "Tăierea împrejur a Domnului — Sfântul Vasile cel Mare",
+"ar": "ختانة الرب بالجسد — القديس باسيليوس الكبير"
+},
+"feast.01-07": {
+"fr": "Synaxe de saint Jean le Prodrome et Baptiste",
+"en": "Synaxis of St John the Forerunner and Baptist",
+"el": "Σύναξις του Τιμίου Προδρόμου και Βαπτιστού Ιωάννου",
+"ru": "Собор Иоанна Предтечи",
+"ro": "Soborul Sfântului Ioan Botezătorul",
+"ar": "تذكار جامع للقديس يوحنا المعمدان"
+},
+"feast.01-30": {
+"fr": "Les Trois Saints Hiérarques : Basile, Grégoire et Jean Chrysostome",
+"en": "The Three Holy Hierarchs: Basil, Gregory and John Chrysostom",
+"el": "Οι Τρεις Ιεράρχαι: Βασίλειος, Γρηγόριος, Ιωάννης ο Χρυσόστομος",
+"ru": "Собор трёх святителей: Василия, Григория и Иоанна Златоуста",
+"ro": "Sfinții Trei Ierarhi: Vasile, Grigorie și Ioan Gură de Aur",
+"ar": "الأقمار الثلاثة: باسيليوس وغريغوريوس ويوحنا الذهبي الفم"
+},
+"feast.06-24": {
+"fr": "Nativité de saint Jean le Prodrome et Baptiste",
+"en": "Nativity of St John the Forerunner and Baptist",
+"el": "Το Γενέθλιον του Τιμίου Προδρόμου",
+"ru": "Рождество Иоанна Предтечи",
+"ro": "Nașterea Sfântului Ioan Botezătorul",
+"ar": "مولد القديس يوحنا المعمدان"
+},
+"feast.06-29": {
+"fr": "Saints Pierre et Paul, coryphées des Apôtres",
+"en": "Sts Peter and Paul, Chief Apostles",
+"el": "Άγιοι Απόστολοι Πέτρος και Παύλος",
+"ru": "Святые первоверховные апостолы Пётр и Павел",
+"ro": "Sfinții Apostoli Petru și Pavel",
+"ar": "الرسولان بطرس وبولس هامتا الرسل"
+},
+"feast.08-29": {
+"fr": "Décollation de saint Jean le Prodrome et Baptiste",
+"en": "Beheading of St John the Forerunner and Baptist",
+"el": "Η Αποτομή της Τιμίας Κεφαλής του Προδρόμου",
+"ru": "Усекновение главы Иоанна Предтечи",
+"ro": "Tăierea capului Sfântului Ioan Botezătorul",
+"ar": "قطع رأس القديس يوحنا المعمدان"
+},
+"feast.10-26": {
+"fr": "Saint Démétrios le Myroblite, grand martyr",
+"en": "St Demetrius the Myrrh-streamer, Great Martyr",
+"el": "Άγιος Δημήτριος ο Μυροβλύτης",
+"ru": "Великомученик Димитрий Солунский, мироточивый",
+"ro": "Sfântul Mare Mucenic Dimitrie, Izvorâtorul de mir",
+"ar": "القديس ديمتريوس المفيض الطيب العظيم في الشهداء"
+},
+"feast.11-08": {
+"fr": "Synaxe des saints Archanges Michel, Gabriel et de toutes les Puissances célestes",
+"en": "Synaxis of the Archangels Michael, Gabriel and all the Bodiless Powers",
+"el": "Σύναξις των Αρχαγγέλων Μιχαήλ και Γαβριήλ",
+"ru": "Собор Архистратига Михаила и прочих Небесных Сил бесплотных",
+"ro": "Soborul Sfinților Arhangheli Mihail și Gavriil",
+"ar": "تذكار جامع لرئيسي الملائكة ميخائيل وجبرائيل"
+},
+"feast.11-13": {
+"fr": "Saint Jean Chrysostome, archevêque de Constantinople",
+"en": "St John Chrysostom, Archbishop of Constantinople",
+"el": "Άγιος Ιωάννης ο Χρυσόστομος",
+"ru": "Святитель Иоанн Златоуст",
+"ro": "Sfântul Ioan Gură de Aur",
+"ar": "القديس يوحنا الذهبي الفم"
+},
+"feast.11-30": {
+"fr": "Saint André, apôtre le Premier-Appelé",
+"en": "St Andrew the First-called Apostle",
+"el": "Άγιος Απόστολος Ανδρέας ο Πρωτόκλητος",
+"ru": "Апостол Андрей Первозванный",
+"ro": "Sfântul Apostol Andrei, cel întâi chemat",
+"ar": "القديس أندراوس الرسول المدعو أولاً"
+},
+"feast.12-06": {
+"fr": "Saint Nicolas, archevêque de Myre en Lycie, le Thaumaturge",
+"en": "St Nicholas the Wonderworker, Archbishop of Myra",
+"el": "Άγιος Νικόλαος, Αρχιεπίσκοπος Μύρων της Λυκίας",
+"ru": "Святитель Николай Чудотворец, архиепископ Мир Ликийских",
+"ro": "Sfântul Ierarh Nicolae, Arhiepiscopul Mirelor Lichiei",
+"ar": "القديس نيقولاوس العجائبي رئيس أساقفة ميرا"
+},
+"feast.12-12": {
+"fr": "Saint Spyridon, évêque de Trimythonte, le Thaumaturge",
+"en": "St Spyridon the Wonderworker, Bishop of Trimythous",
+"el": "Άγιος Σπυρίδων ο Θαυματουργός",
+"ru": "Святитель Спиридон Тримифунтский",
+"ro": "Sfântul Ierarh Spiridon al Trimitundei",
+"ar": "القديس اسبيريدون العجائبي أسقف تريميثوس"
+},
+"feast.01-17": {
+"fr": "Saint Antoine le Grand",
+"en": "St Anthony the Great",
+"el": "Όσιος Αντώνιος ο Μέγας",
+"ru": "Преподобный Антоний Великий",
+"ro": "Sfântul Cuvios Antonie cel Mare",
+"ar": "القديس أنطونيوس الكبير"
+},
+"feast.01-18": {
+"fr": "Saints Athanase et Cyrille, patriarches d'Alexandrie",
+"en": "Sts Athanasius and Cyril, Patriarchs of Alexandria",
+"el": "Άγιοι Αθανάσιος και Κύριλλος",
+"ru": "Святители Афанасий и Кирилл Александрийские",
+"ro": "Sfinții Atanasie și Chiril, arhiepiscopii Alexandriei",
+"ar": "القديسان أثناسيوس وكيرلس بطريركا الإسكندرية"
+},
+"feast.01-25": {
+"fr": "Saint Grégoire le Théologien",
+"en": "St Gregory the Theologian",
+"el": "Άγιος Γρηγόριος ο Θεολόγος",
+"ru": "Святитель Григорий Богослов",
+"ro": "Sfântul Grigorie Teologul",
+"ar": "القديس غريغوريوس اللاهوتي"
+},
+"feast.02-10": {
+"fr": "Saint Charalampos, hiéromartyr",
+"en": "St Haralambos the Hieromartyr",
+"el": "Άγιος Χαράλαμπος ο Ιερομάρτυς",
+"ru": "Священномученик Харлампий",
+"ro": "Sfântul Sfințit Mucenic Haralambie",
+"ar": "القديس خارالمبوس الكاهن الشهيد"
+},
+"feast.04-23": {
+"fr": "Saint Georges, grand martyr et trophophore",
+"en": "St George the Great Martyr and Trophy-bearer",
+"el": "Άγιος Γεώργιος ο Μεγαλομάρτυς και Τροπαιοφόρος",
+"ru": "Великомученик Георгий Победоносец",
+"ro": "Sfântul Mare Mucenic Gheorghe, purtătorul de biruință",
+"ar": "القديس جاورجيوس العظيم في الشهداء اللابس الظفر"
+},
+"feast.05-08": {
+"fr": "Saint Jean le Théologien, apôtre et évangéliste",
+"en": "St John the Theologian, Apostle and Evangelist",
+"el": "Άγιος Ιωάννης ο Θεολόγος",
+"ru": "Апостол и евангелист Иоанн Богослов",
+"ro": "Sfântul Apostol și Evanghelist Ioan Teologul",
+"ar": "القديس يوحنا اللاهوتي الرسول والإنجيلي"
+},
+"feast.05-21": {
+"fr": "Saints Constantin et Hélène, égaux aux apôtres",
+"en": "Sts Constantine and Helen, Equal-to-the-Apostles",
+"el": "Άγιοι Κωνσταντίνος και Ελένη οι Ισαπόστολοι",
+"ru": "Равноапостольные Константин и Елена",
+"ro": "Sfinții Împărați Constantin și Elena",
+"ar": "القديسان قسطنطين وهيلانة المعادلا الرسل"
+},
+"feast.06-30": {
+"fr": "Synaxe des douze saints Apôtres",
+"en": "Synaxis of the Twelve Holy Apostles",
+"el": "Σύναξις των Αγίων Δώδεκα Αποστόλων",
+"ru": "Собор двенадцати апостолов",
+"ro": "Soborul Sfinților 12 Apostoli",
+"ar": "تذكار جامع للرسل الاثني عشر"
+},
+"feast.07-20": {
+"fr": "Saint Élie le Prophète",
+"en": "Holy Prophet Elijah",
+"el": "Άγιος Προφήτης Ηλίας",
+"ru": "Пророк Илия",
+"ro": "Sfântul Proroc Ilie",
+"ar": "النبي إيليا"
+},
+"feast.07-26": {
+"fr": "Sainte Paraskévi, vierge martyre",
+"en": "St Paraskevi the Virgin Martyr",
+"el": "Αγία Παρασκευή",
+"ru": "Преподобномученица Параскева",
+"ro": "Sfânta Cuvioasă Muceniță Paraschiva",
+"ar": "القديسة باراسكيفي البارة الشهيدة"
+},
+"feast.07-27": {
+"fr": "Saint Pantéléimon, grand martyr et anargyre",
+"en": "St Panteleimon the Great Martyr and Healer",
+"el": "Άγιος Παντελεήμων ο Μεγαλομάρτυς και Ιαματικός",
+"ru": "Великомученик и целитель Пантелеимон",
+"ro": "Sfântul Mare Mucenic și tămăduitor Pantelimon",
+"ar": "القديس بندلايمون الشافي العظيم في الشهداء"
+},
+"feast.08-31": {
+"fr": "Déposition de la précieuse Ceinture de la Mère de Dieu",
+"en": "Placing of the Precious Sash of the Theotokos",
+"el": "Κατάθεσις της Τιμίας Ζώνης της Θεοτόκου",
+"ru": "Положение честного пояса Богородицы",
+"ro": "Punerea în raclă a Brâului Maicii Domnului",
+"ar": "وضع زنار والدة الإله"
+},
+"feast.09-26": {
+"fr": "Dormition de saint Jean le Théologien",
+"en": "Repose of St John the Theologian",
+"el": "Μετάστασις του Αγίου Ιωάννου του Θεολόγου",
+"ru": "Преставление апостола Иоанна Богослова",
+"ro": "Mutarea Sfântului Ioan Teologul",
+"ar": "انتقال القديس يوحنا اللاهوتي"
+},
+"feast.10-28": {
+"fr": "Protection de la Mère de Dieu (Agia Skepi)",
+"en": "Protection of the Theotokos (Agia Skepi)",
+"el": "Αγία Σκέπη της Θεοτόκου",
+"ru": "Покров Пресвятой Богородицы (греческая традиция)",
+"ro": "Acoperământul Maicii Domnului (după rânduiala grecească)",
+"ar": "شفاعة والدة الإله (التقليد اليوناني)"
+},
+"feast.12-15": {
+"fr": "Saint Éleuthère, hiéromartyr",
+"en": "St Eleutherius the Hieromartyr",
+"el": "Άγιος Ελευθέριος ο Ιερομάρτυς",
+"ru": "Священномученик Елевферий",
+"ro": "Sfântul Sfințit Mucenic Elefterie",
+"ar": "القديس إلفثيريوس الكاهن الشهيد"
+},
+"feast.12-17": {
+"fr": "Saint Daniel le Prophète et les Trois Jeunes Gens — saint Dionysios de Zante",
+"en": "Prophet Daniel and the Three Holy Youths — St Dionysios of Zakynthos",
+"el": "Προφήτης Δανιήλ και οι Τρεις Παίδες — Άγιος Διονύσιος Ζακύνθου",
+"ru": "Пророк Даниил и три отрока — святитель Дионисий Закинфский",
+"ro": "Sfântul Proroc Daniel și cei trei tineri — Sfântul Dionisie din Zakynthos",
+"ar": "النبي دانيال والفتية الثلاثة — القديس ديونيسيوس الزاكنثي"
+},
+"feast.12-20": {
+"fr": "Saint Ignace le Théophore, hiéromartyr",
+"en": "St Ignatius the God-bearer, Hieromartyr",
+"el": "Άγιος Ιγνάτιος ο Θεοφόρος",
+"ru": "Священномученик Игнатий Богоносец",
+"ro": "Sfântul Sfințit Mucenic Ignatie Teoforul",
+"ar": "القديس إغناطيوس المتوشح بالله"
+},
+"feast.11-09": {
+"fr": "Saint Nectaire d'Égine, le Thaumaturge",
+"en": "St Nektarios of Aegina the Wonderworker",
+"el": "Άγιος Νεκτάριος Αιγίνης ο Θαυματουργός",
+"ru": "Святитель Нектарий Эгинский",
+"ro": "Sfântul Ierarh Nectarie din Eghina",
+"ar": "القديس نكتاريوس أسقف المدن الخمس العجائبي"
+},
+"feast.11-25": {
+"fr": "Sainte Catherine, grande martyre — apodose de l'Entrée au Temple",
+"en": "St Catherine the Great Martyr — Leave-taking of the Entry",
+"el": "Αγία Αικατερίνη η Μεγαλομάρτυς — Απόδοσις των Εισοδίων",
+"ru": "Великомученица Екатерина — отдание Введения",
+"ro": "Sfânta Mare Muceniță Ecaterina — Odovania Intrării în Biserică",
+"ar": "القديسة كاترين العظيمة في الشهداء — وداع عيد الدخول"
+},
+"feast.11-14": {
+"fr": "Saint Philippe, apôtre — saint Grégoire Palamas",
+"en": "St Philip the Apostle — St Gregory Palamas",
+"el": "Άγιος Απόστολος Φίλιππος — Άγιος Γρηγόριος ο Παλαμάς",
+"ru": "Апостол Филипп — святитель Григорий Палама",
+"ro": "Sfântul Apostol Filip — Sfântul Grigorie Palama",
+"ar": "القديس فيلبس الرسول — القديس غريغوريوس بالاماس"
+},
+"feast.11-16": {
+"fr": "Saint Matthieu, apôtre et évangéliste",
+"en": "St Matthew the Apostle and Evangelist",
+"el": "Άγιος Απόστολος και Ευαγγελιστής Ματθαίος",
+"ru": "Апостол и евангелист Матфей",
+"ro": "Sfântul Apostol și Evanghelist Matei",
+"ar": "القديس متى الرسول والإنجيلي"
+},
+"feast.10-18": {
+"fr": "Saint Luc, apôtre et évangéliste",
+"en": "St Luke the Apostle and Evangelist",
+"el": "Άγιος Απόστολος και Ευαγγελιστής Λουκάς",
+"ru": "Апостол и евангелист Лука",
+"ro": "Sfântul Apostol și Evanghelist Luca",
+"ar": "القديس لوقا الرسول والإنجيلي"
+},
+"feast.04-25": {
+"fr": "Saint Marc, apôtre et évangéliste",
+"en": "St Mark the Apostle and Evangelist",
+"el": "Άγιος Απόστολος και Ευαγγελιστής Μάρκος",
+"ru": "Апостол и евангелист Марк",
+"ro": "Sfântul Apostol și Evanghelist Marcu",
+"ar": "القديس مرقس الرسول والإنجيلي"
+},
+"feast.10-06": {
+"fr": "Saint Thomas, apôtre",
+"en": "St Thomas the Apostle",
+"el": "Άγιος Απόστολος Θωμάς",
+"ru": "Апостол Фома",
+"ro": "Sfântul Apostol Toma",
+"ar": "القديس توما الرسول"
+},
+"feast.02-24": {
+"fr": "Première et deuxième inventions du chef de saint Jean Baptiste",
+"en": "First and Second Finding of the Head of St John the Baptist",
+"el": "Α΄ και Β΄ Εύρεσις της Τιμίας Κεφαλής του Προδρόμου",
+"ru": "Первое и второе обретение главы Иоанна Предтечи",
+"ro": "Întâia și a doua aflare a capului Sfântului Ioan Botezătorul",
+"ar": "وجود هامة السابق للمرة الأولى والثانية"
+},
+"feast.03-09": {
+"fr": "Les saints Quarante Martyrs de Sébaste",
+"en": "The Holy Forty Martyrs of Sebaste",
+"el": "Οι Άγιοι Τεσσαράκοντα Μάρτυρες της Σεβαστείας",
+"ru": "Сорок мучеников Севастийских",
+"ro": "Sfinții 40 de Mucenici din Sevastia",
+"ar": "الشهداء الأربعون في سبسطية"
+},
+"feast.03-26": {
+"fr": "Synaxe de l'Archange Gabriel",
+"en": "Synaxis of the Archangel Gabriel",
+"el": "Σύναξις του Αρχαγγέλου Γαβριήλ",
+"ru": "Собор Архангела Гавриила",
+"ro": "Soborul Sfântului Arhanghel Gavriil",
+"ar": "تذكار جامع لرئيس الملائكة جبرائيل"
+},
+"feast.05-25": {
+"fr": "Troisième invention du chef de saint Jean Baptiste",
+"en": "Third Finding of the Head of St John the Baptist",
+"el": "Γ΄ Εύρεσις της Τιμίας Κεφαλής του Προδρόμου",
+"ru": "Третье обретение главы Иоанна Предтечи",
+"ro": "A treia aflare a capului Sfântului Ioan Botezătorul",
+"ar": "وجود هامة السابق للمرة الثالثة"
+},
+"feast.07-22": {
+"fr": "Sainte Marie-Madeleine, myrrhophore et égale aux apôtres",
+"en": "St Mary Magdalene, Myrrh-bearer and Equal-to-the-Apostles",
+"el": "Αγία Μαρία η Μαγδαληνή η Μυροφόρος και Ισαπόστολος",
+"ru": "Равноапостольная Мария Магдалина, мироносица",
+"ro": "Sfânta Mironosiță și întocmai cu Apostolii Maria Magdalena",
+"ar": "القديسة مريم المجدلية حاملة الطيب المعادلة الرسل"
+},
+"feast.09-09": {
+"fr": "Saints Joachim et Anne, ancêtres de Dieu",
+"en": "Sts Joachim and Anna, Ancestors of God",
+"el": "Άγιοι Θεοπάτορες Ιωακείμ και Άννα",
+"ru": "Праведные богоотцы Иоаким и Анна",
+"ro": "Sfinții Drepți Părinți Ioachim și Ana",
+"ar": "القديسان البارّان جدّا الإله يواكيم وحنّة"
+},
+"feast.09-23": {
+"fr": "Conception de saint Jean le Prodrome",
+"en": "Conception of St John the Forerunner",
+"el": "Η Σύλληψις του Τιμίου Προδρόμου",
+"ru": "Зачатие Иоанна Предтечи",
+"ro": "Zămislirea Sfântului Ioan Botezătorul",
+"ar": "الحبل بالقديس يوحنا المعمدان"
+},
+"feast.12-09": {
+"fr": "Conception de sainte Anne, mère de la Mère de Dieu",
+"en": "Conception by St Anna of the Theotokos",
+"el": "Η Σύλληψις της Αγίας Άννης",
+"ru": "Зачатие праведной Анной Пресвятой Богородицы",
+"ro": "Zămislirea Sfintei Fecioare Maria de către Sfânta Ana",
+"ar": "حبل القديسة حنة بوالدة الإله"
+},
+"feast.12-04": {
+"fr": "Sainte Barbara, grande martyre — saint Jean Damascène",
+"en": "St Barbara the Great Martyr — St John of Damascus",
+"el": "Αγία Βαρβάρα η Μεγαλομάρτυς — Άγιος Ιωάννης ο Δαμασκηνός",
+"ru": "Великомученица Варвара — преподобный Иоанн Дамаскин",
+"ro": "Sfânta Mare Muceniță Varvara — Sfântul Ioan Damaschin",
+"ar": "القديسة بربارة العظيمة في الشهيدات — القديس يوحنا الدمشقي"
+},
+"feast.08-01": {
+"fr": "Procession de la précieuse Croix — début du Carême de la Dormition",
+"en": "Procession of the Precious Cross — beginning of the Dormition Fast",
+"el": "Πρόοδος του Τιμίου Σταυρού — αρχή της νηστείας του Δεκαπενταυγούστου",
+"ru": "Происхождение Честных Древ Креста — начало Успенского поста",
+"ro": "Scoaterea Sfintei Cruci — începutul Postului Adormirii",
+"ar": "زياح الصليب الكريم — بداية صوم السيدة"
+},
+"tab.today": {
+"fr": "Aujourd'hui",
+"en": "Today",
+"el": "Σήμερα",
+"ru": "Сегодня",
+"ro": "Astăzi",
+"ar": "اليوم"
+},
+"tab.calendar": {
+"fr": "Calendrier",
+"en": "Calendar",
+"el": "Ημερολόγιο",
+"ru": "Календарь",
+"ro": "Calendar",
+"ar": "التقويم"
+},
+"tab.lent": {
+"fr": "Carêmes",
+"en": "Fasts",
+"el": "Νηστείες",
+"ru": "Посты",
+"ro": "Posturi",
+"ar": "الأصوام"
+},
+"tab.settings": {
+"fr": "Réglages",
+"en": "Settings",
+"el": "Ρυθμίσεις",
+"ru": "Настройки",
+"ro": "Setări",
+"ar": "الإعدادات"
+},
+"day.menologion": {
+"fr": "Ménologe : {d}",
+"en": "Menaion date: {d}",
+"el": "Μηνολόγιο: {d}",
+"ru": "По церковному календарю: {d}",
+"ro": "Mineiul: {d}",
+"ar": "تاريخ السنكسار: {d}"
+},
+"day.icons": {
+"fr": "Icônes du jour",
+"en": "Icons of the day",
+"el": "Εικόνες της ημέρας",
+"ru": "Иконы дня",
+"ro": "Icoanele zilei",
+"ar": "أيقونات اليوم"
+},
+"section.fasting": {
+"fr": "Jeûne du jour",
+"en": "Today's fast",
+"el": "Νηστεία της ημέρας",
+"ru": "Пост дня",
+"ro": "Postul zilei",
+"ar": "صوم اليوم"
+},
+"section.saints": {
+"fr": "Saints et mémoires du jour",
+"en": "Saints and commemorations",
+"el": "Άγιοι και μνήμες της ημέρας",
+"ru": "Святые и памяти дня",
+"ro": "Sfinții și pomenirile zilei",
+"ar": "قديسو اليوم وتذكاراته"
+},
+"section.lives": {
+"fr": "Vies des saints",
+"en": "Lives of the saints",
+"el": "Βίοι των Αγίων",
+"ru": "Жития святых",
+"ro": "Viețile sfinților",
+"ar": "سير القديسين"
+},
+"saints.none": {
+"fr": "Aucune commémoration pour ce jour.",
+"en": "No commemoration for this day.",
+"el": "Καμία μνήμη για αυτή την ημέρα.",
+"ru": "В этот день нет памятей.",
+"ro": "Nicio pomenire în această zi.",
+"ar": "لا تذكار في هذا اليوم."
+},
+"lives.loading": {
+"fr": "Chargement du synaxaire…",
+"en": "Loading the synaxarion…",
+"el": "Φόρτωση του Συναξαριστή…",
+"ru": "Загрузка синаксаря…",
+"ro": "Se încarcă Sinaxarul…",
+"ar": "جارٍ تحميل السنكسار…"
+},
+"lives.failed": {
+"fr": "Impossible de charger les vies des saints. Vérifiez votre connexion.",
+"en": "Could not load the lives of the saints. Check your connection.",
+"el": "Αδύνατη η φόρτωση των βίων. Ελέγξτε τη σύνδεση.",
+"ru": "Не удалось загрузить жития. Проверьте подключение.",
+"ro": "Viețile sfinților nu au putut fi încărcate. Verificați conexiunea.",
+"ar": "تعذّر تحميل سير القديسين. تحقّق من الاتصال."
+},
+"lives.retry": {
+"fr": "Réessayer",
+"en": "Retry",
+"el": "Επανάληψη",
+"ru": "Повторить",
+"ro": "Reîncearcă",
+"ar": "إعادة المحاولة"
+},
+"lives.empty": {
+"fr": "Pas de récit disponible pour ce jour.",
+"en": "No text available for this day.",
+"el": "Δεν υπάρχει κείμενο για αυτή την ημέρα.",
+"ru": "Для этого дня нет текста.",
+"ro": "Niciun text pentru această zi.",
+"ar": "لا يوجد نص لهذا اليوم."
+},
+"lives.note": {
+"fr": "Textes en anglais d'orthocal.info, traduits automatiquement sur l'appareil.",
+"en": "Texts from orthocal.info.",
+"el": "Κείμενα στα αγγλικά από το orthocal.info, με αυτόματη μετάφραση στη συσκευή.",
+"ru": "Тексты на английском с orthocal.info, автоматически переводятся на устройстве.",
+"ro": "Texte în engleză de pe orthocal.info, traduse automat pe dispozitiv.",
+"ar": "نصوص بالإنجليزية من orthocal.info تُترجَم تلقائيًا على الجهاز."
+},
+"shellfish.note": {
+"fr": "🦐 Les fruits de mer sans sang (crevettes, calamars, poulpe, moules) sont traditionnellement permis les jours de jeûne.",
+"en": "🦐 Bloodless seafood (shrimp, squid, octopus, mussels) is traditionally allowed on fast days.",
+"el": "🦐 Τα αναίμακτα θαλασσινά (γαρίδες, καλαμάρια, χταπόδι, μύδια) επιτρέπονται παραδοσιακά τις ημέρες νηστείας.",
+"ru": "🦐 Бескровные морепродукты (креветки, кальмары, осьминоги, мидии) по традиции разрешены в постные дни.",
+"ro": "🦐 Fructele de mare fără sânge (creveți, calamar, caracatiță, midii) sunt îngăduite după tradiție în zilele de post.",
+"ar": "🦐 ثمار البحر التي لا دم فيها (الجمبري، الحبار، الأخطبوط، بلح البحر) مسموحة تقليديًا في أيام الصوم."
+},
+"rec.title": {
+"fr": "Recommandations — {s}",
+"en": "Guidance — {s}",
+"el": "Οδηγίες — {s}",
+"ru": "Рекомендации — {s}",
+"ro": "Recomandări — {s}",
+"ar": "إرشادات — {s}"
+},
+"rules.recommendations": {
+"fr": "Règles et recommandations",
+"en": "Rules and guidance",
+"el": "Κανόνες και οδηγίες",
+"ru": "Правила и рекомендации",
+"ro": "Reguli și recomandări",
+"ar": "القواعد والإرشادات"
+},
+"tone": {
+"fr": "Ton {n} de l'Octoèque",
+"en": "Tone {n} of the Octoechos",
+"el": "Ήχος {n}",
+"ru": "Глас {n}",
+"ro": "Glasul {n}",
+"ar": "اللحن {n}"
+},
+"pascha.today": {
+"fr": "Le Christ est ressuscité !",
+"en": "Christ is risen!",
+"el": "Χριστός Ανέστη!",
+"ru": "Христос воскресе!",
+"ro": "Hristos a înviat!",
+"ar": "المسيح قام!"
+},
+"pascha.future": {
+"fr": "Pâques le {d} — dans {n} jours",
+"en": "Pascha on {d} — in {n} days",
+"el": "Πάσχα στις {d} — σε {n} ημέρες",
+"ru": "Пасха {d} — через {n} дн.",
+"ro": "Paștile pe {d} — peste {n} zile",
+"ar": "الفصح في {d} — بعد {n} يومًا"
+},
+"pascha.past": {
+"fr": "Pâques était le {d} (jour {n})",
+"en": "Pascha was on {d} (day {n})",
+"el": "Το Πάσχα ήταν στις {d} (ημέρα {n})",
+"ru": "Пасха была {d} (день {n})",
+"ro": "Paștile au fost pe {d} (ziua {n})",
+"ar": "كان الفصح في {d} (اليوم {n})"
+},
+"calendar.pascha": {
+"fr": "Pâques {y} : {d}",
+"en": "Pascha {y}: {d}",
+"el": "Πάσχα {y}: {d}",
+"ru": "Пасха {y}: {d}",
+"ro": "Paștile {y}: {d}",
+"ar": "الفصح {y}: {d}"
+},
+"calendar.notable": {
+"fr": "Fêtes et temps forts du mois",
+"en": "Feasts of the month",
+"el": "Εορτές του μήνα",
+"ru": "Праздники месяца",
+"ro": "Sărbătorile lunii",
+"ar": "أعياد الشهر"
+},
+"calendar.noFeast": {
+"fr": "Pas de grande fête ce mois-ci.",
+"en": "No major feast this month.",
+"el": "Καμία μεγάλη εορτή αυτόν τον μήνα.",
+"ru": "В этом месяце нет великих праздников.",
+"ro": "Nicio sărbătoare mare în această lună.",
+"ar": "لا أعياد كبرى هذا الشهر."
+},
+"legend.great": {
+"fr": "Grande fête",
+"en": "Great feast",
+"el": "Δεσποτική/Θεομητορική εορτή",
+"ru": "Великий праздник",
+"ro": "Praznic împărătesc",
+"ar": "عيد سيدي"
+},
+"legend.major": {
+"fr": "Fête importante",
+"en": "Major feast",
+"el": "Μεγάλη εορτή",
+"ru": "Большой праздник",
+"ro": "Sărbătoare mare",
+"ar": "عيد كبير"
+},
+"legend.fastFree": {
+"fr": "Sans jeûne",
+"en": "Fast-free",
+"el": "Αρτύσιμο",
+"ru": "Без поста",
+"ro": "Harți",
+"ar": "إفطار"
+},
+"lent.title": {
+"fr": "Carêmes et jeûnes",
+"en": "Fasts and fasting",
+"el": "Νηστείες",
+"ru": "Посты",
+"ro": "Posturi",
+"ar": "الأصوام"
+},
+"lent.current": {
+"fr": "{s} en cours jusqu'au {d} (encore {n} jours).",
+"en": "{s} until {d} ({n} days left).",
+"el": "{s} έως τις {d} (απομένουν {n} ημέρες).",
+"ru": "{s} до {d} (осталось {n} дн.).",
+"ro": "{s} până pe {d} (mai sunt {n} zile).",
+"ar": "{s} حتى {d} (بقي {n} يومًا)."
+},
+"lent.next": {
+"fr": "Prochain carême : {s}, le {d} (dans {n} jours).",
+"en": "Next fast: {s}, on {d} (in {n} days).",
+"el": "Επόμενη νηστεία: {s}, στις {d} (σε {n} ημέρες).",
+"ru": "Следующий пост: {s}, {d} (через {n} дн.).",
+"ro": "Următorul post: {s}, pe {d} (peste {n} zile).",
+"ar": "الصوم التالي: {s}، في {d} (بعد {n} يومًا)."
+},
+"lent.tapHint": {
+"fr": "Touchez pour voir les règles",
+"en": "Tap to see the rules",
+"el": "Πατήστε για τους κανόνες",
+"ru": "Нажмите, чтобы увидеть правила",
+"ro": "Atingeți pentru reguli",
+"ar": "اضغط لعرض القواعد"
+},
+"lent.year": {
+"fr": "Année {y}",
+"en": "Year {y}",
+"el": "Έτος {y}",
+"ru": "{y} год",
+"ro": "Anul {y}",
+"ar": "سنة {y}"
+},
+"lent.inProgress": {
+"fr": "EN COURS",
+"en": "NOW",
+"el": "ΤΩΡΑ",
+"ru": "СЕЙЧАС",
+"ro": "ÎN CURS",
+"ar": "الآن"
+},
+"lent.range": {
+"fr": "Du {a} au {b} · {n} jours",
+"en": "{a} – {b} · {n} days",
+"el": "{a} – {b} · {n} ημέρες",
+"ru": "{a} – {b} · {n} дн.",
+"ro": "{a} – {b} · {n} zile",
+"ar": "{a} – {b} · {n} يومًا"
+},
+"lent.guide": {
+"fr": "Comprendre les niveaux de jeûne",
+"en": "Understanding the fasting levels",
+"el": "Οι βαθμίδες της νηστείας",
+"ru": "Степени поста",
+"ro": "Treptele postului",
+"ar": "درجات الصوم"
+},
+"lent.guideNote": {
+"fr": "Règles selon le Typikon de la Grande Église, telles que publiées par l'Archevêché grec-orthodoxe (GOARCH). Le jeûne est une aide spirituelle, non une fin en soi : malades, femmes enceintes, enfants, personnes âgées et voyageurs l'adaptent avec la bénédiction de leur père spirituel.",
+"en": "Rules according to the Typikon of the Great Church, as published by the Greek Orthodox Archdiocese (GOARCH). Fasting is a spiritual help, not an end in itself: the sick, pregnant women, children, the elderly and travellers adapt it with the blessing of their spiritual father.",
+"el": "Κανόνες κατά το Τυπικό της Μεγάλης Εκκλησίας, όπως δημοσιεύονται από την Ελληνική Ορθόδοξη Αρχιεπισκοπή (GOARCH). Η νηστεία είναι βοήθεια πνευματική, όχι αυτοσκοπός: ασθενείς, έγκυοι, παιδιά, ηλικιωμένοι και οδοιπόροι την προσαρμόζουν με την ευλογία του πνευματικού τους.",
+"ru": "Правила по Типикону Великой Церкви в изложении Греческой православной архиепископии (GOARCH). Пост — духовное средство, а не цель: больные, беременные, дети, пожилые и путешествующие соразмеряют его по благословению духовника.",
+"ro": "Reguli după Tipicul Marii Biserici, așa cum sunt publicate de Arhiepiscopia Ortodoxă Greacă (GOARCH). Postul este un ajutor duhovnicesc, nu un scop în sine: bolnavii, femeile însărcinate, copiii, bătrânii și călătorii îl adaptează cu binecuvântarea duhovnicului.",
+"ar": "القواعد بحسب تيبيكون الكنيسة العظمى كما تنشرها الأبرشية اليونانية الأرثوذكسية (GOARCH). الصوم عون روحي وليس غاية بذاته: يكيّفه المرضى والحوامل والأطفال والمسنّون والمسافرون ببركة أبيهم الروحي."
+},
+"saint.bio": {
+"fr": "Biographie",
+"en": "Biography",
+"el": "Βιογραφία",
+"ru": "Житие",
+"ro": "Biografie",
+"ar": "السيرة"
+},
+"saint.searching": {
+"fr": "Recherche de la biographie…",
+"en": "Looking for the biography…",
+"el": "Αναζήτηση βιογραφίας…",
+"ru": "Поиск жития…",
+"ro": "Se caută biografia…",
+"ar": "جارٍ البحث عن السيرة…"
+},
+"saint.article": {
+"fr": "Article : {t}",
+"en": "Article: {t}",
+"el": "Άρθρο: {t}",
+"ru": "Статья: {t}",
+"ro": "Articol: {t}",
+"ar": "المقال: {t}"
+},
+"saint.readMore": {
+"fr": "Lire l'article complet sur Wikipédia",
+"en": "Read the full article on Wikipedia",
+"el": "Διαβάστε όλο το άρθρο στη Βικιπαίδεια",
+"ru": "Читать статью целиком в Википедии",
+"ro": "Citiți articolul complet pe Wikipedia",
+"ar": "اقرأ المقال كاملًا على ويكيبيديا"
+},
+"saint.license": {
+"fr": "Texte et image : Wikipédia ({l}), licence CC BY-SA.",
+"en": "Text and image: Wikipedia ({l}), CC BY-SA licence.",
+"el": "Κείμενο και εικόνα: Βικιπαίδεια ({l}), άδεια CC BY-SA.",
+"ru": "Текст и изображение: Википедия ({l}), лицензия CC BY-SA.",
+"ro": "Text și imagine: Wikipedia ({l}), licență CC BY-SA.",
+"ar": "النص والصورة: ويكيبيديا ({l})، رخصة CC BY-SA."
+},
+"saint.notFound": {
+"fr": "Aucun article Wikipédia n'a pu être identifié avec certitude pour ce saint. Consultez la section « Vies des saints » de la journée.",
+"en": "No Wikipedia article could be identified with certainty for this saint. See the “Lives of the saints” section of the day.",
+"el": "Δεν βρέθηκε με βεβαιότητα άρθρο της Βικιπαίδειας για αυτόν τον άγιο. Δείτε την ενότητα «Βίοι των Αγίων».",
+"ru": "Не удалось надёжно найти статью Википедии об этом святом. См. раздел «Жития святых».",
+"ro": "Nu s-a putut identifica cu certitudine un articol Wikipedia pentru acest sfânt. Vedeți secțiunea „Viețile sfinților”.",
+"ar": "تعذّر التعرّف بثقة على مقال في ويكيبيديا لهذا القديس. راجع قسم «سير القديسين»."
+},
+"story.source": {
+"fr": "Source : orthocal.info — synaxaire de la tradition grecque.",
+"en": "Source: orthocal.info — synaxarion of the Greek tradition.",
+"el": "Πηγή: orthocal.info — Συναξαριστής ελληνικής παράδοσης.",
+"ru": "Источник: orthocal.info — синаксарь греческой традиции.",
+"ro": "Sursa: orthocal.info — Sinaxarul tradiției grecești.",
+"ar": "المصدر: orthocal.info — سنكسار التقليد اليوناني."
+},
+"tr.translating": {
+"fr": "Traduction…",
+"en": "Translating…",
+"el": "Μετάφραση…",
+"ru": "Перевод…",
+"ro": "Se traduce…",
+"ar": "جارٍ الترجمة…"
+},
+"tr.unavailable": {
+"fr": "Traduction indisponible — texte original",
+"en": "Translation unavailable — original text",
+"el": "Μη διαθέσιμη μετάφραση — πρωτότυπο κείμενο",
+"ru": "Перевод недоступен — исходный текст",
+"ro": "Traducere indisponibilă — text original",
+"ar": "الترجمة غير متاحة — النص الأصلي"
+},
+"tr.auto": {
+"fr": "Traduit automatiquement",
+"en": "Machine-translated",
+"el": "Αυτόματη μετάφραση",
+"ru": "Машинный перевод",
+"ro": "Traducere automată",
+"ar": "ترجمة آلية"
+},
+"tr.original": {
+"fr": "Texte original",
+"en": "Original text",
+"el": "Πρωτότυπο κείμενο",
+"ru": "Исходный текст",
+"ro": "Text original",
+"ar": "النص الأصلي"
+},
+"tr.showOriginal": {
+"fr": "Original",
+"en": "Original",
+"el": "Πρωτότυπο",
+"ru": "Оригинал",
+"ro": "Original",
+"ar": "الأصل"
+},
+"tr.showTranslation": {
+"fr": "Traduction",
+"en": "Translation",
+"el": "Μετάφραση",
+"ru": "Перевод",
+"ro": "Traducere",
+"ar": "الترجمة"
+},
+"tr.disabled": {
+"fr": "Texte original (traduction automatique désactivée).",
+"en": "Original text (automatic translation off).",
+"el": "Πρωτότυπο κείμενο (αυτόματη μετάφραση ανενεργή).",
+"ru": "Исходный текст (автоперевод выключен).",
+"ro": "Text original (traducerea automată dezactivată).",
+"ar": "النص الأصلي (الترجمة الآلية معطّلة)."
+},
+"tr.needsIOS18": {
+"fr": "Texte original. La traduction automatique nécessite iOS 18.",
+"en": "Original text. Automatic translation requires iOS 18.",
+"el": "Πρωτότυπο κείμενο. Η αυτόματη μετάφραση απαιτεί iOS 18.",
+"ru": "Исходный текст. Для автоперевода нужна iOS 18.",
+"ro": "Text original. Traducerea automată necesită iOS 18.",
+"ar": "النص الأصلي. تتطلب الترجمة الآلية iOS 18."
+},
+"settings.language": {
+"fr": "Langue",
+"en": "Language",
+"el": "Γλώσσα",
+"ru": "Язык",
+"ro": "Limba",
+"ar": "اللغة"
+},
+"settings.languageFooter": {
+"fr": "La langue s'applique à toute l'application. Les noms des saints peu connus s'affichent en anglais quand Wikipédia ne les propose pas dans votre langue.",
+"en": "The language applies to the whole app. Lesser-known saints appear in English when Wikipedia has no article in your language.",
+"el": "Η γλώσσα ισχύει σε όλη την εφαρμογή. Οι λιγότερο γνωστοί άγιοι εμφανίζονται στα αγγλικά όταν η Βικιπαίδεια δεν έχει άρθρο στη γλώσσα σας.",
+"ru": "Язык применяется ко всему приложению. Малоизвестные святые показываются по-английски, если в Википедии нет статьи на вашем языке.",
+"ro": "Limba se aplică întregii aplicații. Sfinții mai puțin cunoscuți apar în engleză când Wikipedia nu are articol în limba dvs.",
+"ar": "تُطبَّق اللغة على التطبيق كله. تظهر أسماء القديسين الأقل شهرة بالإنجليزية إذا لم يكن لها مقال بلغتك في ويكيبيديا."
+},
+"settings.calendar": {
+"fr": "Calendrier liturgique",
+"en": "Liturgical calendar",
+"el": "Λειτουργικό ημερολόγιο",
+"ru": "Церковный календарь",
+"ro": "Calendarul liturgic",
+"ar": "التقويم الليتورجي"
+},
+"settings.calendarFooter": {
+"fr": "Pâques et les fêtes mobiles sont identiques dans les deux calendriers.",
+"en": "Pascha and the movable feasts are the same in both calendars.",
+"el": "Το Πάσχα και οι κινητές εορτές είναι ίδιες και στα δύο ημερολόγια.",
+"ru": "Пасха и переходящие праздники совпадают в обоих календарях.",
+"ro": "Paștile și sărbătorile cu dată schimbătoare sunt aceleași în ambele calendare.",
+"ar": "الفصح والأعياد المتنقلة واحدة في التقويمين."
+},
+"settings.widgetOwnSettings": {
+"fr": "Le widget a ses propres réglages : touchez-le longuement puis « Modifier le widget ».",
+"en": "The widget has its own settings: long-press it, then “Edit Widget”.",
+"el": "Το widget έχει δικές του ρυθμίσεις: πατήστε το παρατεταμένα και «Επεξεργασία».",
+"ru": "У виджета свои настройки: нажмите и удерживайте его, затем «Изменить виджет».",
+"ro": "Widgetul are propriile setări: țineți apăsat pe el, apoi „Editați widgetul”.",
+"ar": "للأداة إعداداتها الخاصة: اضغط عليها مطوّلًا ثم «تعديل الأداة»."
+},
+"settings.translate": {
+"fr": "Traduire automatiquement",
+"en": "Translate automatically",
+"el": "Αυτόματη μετάφραση",
+"ru": "Переводить автоматически",
+"ro": "Traducere automată",
+"ar": "ترجمة تلقائية"
+},
+"settings.translateFooter": {
+"fr": "Les vies d'orthocal.info sont en anglais. L'appareil les traduit lui-même dans votre langue (la première fois, il peut proposer de télécharger la langue).",
+"en": "The lives from orthocal.info are in English. The device translates them into your language (the first time it may offer to download the language).",
+"el": "Οι βίοι του orthocal.info είναι στα αγγλικά. Η συσκευή τους μεταφράζει στη γλώσσα σας (την πρώτη φορά μπορεί να ζητήσει λήψη της γλώσσας).",
+"ru": "Жития с orthocal.info на английском. Устройство само переводит их на ваш язык (в первый раз оно может предложить загрузить язык).",
+"ro": "Viețile de pe orthocal.info sunt în engleză. Dispozitivul le traduce în limba dvs. (prima dată poate propune descărcarea limbii).",
+"ar": "سير orthocal.info بالإنجليزية، ويترجمها الجهاز إلى لغتك (قد يقترح تنزيل اللغة في المرة الأولى)."
+},
+"settings.widget": {
+"fr": "Ajouter le widget",
+"en": "Add the widget",
+"el": "Προσθήκη widget",
+"ru": "Добавить виджет",
+"ro": "Adăugați widgetul",
+"ar": "إضافة الأداة"
+},
+"settings.widget.ios1": {
+"fr": "Touchez longuement l'écran d'accueil, puis « Modifier » › « Ajouter un widget ».",
+"en": "Long-press the Home Screen, then “Edit” › “Add Widget”.",
+"el": "Πατήστε παρατεταμένα την οθόνη αφετηρίας, μετά «Επεξεργασία» › «Προσθήκη widget».",
+"ru": "Нажмите и удерживайте экран «Домой», затем «Править» › «Добавить виджет».",
+"ro": "Țineți apăsat pe ecranul principal, apoi „Editați” › „Adăugați widget”.",
+"ar": "اضغط مطوّلًا على الشاشة الرئيسية ثم «تعديل» › «إضافة أداة»."
+},
+"settings.widget.ios2": {
+"fr": "Cherchez « Synaxaire » (petit, moyen, grand) ou « Saints du jour » (mosaïque d'icônes, moyen ou grand).",
+"en": "Search for “Synaxaire” (small, medium, large) or “Saints of the day” (icon mosaic, medium or large).",
+"el": "Αναζητήστε «Synaxaire» (μικρό, μεσαίο, μεγάλο) ή «Άγιοι της ημέρας» (ψηφιδωτό εικόνων).",
+"ru": "Найдите «Synaxaire» (малый, средний, большой) или «Святые дня» (мозаика икон).",
+"ro": "Căutați „Synaxaire” (mic, mediu, mare) sau „Sfinții zilei” (mozaic de icoane).",
+"ar": "ابحث عن «Synaxaire» (صغير، متوسط، كبير) أو «قديسو اليوم» (فسيفساء الأيقونات)."
+},
+"settings.widget.ios3": {
+"fr": "Écran verrouillé : touchez-le longuement › « Personnaliser ».",
+"en": "Lock Screen: long-press it › “Customize”.",
+"el": "Οθόνη κλειδώματος: πατήστε παρατεταμένα › «Προσαρμογή».",
+"ru": "Экран блокировки: нажмите и удерживайте › «Настроить».",
+"ro": "Ecranul de blocare: țineți apăsat › „Personalizați”.",
+"ar": "شاشة القفل: اضغط مطوّلًا › «تخصيص»."
+},
+"settings.widget.android1": {
+"fr": "Touchez longuement l'écran d'accueil › « Widgets ».",
+"en": "Long-press the home screen › “Widgets”.",
+"el": "Πατήστε παρατεταμένα την αρχική οθόνη › «Widgets».",
+"ru": "Нажмите и удерживайте главный экран › «Виджеты».",
+"ro": "Țineți apăsat pe ecranul principal › „Widgeturi”.",
+"ar": "اضغط مطوّلًا على الشاشة الرئيسية › «الأدوات»."
+},
+"settings.widget.android2": {
+"fr": "Choisissez « Synaxaire » puis redimensionnez-le : il s'adapte (petit, moyen, grand). « Saints du jour » affiche la mosaïque d'icônes.",
+"en": "Choose “Synaxaire” and resize it: it adapts (small, medium, large). “Saints of the day” shows the icon mosaic.",
+"el": "Επιλέξτε «Synaxaire» και αλλάξτε το μέγεθος: προσαρμόζεται. Το «Άγιοι της ημέρας» δείχνει το ψηφιδωτό εικόνων.",
+"ru": "Выберите «Synaxaire» и измените размер: виджет подстраивается. «Святые дня» показывает мозаику икон.",
+"ro": "Alegeți „Synaxaire” și redimensionați-l: se adaptează. „Sfinții zilei” afișează mozaicul de icoane.",
+"ar": "اختر «Synaxaire» ثم غيّر حجمها فتتكيّف. وتعرض «قديسو اليوم» فسيفساء الأيقونات."
+},
+"settings.sources": {
+"fr": "Sources",
+"en": "Sources",
+"el": "Πηγές",
+"ru": "Источники",
+"ro": "Surse",
+"ar": "المصادر"
+},
+"source.menologion.title": {
+"fr": "Synaxaire (ménologe)",
+"en": "Synaxarion (Menaion)",
+"el": "Συναξαριστής (Μηνολόγιο)",
+"ru": "Синаксарь (месяцеслов)",
+"ro": "Sinaxar (Mineiul)",
+"ar": "السنكسار"
+},
+"source.menologion.detail": {
+"fr": "Commémorations de la tradition grecque/antiochienne, projet orthocal (licence MIT).",
+"en": "Commemorations of the Greek/Antiochian tradition, orthocal project (MIT licence).",
+"el": "Μνήμες ελληνικής/αντιοχειανής παράδοσης, έργο orthocal (άδεια MIT).",
+"ru": "Памяти греческой/антиохийской традиции, проект orthocal (лицензия MIT).",
+"ro": "Pomeniri ale tradiției grecești/antiohiene, proiectul orthocal (licență MIT).",
+"ar": "تذكارات التقليد اليوناني/الأنطاكي، مشروع orthocal (رخصة MIT)."
+},
+"source.fasting.title": {
+"fr": "Règles de jeûne",
+"en": "Fasting rules",
+"el": "Κανόνες νηστείας",
+"ru": "Правила поста",
+"ro": "Regulile postului",
+"ar": "قواعد الصوم"
+},
+"source.fasting.detail": {
+"fr": "Calendrier de l'Archevêché grec-orthodoxe (goarch.org), vérifié jour par jour 2025-2035.",
+"en": "Greek Orthodox Archdiocese calendar (goarch.org), checked day by day 2025-2035.",
+"el": "Ημερολόγιο της Ελληνικής Ορθόδοξης Αρχιεπισκοπής (goarch.org), ελεγμένο 2025-2035.",
+"ru": "Календарь Греческой архиепископии (goarch.org), сверен по дням 2025-2035.",
+"ro": "Calendarul Arhiepiscopiei Ortodoxe Grecești (goarch.org), verificat zi cu zi 2025-2035.",
+"ar": "تقويم الأبرشية اليونانية الأرثوذكسية (goarch.org)، مدقَّق يومًا بيوم 2025-2035."
+},
+"source.lives.title": {
+"fr": "Vies des saints",
+"en": "Lives of the saints",
+"el": "Βίοι των Αγίων",
+"ru": "Жития святых",
+"ro": "Viețile sfinților",
+"ar": "سير القديسين"
+},
+"source.lives.detail": {
+"fr": "orthocal.info, tradition grecque.",
+"en": "orthocal.info, Greek tradition.",
+"el": "orthocal.info, ελληνική παράδοση.",
+"ru": "orthocal.info, греческая традиция.",
+"ro": "orthocal.info, tradiția grecească.",
+"ar": "orthocal.info، التقليد اليوناني."
+},
+"source.icons.title": {
+"fr": "Icônes et biographies",
+"en": "Icons and biographies",
+"el": "Εικόνες και βιογραφίες",
+"ru": "Иконы и жизнеописания",
+"ro": "Icoane și biografii",
+"ar": "الأيقونات والسير"
+},
+"source.icons.detail": {
+"fr": "Image principale de l'article Wikipédia du saint (CC BY-SA).",
+"en": "Main image of the saint's Wikipedia article (CC BY-SA).",
+"el": "Κύρια εικόνα του άρθρου της Βικιπαίδειας (CC BY-SA).",
+"ru": "Главное изображение статьи Википедии о святом (CC BY-SA).",
+"ro": "Imaginea principală a articolului Wikipedia (CC BY-SA).",
+"ar": "الصورة الرئيسية لمقال القديس في ويكيبيديا (CC BY-SA)."
+},
+"settings.clearCache": {
+"fr": "Vider le cache des images et textes",
+"en": "Clear image and text cache",
+"el": "Εκκαθάριση προσωρινής μνήμης",
+"ru": "Очистить кэш",
+"ro": "Goliți memoria cache",
+"ar": "مسح ذاكرة التخزين المؤقت"
+},
+"settings.cacheCleared": {
+"fr": "Cache vidé",
+"en": "Cache cleared",
+"el": "Η μνήμη εκκαθαρίστηκε",
+"ru": "Кэш очищен",
+"ro": "Memoria cache golită",
+"ar": "تم المسح"
+},
+"settings.footer": {
+"fr": "Synaxaire — calendrier orthodoxe. Pour un usage personnel.",
+"en": "Synaxaire — Orthodox calendar. For personal use.",
+"el": "Synaxaire — ορθόδοξο ημερολόγιο. Για προσωπική χρήση.",
+"ru": "Synaxaire — православный календарь. Для личного пользования.",
+"ro": "Synaxaire — calendar ortodox. Pentru uz personal.",
+"ar": "Synaxaire — تقويم أرثوذكسي. للاستخدام الشخصي."
+},
+"widget.desc": {
+"fr": "Le saint du jour avec son icône, la fête et le jeûne.",
+"en": "Saint of the day with icon, feast and fast.",
+"el": "Ο άγιος της ημέρας με την εικόνα, η εορτή και η νηστεία.",
+"ru": "Святой дня с иконой, праздник и пост.",
+"ro": "Sfântul zilei cu icoana, sărbătoarea și postul.",
+"ar": "قديس اليوم مع أيقونته والعيد والصوم."
+},
+"widget.saints.name": {
+"fr": "Saints du jour",
+"en": "Saints of the day",
+"el": "Άγιοι της ημέρας",
+"ru": "Святые дня",
+"ro": "Sfinții zilei",
+"ar": "قديسو اليوم"
+},
+"widget.saints.desc": {
+"fr": "Les icônes des saints du jour.",
+"en": "Icons of today's saints.",
+"el": "Οι εικόνες των αγίων της ημέρας.",
+"ru": "Иконы святых дня.",
+"ro": "Icoanele sfinților zilei.",
+"ar": "أيقونات قديسي اليوم."
+},
+"widget.alsoCelebrated": {
+"fr": "AUSSI FÊTÉS",
+"en": "ALSO COMMEMORATED",
+"el": "ΕΠΙΣΗΣ ΕΟΡΤΑΖΟΥΝ",
+"ru": "ТАКЖЕ ПАМЯТЬ",
+"ro": "ÎNCĂ POMENIȚI",
+"ar": "ويُعيَّد أيضًا"
+},
+"rec.greatLent": {
+"fr": "Du lundi au vendredi : xérophagie (ni huile ni vin) ; samedi et dimanche : vin et huile.\nPoisson permis à l'Annonciation (25 mars) et au dimanche des Rameaux ; œufs de poisson (tarama) le samedi de Lazare.\nLes trois premiers jours (Lundi pur → mercredi), la tradition recommande une abstinence complète ou très légère jusqu'à la Liturgie des Présanctifiés.\nOffices propres : Grand Canon de saint André (1re semaine), Présanctifiés le mercredi et le vendredi, Salutations à la Mère de Dieu le vendredi soir.\nLe jeûne va avec la prière, l'aumône, la confession et le pardon mutuel ; il s'adapte selon la santé, avec la bénédiction du père spirituel.",
+"en": "Monday to Friday: xerophagy (no oil, no wine); Saturday and Sunday: wine and oil.\nFish on the Annunciation (March 25) and Palm Sunday; fish roe (taramá) on Lazarus Saturday.\nDuring the first three days (Clean Monday to Wednesday), tradition recommends total or very light abstinence until the Presanctified Liturgy.\nSpecial services: Great Canon of St Andrew (first week), Presanctified Liturgy on Wednesday and Friday, Salutations to the Theotokos on Friday evening.\nFasting goes with prayer, almsgiving, confession and mutual forgiveness; it is adapted to one's health with the blessing of one's spiritual father.",
+"el": "Δευτέρα έως Παρασκευή: ξηροφαγία (χωρίς λάδι και κρασί)· Σάββατο και Κυριακή: οίνος και έλαιον.\nΚατάλυσις ιχθύος στον Ευαγγελισμό (25 Μαρτίου) και την Κυριακή των Βαΐων· ταραμάς το Σάββατο του Λαζάρου.\nΤις τρεις πρώτες ημέρες (Καθαρά Δευτέρα έως Τετάρτη) η παράδοση συνιστά πλήρη ή πολύ ελαφριά αποχή έως την Προηγιασμένη.\nΙδιαίτερες ακολουθίες: Μέγας Κανών του Αγίου Ανδρέου (Α΄ εβδομάδα), Προηγιασμένη Τετάρτη και Παρασκευή, Χαιρετισμοί την Παρασκευή το βράδυ.\nΗ νηστεία συνοδεύεται από προσευχή, ελεημοσύνη, εξομολόγηση και αμοιβαία συγχώρηση· προσαρμόζεται στην υγεία με την ευλογία του πνευματικού.",
+"ru": "С понедельника по пятницу — сухоядение (без масла и вина); в субботу и воскресенье — вино и елей.\nРыба на Благовещение (25 марта) и в Вербное воскресенье; рыбная икра в Лазареву субботу.\nВ первые три дня (с Чистого понедельника до среды) традиция советует полное или очень строгое воздержание до Литургии Преждеосвященных Даров.\nОсобые службы: Великий канон святого Андрея (первая седмица), Преждеосвященная литургия в среду и пятницу, Акафист Богородице в пятницу вечером.\nПост соединяется с молитвой, милостыней, исповедью и взаимным прощением; он соразмеряется со здоровьем по благословению духовника.",
+"ro": "De luni până vineri: mâncare uscată (fără ulei și vin); sâmbăta și duminica: vin și untdelemn.\nDezlegare la pește de Buna Vestire (25 martie) și de Florii; icre în Sâmbăta lui Lazăr.\nÎn primele trei zile (Lunea curată – miercuri), tradiția recomandă ajunare totală sau foarte ușoară până la Liturghia Darurilor mai înainte sfințite.\nSlujbe proprii: Canonul cel Mare al Sfântului Andrei (prima săptămână), Liturghia Darurilor miercurea și vinerea, Acatistul Maicii Domnului vineri seara.\nPostul se împletește cu rugăciunea, milostenia, spovedania și iertarea reciprocă; se adaptează sănătății, cu binecuvântarea duhovnicului.",
+"ar": "من الاثنين إلى الجمعة: يابسات (بلا زيت ولا خمر)؛ السبت والأحد: خمر وزيت.\nيُسمح بالسمك في عيد البشارة (25 آذار) وأحد الشعانين، وببطارخ السمك في سبت لعازر.\nفي الأيام الثلاثة الأولى (من الاثنين النظيف إلى الأربعاء) يُستحسن الانقطاع التام أو الخفيف جدًا حتى القداس السابق تقديسه.\nصلوات خاصة: القانون الكبير للقديس أندراوس (الأسبوع الأول)، القداس السابق تقديسه يومي الأربعاء والجمعة، المديح لوالدة الإله مساء الجمعة.\nيرافق الصومَ الصلاةُ والصدقةُ والاعترافُ والمسامحة المتبادلة، ويُكيَّف بحسب الصحة ببركة الأب الروحي."
+},
+"rec.holyWeek": {
+"fr": "Semaine la plus stricte de l'année : xérophagie chaque jour, vin et huile le Grand Jeudi.\nLe Grand Vendredi, beaucoup ne mangent rien jusqu'à la mise au tombeau (Épitaphios) ; jour d'abstinence totale si possible.\nLe Grand Samedi, jeûne strict ; la tradition admet un peu de vin après la Liturgie de saint Basile.\nSe préparer à la communion pascale par la confession au début de la semaine.",
+"en": "The strictest week of the year: xerophagy every day, wine and oil on Holy Thursday.\nOn Holy Friday many eat nothing until the Burial service (Epitaphios); a day of total abstinence if possible.\nHoly Saturday: strict fast; tradition allows a little wine after the Liturgy of St Basil.\nPrepare for Paschal communion through confession early in the week.",
+"el": "Η αυστηρότερη εβδομάδα του έτους: ξηροφαγία κάθε ημέρα, οίνος και έλαιον τη Μεγάλη Πέμπτη.\nΤη Μεγάλη Παρασκευή πολλοί δεν τρώνε τίποτα έως τον Επιτάφιο· ημέρα πλήρους αποχής αν είναι δυνατόν.\nΤο Μέγα Σάββατο αυστηρή νηστεία· η παράδοση επιτρέπει λίγο κρασί μετά τη Λειτουργία του Μεγάλου Βασιλείου.\nΠροετοιμασία για την πασχαλινή Θεία Κοινωνία με εξομολόγηση στην αρχή της εβδομάδας.",
+"ru": "Самая строгая седмица года: сухоядение каждый день, вино и елей в Великий четверг.\nВ Великую пятницу многие ничего не едят до выноса Плащаницы; по возможности — день полного воздержания.\nВеликая суббота — строгий пост; после литургии святителя Василия допускается немного вина.\nГотовиться к пасхальному причастию исповедью в начале седмицы.",
+"ro": "Cea mai aspră săptămână a anului: mâncare uscată în fiecare zi, vin și untdelemn în Joia Mare.\nÎn Vinerea Mare mulți nu mănâncă nimic până la Prohod; zi de ajunare totală dacă este cu putință.\nSâmbăta Mare: post aspru; tradiția îngăduie puțin vin după Liturghia Sfântului Vasile.\nPregătirea pentru împărtășirea de Paști prin spovedanie la începutul săptămânii.",
+"ar": "أشد أسابيع السنة: يابسات كل يوم، وخمر وزيت يوم الخميس العظيم.\nفي الجمعة العظيمة يمتنع كثيرون عن الطعام حتى جناز المسيح؛ يوم انقطاع تام إن أمكن.\nالسبت العظيم: صوم قاطع؛ ويُسمح بقليل من الخمر بعد قداس القديس باسيليوس.\nالاستعداد للمناولة الفصحية بالاعتراف في بداية الأسبوع."
+},
+"rec.cheesefare": {
+"fr": "Dernière semaine avant le Carême : plus de viande, mais laitages, œufs et poisson sont permis tous les jours, même le mercredi et le vendredi.\nLe dimanche du Pardon, on se demande mutuellement pardon aux Vêpres du soir.",
+"en": "Last week before Lent: no more meat, but dairy, eggs and fish are allowed every day, even Wednesday and Friday.\nOn Forgiveness Sunday, we ask one another's forgiveness at the evening Vespers.",
+"el": "Τελευταία εβδομάδα πριν τη Σαρακοστή: όχι κρέας, αλλά γαλακτοκομικά, αυγά και ψάρι επιτρέπονται κάθε ημέρα, και Τετάρτη και Παρασκευή.\nΤην Κυριακή της Τυρινής ζητούμε αμοιβαία συγχώρηση στον Εσπερινό της Συγχωρήσεως.",
+"ru": "Последняя неделя перед постом: мясо уже не едят, но молочное, яйца и рыба разрешены каждый день, даже в среду и пятницу.\nВ Прощёное воскресенье на вечерне все просят друг у друга прощения.",
+"ro": "Ultima săptămână înainte de Post: fără carne, dar lactatele, ouăle și peștele sunt îngăduite în fiecare zi, chiar miercurea și vinerea.\nÎn Duminica Iertării ne cerem iertare unii altora la Vecernia de seară.",
+"ar": "الأسبوع الأخير قبل الصوم: لا لحم، لكن يُسمح بالألبان والبيض والسمك كل يوم حتى الأربعاء والجمعة.\nفي أحد الغفران نطلب المسامحة بعضنا من بعض في صلاة الغروب."
+},
+"rec.apostles": {
+"fr": "Selon l'usage grec (GOARCH) : poisson, vin et huile permis tous les jours sauf le mercredi et le vendredi.\nMercredi et vendredi : jeûne strict, sauf fête (Nativité du Prodrome le 24 juin : poisson).\nLe carême s'achève avec la fête des saints Pierre et Paul (29 juin).",
+"en": "Greek usage (GOARCH): fish, wine and oil allowed every day except Wednesday and Friday.\nWednesday and Friday: strict fast, unless a feast falls (Nativity of the Forerunner on June 24: fish).\nThe fast ends with the feast of Sts Peter and Paul (June 29).",
+"el": "Κατά την ελληνική πράξη: ψάρι, οίνος και έλαιον κάθε ημέρα εκτός Τετάρτης και Παρασκευής.\nΤετάρτη και Παρασκευή: αυστηρή νηστεία, εκτός εορτής (Γενέθλιον του Προδρόμου, 24 Ιουνίου: ψάρι).\nΗ νηστεία τελειώνει με την εορτή των Αγίων Αποστόλων Πέτρου και Παύλου (29 Ιουνίου).",
+"ru": "По греческой практике: рыба, вино и елей разрешены каждый день, кроме среды и пятницы.\nСреда и пятница — строгий пост, если нет праздника (Рождество Предтечи 24 июня — рыба).\nПост заканчивается праздником святых апостолов Петра и Павла (29 июня).",
+"ro": "După rânduiala grecească: pește, vin și untdelemn în fiecare zi, în afară de miercuri și vineri.\nMiercurea și vinerea: post aspru, afară de sărbători (Nașterea Înaintemergătorului, 24 iunie: pește).\nPostul se încheie cu praznicul Sfinților Apostoli Petru și Pavel (29 iunie).",
+"ar": "بحسب الممارسة اليونانية: يُسمح بالسمك والخمر والزيت كل يوم ما عدا الأربعاء والجمعة.\nالأربعاء والجمعة: صوم قاطع، إلا في الأعياد (مولد السابق في 24 حزيران: سمك).\nينتهي الصوم بعيد الرسولين بطرس وبولس (29 حزيران)."
+},
+"rec.dormition": {
+"fr": "Du 1er au 14 août : jeûne strict en semaine, vin et huile le samedi et le dimanche.\nPoisson permis à la Transfiguration (6 août).\nOn chante chaque soir la Paraclisis (petite ou grande supplication) à la Mère de Dieu.",
+"en": "August 1–14: strict fast on weekdays, wine and oil on Saturday and Sunday.\nFish allowed on the Transfiguration (August 6).\nThe Paraklesis (Small or Great Supplicatory Canon) to the Theotokos is sung every evening.",
+"el": "1–14 Αυγούστου: αυστηρή νηστεία τις καθημερινές, οίνος και έλαιον Σάββατο και Κυριακή.\nΚατάλυσις ιχθύος τη Μεταμόρφωση (6 Αυγούστου).\nΚάθε βράδυ ψάλλεται η Παράκληση (Μικρή ή Μεγάλη) στην Παναγία.",
+"ru": "С 1 по 14 августа — строгий пост в будни, вино и елей в субботу и воскресенье.\nРыба разрешается на Преображение (6 августа).\nКаждый вечер поётся молебный канон (Параклис) Богородице.",
+"ro": "1–14 august: post aspru în zilele de rând, vin și untdelemn sâmbăta și duminica.\nDezlegare la pește la Schimbarea la Față (6 august).\nÎn fiecare seară se cântă Paraclisul Maicii Domnului.",
+"ar": "من 1 إلى 14 آب: صوم قاطع في أيام الأسبوع، وخمر وزيت يومي السبت والأحد.\nيُسمح بالسمك في عيد التجلي (6 آب).\nتُرتَّل كل مساء صلاة الباراكليسي (البراكليسي الصغير أو الكبير) لوالدة الإله."
+},
+"rec.nativity": {
+"fr": "Du 15 novembre au 11 décembre : poisson, vin et huile permis, sauf le mercredi et le vendredi (jeûne strict, ou vin et huile en cas de fête).\nDu 12 au 24 décembre : plus de poisson ; vin et huile le samedi et le dimanche, jeûne strict en semaine.\nPoisson à l'Entrée au Temple de la Mère de Dieu (21 novembre).\nLa veille de Noël (24 décembre) : jeûne strict, traditionnellement jusqu'à la première étoile ou après la Liturgie.",
+"en": "November 15 – December 11: fish, wine and oil allowed except Wednesday and Friday (strict fast, or wine and oil on a feast).\nDecember 12–24: no more fish; wine and oil on Saturday and Sunday, strict fast on weekdays.\nFish on the Entry of the Theotokos into the Temple (November 21).\nChristmas Eve (December 24): strict fast, traditionally until the first star or after the Liturgy.",
+"el": "15 Νοεμβρίου – 11 Δεκεμβρίου: ψάρι, οίνος και έλαιον εκτός Τετάρτης και Παρασκευής (αυστηρή νηστεία ή οίνος και έλαιον σε εορτή).\n12–24 Δεκεμβρίου: όχι ψάρι· οίνος και έλαιον Σάββατο και Κυριακή, αυστηρή νηστεία τις καθημερινές.\nΚατάλυσις ιχθύος στα Εισόδια της Θεοτόκου (21 Νοεμβρίου).\nΠαραμονή Χριστουγέννων (24 Δεκεμβρίου): αυστηρή νηστεία, κατά την παράδοση έως το πρώτο αστέρι ή μετά τη Λειτουργία.",
+"ru": "С 15 ноября по 11 декабря — рыба, вино и елей, кроме среды и пятницы (строгий пост или вино и елей в праздник).\nС 12 по 24 декабря — без рыбы; вино и елей в субботу и воскресенье, строгий пост в будни.\nРыба на Введение во храм Богородицы (21 ноября).\nСочельник (24 декабря): строгий пост, по традиции до первой звезды или до окончания литургии.",
+"ro": "15 noiembrie – 11 decembrie: pește, vin și untdelemn, afară de miercuri și vineri (post aspru sau vin și untdelemn la sărbători).\n12–24 decembrie: fără pește; vin și untdelemn sâmbăta și duminica, post aspru în zilele de rând.\nDezlegare la pește la Intrarea în Biserică a Maicii Domnului (21 noiembrie).\nAjunul Crăciunului (24 decembrie): post aspru, după tradiție până la prima stea sau după Liturghie.",
+"ar": "من 15 تشرين الثاني إلى 11 كانون الأول: يُسمح بالسمك والخمر والزيت ما عدا الأربعاء والجمعة (صوم قاطع، أو خمر وزيت في الأعياد).\nمن 12 إلى 24 كانون الأول: لا سمك؛ خمر وزيت السبت والأحد، وصوم قاطع في أيام الأسبوع.\nيُسمح بالسمك في عيد دخول السيدة إلى الهيكل (21 تشرين الثاني).\nبرامون الميلاد (24 كانون الأول): صوم قاطع، وبحسب التقليد حتى ظهور أول نجمة أو بعد القداس."
+},
+"rec.wednesdayFriday": {
+"fr": "Le mercredi (trahison du Christ) et le vendredi (Crucifixion) sont jours de jeûne toute l'année, hors périodes sans jeûne.\nJeûne strict par défaut ; vin et huile, ou poisson, lorsqu'une fête tombe ce jour-là.",
+"en": "Wednesday (betrayal of Christ) and Friday (Crucifixion) are fast days all year, except in fast-free periods.\nStrict fast by default; wine and oil, or fish, when a feast falls on that day.",
+"el": "Η Τετάρτη (προδοσία του Χριστού) και η Παρασκευή (Σταύρωση) είναι ημέρες νηστείας όλο το χρόνο, εκτός των περιόδων καταλύσεως.\nΑυστηρή νηστεία κατά κανόνα· οίνος και έλαιον ή ψάρι όταν συμπίπτει εορτή.",
+"ru": "Среда (предательство Христа) и пятница (Распятие) — постные дни круглый год, кроме сплошных седмиц.\nОбычно строгий пост; вино и елей или рыба, если на этот день приходится праздник.",
+"ro": "Miercurea (vânzarea Domnului) și vinerea (Răstignirea) sunt zile de post tot anul, afară de perioadele fără post.\nPost aspru de regulă; vin și untdelemn sau pește când în acea zi cade o sărbătoare.",
+"ar": "الأربعاء (تسليم المسيح) والجمعة (الصلب) يوما صوم على مدار السنة، ما عدا فترات الإفطار.\nصوم قاطع عادةً؛ ويُسمح بالخمر والزيت أو بالسمك إذا صادف عيد."
+},
+"rec.paschalSeason": {
+"fr": "De Thomas à la Pentecôte, le jeûne du mercredi et du vendredi est adouci : vin et huile permis.\nPoisson à la Mi-Pentecôte et à l'Apodose de Pâques.\nOn se salue par « Le Christ est ressuscité ! — En vérité Il est ressuscité ! » jusqu'à l'Ascension.",
+"en": "From Thomas Sunday to Pentecost, the Wednesday and Friday fast is relaxed: wine and oil allowed.\nFish at Mid-Pentecost and at the Leave-taking of Pascha.\nWe greet one another with “Christ is risen! — Truly He is risen!” until the Ascension.",
+"el": "Από του Θωμά έως την Πεντηκοστή η νηστεία Τετάρτης και Παρασκευής είναι ελαφρύτερη: οίνος και έλαιον.\nΚατάλυσις ιχθύος τη Μεσοπεντηκοστή και την Απόδοση του Πάσχα.\nΧαιρετιζόμαστε με το «Χριστός Ανέστη! — Αληθώς Ανέστη!» έως την Ανάληψη.",
+"ru": "От Фомина воскресенья до Троицы пост в среду и пятницу ослаблен: вино и елей.\nРыба на Преполовение и на отдание Пасхи.\nДо Вознесения приветствуем друг друга: «Христос воскресе! — Воистину воскресе!»",
+"ro": "De la Duminica Tomii până la Rusalii, postul de miercuri și vineri este mai ușor: vin și untdelemn.\nDezlegare la pește la Înjumătățirea Praznicului și la Odovania Paștilor.\nNe salutăm cu „Hristos a înviat! — Adevărat a înviat!” până la Înălțare.",
+"ar": "من أحد توما إلى العنصرة يُخفَّف صوم الأربعاء والجمعة: يُسمح بالخمر والزيت.\nيُسمح بالسمك في منتصف الخمسين ووداع الفصح.\nنتبادل التحية «المسيح قام! — حقًا قام!» حتى الصعود."
+},
+"rec.christmastide": {
+"fr": "Du 25 décembre au 4 janvier : aucun jeûne.\nLa veille de la Théophanie (5 janvier) est un jour de jeûne strict.",
+"en": "December 25 – January 4: no fasting.\nThe Eve of Theophany (January 5) is a strict fast day.",
+"el": "25 Δεκεμβρίου – 4 Ιανουαρίου: κατάλυσις εις πάντα.\nΗ παραμονή των Θεοφανείων (5 Ιανουαρίου) είναι ημέρα αυστηρής νηστείας.",
+"ru": "С 25 декабря по 4 января поста нет.\nКрещенский сочельник (5 января) — день строгого поста.",
+"ro": "25 decembrie – 4 ianuarie: fără post.\nAjunul Bobotezei (5 ianuarie) este zi de post aspru.",
+"ar": "من 25 كانون الأول إلى 4 كانون الثاني: لا صوم.\nبرامون الظهور الإلهي (5 كانون الثاني) يوم صوم قاطع."
+},
+"rec.publicanWeek": {
+"fr": "Semaine sans jeûne, pour ne pas imiter l'orgueil du pharisien qui « jeûnait deux fois la semaine ».",
+"en": "A fast-free week, so as not to imitate the pride of the Pharisee who “fasted twice a week”.",
+"el": "Εβδομάδα καταλύσεως, για να μη μιμηθούμε την υπερηφάνεια του Φαρισαίου που «νήστευε δις του σαββάτου».",
+"ru": "Сплошная седмица — чтобы не уподобиться гордости фарисея, который «постился два раза в неделю».",
+"ro": "Săptămână fără post, ca să nu imităm mândria fariseului care „postea de două ori pe săptămână”.",
+"ar": "أسبوع إفطار، كي لا نتشبّه بكبرياء الفريسي الذي «كان يصوم مرتين في الأسبوع»."
+},
+"rec.brightWeek": {
+"fr": "Toute la semaine est un seul jour de Pâques : aucun jeûne.",
+"en": "The whole week is one single day of Pascha: no fasting.",
+"el": "Όλη η εβδομάδα είναι μία ημέρα Πάσχα: κατάλυσις εις πάντα.",
+"ru": "Вся седмица — как один пасхальный день: поста нет.",
+"ro": "Toată săptămâna este o singură zi de Paști: fără post.",
+"ar": "الأسبوع كله يوم فصح واحد: لا صوم."
+},
+"rec.trinityWeek": {
+"fr": "Semaine sans jeûne après la Pentecôte. Le Carême des Apôtres commence le lundi suivant le dimanche de Tous les Saints.",
+"en": "Fast-free week after Pentecost. The Apostles' Fast begins on the Monday after All Saints Sunday.",
+"el": "Εβδομάδα καταλύσεως μετά την Πεντηκοστή. Η νηστεία των Αποστόλων αρχίζει τη Δευτέρα μετά την Κυριακή των Αγίων Πάντων.",
+"ru": "Сплошная седмица после Троицы. Петров пост начинается в понедельник после Недели всех святых.",
+"ro": "Săptămână fără post după Rusalii. Postul Apostolilor începe în lunea de după Duminica Tuturor Sfinților.",
+"ar": "أسبوع إفطار بعد العنصرة. يبدأ صوم الرسل يوم الاثنين الذي يلي أحد جميع القديسين."
+},
+"rec.strictDay": {
+"fr": "Jour de jeûne strict quel que soit le jour de la semaine (veille de la Théophanie, Décollation du Prodrome, Exaltation de la Croix).\nS'il tombe un samedi ou un dimanche, vin et huile sont permis.",
+"en": "Strict fast whatever the weekday (Eve of Theophany, Beheading of the Forerunner, Exaltation of the Cross).\nIf it falls on Saturday or Sunday, wine and oil are allowed.",
+"el": "Αυστηρή νηστεία ανεξαρτήτως ημέρας (Παραμονή Θεοφανείων, Αποτομή του Προδρόμου, Ύψωσις του Σταυρού).\nΑν συμπέσει Σάββατο ή Κυριακή, επιτρέπονται οίνος και έλαιον.",
+"ru": "Строгий пост в любой день недели (Крещенский сочельник, Усекновение главы Предтечи, Воздвижение Креста).\nЕсли день приходится на субботу или воскресенье, разрешаются вино и елей.",
+"ro": "Post aspru în orice zi a săptămânii (Ajunul Bobotezei, Tăierea capului Înaintemergătorului, Înălțarea Sfintei Cruci).\nDacă se nimerește sâmbăta sau duminica, este dezlegare la vin și untdelemn.",
+"ar": "صوم قاطع أيًّا كان يوم الأسبوع (برامون الظهور الإلهي، قطع رأس السابق، رفع الصليب).\nإذا صادف يوم سبت أو أحد يُسمح بالخمر والزيت."
+}
+}
+}

@@ -13,6 +13,8 @@ public struct LiturgicalDay: Identifiable, Sendable {
     /// Titres secondaires (fête fixe + jour mobile, quand les deux coïncident).
     public let subtitles: [String]
     public let rank: FeastRank
+    /// Vrai quand le titre est le nom du premier saint (pas une fête).
+    public let titleIsSaint: Bool
     /// Article Wikipédia (fr) de la fête, quand il est connu.
     public let feastWikipediaTitle: String?
 
@@ -58,7 +60,7 @@ public struct LiturgicalDay: Identifiable, Sendable {
         if church.month == 4 && church.day == 23 && georgeBeforePascha {
             list = list.map { c in
                 c.en.hasPrefix("George the Great Martyr")
-                    ? Commemoration(fr: c.fr + " (fête transférée au lundi de Pâques)", en: c.en, t: nil)
+                    ? Commemoration(fr: c.fr + Loc.t("george.suffix"), en: c.en + Loc.t("george.suffix"), t: nil)
                     : c
             }
         }
@@ -78,25 +80,28 @@ public struct LiturgicalDay: Identifiable, Sendable {
         if let m = movable { titles.append((m.title, m.rank, m.wikipediaTitle)) }
         if let f = fixed { titles.append((f.title, f.rank, f.wikipediaTitle)) }
         if pd == 1 && georgeBeforePascha {
-            titles.append(("Saint Georges, grand martyr (fête transférée)", .major, "Georges de Lydda"))
+            titles.append((Loc.t("george.title"), .major, "Georges de Lydda"))
         }
         // La fête du rang le plus élevé passe en premier.
         titles.sort { $0.1 > $1.1 }
 
         if let first = titles.first, first.1 >= .sunday || movable == nil {
             self.title = first.0
+            self.titleIsSaint = false
             self.rank = max(first.1, civil.isSunday ? .sunday : .ordinary)
             self.feastWikipediaTitle = first.2
             self.subtitles = titles.dropFirst().map { $0.0 }
         } else if let m = movable {
             // Jour de semaine ordinaire du Carême ou du temps pascal : le saint du jour devient le titre.
-            let saintTitle = list.first(where: { !$0.isFestal })?.fr ?? m.title
+            let saintTitle = list.first(where: { !$0.isFestal })?.displayName ?? m.title
             self.title = saintTitle
+            self.titleIsSaint = true
             self.rank = civil.isSunday ? .sunday : .ordinary
             self.feastWikipediaTitle = nil
             self.subtitles = [m.title] + titles.dropFirst().map { $0.0 }
         } else {
-            self.title = list.first(where: { !$0.isFestal })?.fr ?? list.first?.fr ?? "Férie"
+            self.title = list.first(where: { !$0.isFestal })?.displayName ?? list.first?.displayName ?? Loc.t("ferial")
+            self.titleIsSaint = !list.isEmpty
             self.rank = civil.isSunday ? .sunday : (list.isEmpty ? .ordinary : .saint)
             self.feastWikipediaTitle = nil
             self.subtitles = []

@@ -1,7 +1,7 @@
 import SwiftUI
 import UIKit
 
-/// Fiche d'un saint : icône, biographie Wikipédia et lien vers l'article.
+/// Fiche d'un saint : icône, nom et biographie Wikipédia, lien vers l'article.
 struct SaintScreen: View {
     let commemoration: Commemoration
     var wikipediaTitle: String?
@@ -10,60 +10,63 @@ struct SaintScreen: View {
     @State private var image: UIImage?
     @State private var loading = true
 
-    private var source: IconSource {
-        if let wikipediaTitle { return .title(wikipediaTitle, fallback: commemoration) }
-        return .commemoration(commemoration)
+    private var source: IconSource { .saint(commemoration, knownTitle: wikipediaTitle) }
+
+    /// Nom dans la langue de l'app : nos noms pour fr/en, Wikipédia sinon.
+    private var displayName: String {
+        if Loc.language != "fr" && Loc.language != "en", let p = profile, p.language == Loc.language { return p.name }
+        return commemoration.displayName
     }
 
     var body: some View {
         ScrollView {
             VStack(spacing: 18) {
                 IconFrame(image: image, initial: commemoration.initial, cornerRadius: 18)
-                    .frame(width: 220, height: 290)
+                    .iconSize(IconSize.detail)
                     .shadow(color: .black.opacity(0.2), radius: 12, y: 6)
                     .padding(.top, 12)
 
                 VStack(spacing: 6) {
-                    Text(commemoration.fr)
+                    Text(displayName)
                         .font(Theme.titleFont(23))
                         .foregroundStyle(Theme.burgundy)
                         .multilineTextAlignment(.center)
                         .fixedSize(horizontal: false, vertical: true)
-                    Text(commemoration.en)
-                        .font(.system(size: 13))
-                        .italic()
-                        .foregroundStyle(Theme.inkSoft)
-                        .multilineTextAlignment(.center)
+                    if displayName != commemoration.en {
+                        Text(commemoration.en)
+                            .font(.system(size: 13))
+                            .italic()
+                            .foregroundStyle(Theme.inkSoft)
+                            .multilineTextAlignment(.center)
+                    }
                 }
 
-                SectionCard(title: "Biographie", symbol: "text.book.closed") {
+                SectionCard(title: Loc.t("saint.bio"), symbol: "text.book.closed") {
                     if loading {
                         HStack(spacing: 8) {
                             ProgressView()
-                            Text("Recherche de la biographie…")
+                            Text(Loc.t("saint.searching"))
                                 .font(.system(size: 14))
                                 .foregroundStyle(Theme.inkSoft)
                         }
                     } else if let profile {
-                        if profile.title.lowercased() != commemoration.fr.lowercased() {
-                            Text("Article : \(profile.title)")
-                                .font(.system(size: 13, weight: .semibold))
-                                .foregroundStyle(Theme.gold)
-                        }
+                        Text(Loc.t("saint.article", ["t": profile.title]))
+                            .font(.system(size: 13, weight: .semibold))
+                            .foregroundStyle(Theme.gold)
                         TranslatableText(original: profile.extract, sourceLanguage: profile.language)
                         if let url = profile.pageURL {
                             Link(destination: url) {
-                                Label("Lire l'article complet sur Wikipédia", systemImage: "safari")
+                                Label(Loc.t("saint.readMore"), systemImage: "safari")
                                     .font(.system(size: 14, weight: .semibold))
                             }
                             .padding(.top, 4)
                         }
-                        Text("Texte et image : Wikipédia (\(profile.language)), licence CC BY-SA. Vérifiez qu'il s'agit bien du saint commémoré : les homonymes sont fréquents.")
+                        Text(Loc.t("saint.license", ["l": profile.language]))
                             .font(.system(size: 11))
                             .foregroundStyle(Theme.inkSoft)
                             .fixedSize(horizontal: false, vertical: true)
                     } else {
-                        Text("Aucune biographie trouvée en ligne pour ce saint. Consultez la section « Vies des saints » de la journée, ou le Synaxaire.")
+                        Text(Loc.t("saint.notFound"))
                             .font(.system(size: 14))
                             .foregroundStyle(Theme.inkSoft)
                             .fixedSize(horizontal: false, vertical: true)
@@ -80,10 +83,8 @@ struct SaintScreen: View {
             let p = await IconLoader.profile(for: source)
             profile = p
             loading = false
-            if let url = p?.imageURL, let data = await ImageCache.data(for: url) {
-                let img = IconLoader.downscale(data, maxPixel: 900)
-                withAnimation(.easeOut(duration: 0.25)) { image = img }
-            }
+            let img = await IconLoader.image(for: p, maxPixel: 900)
+            withAnimation(.easeOut(duration: 0.25)) { image = img }
         }
     }
 }

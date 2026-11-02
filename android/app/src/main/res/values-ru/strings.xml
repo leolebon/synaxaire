@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="widget_desc">Святой дня с иконой, праздник и пост.</string>
+    <string name="widget_saints_name">Святые дня</string>
+    <string name="widget_saints_desc">Иконы святых дня.</string>
+</resources>

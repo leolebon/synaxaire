@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="widget_desc">قديس اليوم مع أيقونته والعيد والصوم.</string>
+    <string name="widget_saints_name">قديسو اليوم</string>
+    <string name="widget_saints_desc">أيقونات قديسي اليوم.</string>
+</resources>

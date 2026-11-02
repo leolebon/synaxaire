@@ -1,38 +1,41 @@
 import SwiftUI
 import UIKit
 
-/// Source d'une icône : article Wikipédia connu, ou recherche à partir d'une commémoration.
+/// Source d'une icône : un saint du ménologe, ou une fête dont l'article est connu.
 enum IconSource: Equatable {
-    case title(String, fallback: Commemoration?)
-    case commemoration(Commemoration)
+    case saint(Commemoration, knownTitle: String?)
+    case feast(String, fallback: Commemoration?)
 
     static func hero(for day: LiturgicalDay) -> IconSource? {
-        if let t = day.heroWikipediaTitle { return .title(t, fallback: day.primarySaint) }
-        if let c = day.primarySaint { return .commemoration(c) }
+        if let t = day.feastWikipediaTitle { return .feast(t, fallback: day.primarySaint) }
+        if let c = day.primarySaint { return .saint(c, knownTitle: day.primarySaintWikipediaTitle) }
         return nil
     }
 }
 
 enum IconLoader {
-    /// Charge la fiche Wikipédia correspondant à la source.
-    static func profile(for source: IconSource) async -> SaintProfile? {
+    /// Fiche Wikipédia de la source, dans la langue de l'application.
+    static func profile(for source: IconSource, language: String = Loc.language) async -> SaintProfile? {
         switch source {
-        case .title(let title, let fallback):
-            let p = await WikipediaService.shared.profile(forTitle: title)
+        case .feast(let title, let fallback):
+            let p = await WikipediaService.shared.profile(for: nil, knownTitle: title, language: language)
             if p?.imageURL == nil, let fallback {
-                return await WikipediaService.shared.profile(for: fallback) ?? p
+                return await WikipediaService.shared.profile(for: fallback, knownTitle: nil, language: language) ?? p
             }
             return p
-        case .commemoration(let c):
-            return await WikipediaService.shared.profile(for: c)
+        case .saint(let c, let known):
+            return await WikipediaService.shared.profile(for: c, knownTitle: known, language: language)
         }
     }
 
-    /// Charge l'image (réduite) d'une source.
-    static func image(for source: IconSource, maxPixel: CGFloat = 700) async -> UIImage? {
-        guard let profile = await profile(for: source), let url = profile.imageURL,
-              let data = await ImageCache.data(for: url) else { return nil }
+    /// Image principale (réduite) de l'article.
+    static func image(for profile: SaintProfile?, maxPixel: CGFloat = 700) async -> UIImage? {
+        guard let url = profile?.imageURL, let data = await ImageCache.data(for: url) else { return nil }
         return downscale(data, maxPixel: maxPixel)
+    }
+
+    static func image(for source: IconSource, maxPixel: CGFloat = 700) async -> UIImage? {
+        await image(for: await profile(for: source), maxPixel: maxPixel)
     }
 
     static func downscale(_ data: Data, maxPixel: CGFloat) -> UIImage? {
@@ -51,10 +54,12 @@ enum IconLoader {
 }
 
 /// Icône chargée de façon asynchrone, avec motif de remplacement.
+/// `onProfile` transmet la fiche trouvée (pour afficher le nom localisé).
 struct SaintIcon: View {
     let source: IconSource?
     var initial: String = "☦"
     var cornerRadius: CGFloat = 14
+    var onProfile: ((SaintProfile?) -> Void)? = nil
 
     @State private var image: UIImage?
 
@@ -63,7 +68,9 @@ struct SaintIcon: View {
             .task(id: source) {
                 image = nil
                 guard let source else { return }
-                let loaded = await IconLoader.image(for: source)
+                let profile = await IconLoader.profile(for: source)
+                onProfile?(profile)
+                let loaded = await IconLoader.image(for: profile)
                 withAnimation(.easeOut(duration: 0.25)) { image = loaded }
             }
     }

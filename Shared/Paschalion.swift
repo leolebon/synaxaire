@@ -47,112 +47,108 @@ public enum Paschalion {
 
 /// Un jour du cycle mobile (Triode / Pentecostaire).
 public struct MovableDay: Sendable {
-    public let title: String
+    public let key: String
+    public let args: [String: String]
     public let rank: FeastRank
     public let wikipediaTitle: String?
+
+    public init(key: String, args: [String: String] = [:], rank: FeastRank, wikipediaTitle: String?) {
+        self.key = key
+        self.args = args
+        self.rank = rank
+        self.wikipediaTitle = wikipediaTitle
+    }
+
+    public var title: String { Loc.t(key, args) }
 }
 
 public enum MovableCycle {
 
-    /// Titre liturgique français du jour mobile, s'il en a un.
+    /// Jour liturgique mobile, s'il a un titre propre.
     public static func day(forPaschaDistance pd: Int, weekday: Int) -> MovableDay? {
-        if let fixed = table[pd] { return fixed }
+        if let fixed = table[pd] {
+            return MovableDay(key: "mov.\(pd)", rank: fixed.0, wikipediaTitle: fixed.1)
+        }
         // Semaine radieuse.
         if (1...6).contains(pd) {
-            let names = ["", "Lundi", "Mardi", "Mercredi", "Jeudi", "Vendredi", "Samedi"]
-            if pd == 5 {
-                return MovableDay(title: "Vendredi radieux — Notre-Dame de la Source vivifiante (Zoodochos Pigi)", rank: .major, wikipediaTitle: "Zoodochos Pege")
-            }
-            return MovableDay(title: "\(names[pd]) radieux — Semaine du Renouveau", rank: .major, wikipediaTitle: "Semaine radieuse")
+            return MovableDay(key: "mov.\(pd)", rank: .major,
+                              wikipediaTitle: pd == 5 ? "Zoodochos Pege" : "Semaine radieuse")
         }
-        // Semaine sainte (titres déjà dans la table) et carême : dimanches couverts par la table.
-        if (-48 ... -9).contains(pd) {
+        // Jours de semaine du Grand Carême.
+        if (-48 ... -9).contains(pd), weekday != 1 && weekday != 7 {
             let week = (pd + 48) / 7 + 1
-            if weekday != 1 && weekday != 7 {
-                return MovableDay(title: "\(ordinal(week)) semaine du Grand Carême", rank: .ordinary, wikipediaTitle: nil)
-            }
+            return MovableDay(key: "mov.lentWeek", args: ["n": String(week)], rank: .ordinary, wikipediaTitle: nil)
         }
         // Temps pascal : jours ordinaires.
         if (8...38).contains(pd) {
-            return MovableDay(title: "Temps pascal — « Le Christ est ressuscité ! »", rank: .ordinary, wikipediaTitle: nil)
+            return MovableDay(key: "mov.paschal", rank: .ordinary, wikipediaTitle: nil)
         }
         return nil
     }
 
-    private static func ordinal(_ n: Int) -> String {
-        n == 1 ? "1re" : "\(n)e"
-    }
-
-    static let table: [Int: MovableDay] = [
-        -70: MovableDay(title: "Dimanche du Publicain et du Pharisien — début du Triode", rank: .sunday, wikipediaTitle: nil),
-        -63: MovableDay(title: "Dimanche du Fils prodigue", rank: .sunday, wikipediaTitle: "Parabole du fils prodigue"),
-        -57: MovableDay(title: "Samedi des âmes — commémoration de tous les défunts", rank: .sunday, wikipediaTitle: nil),
-        -56: MovableDay(title: "Dimanche du Jugement dernier — dimanche de l'Apocréo (adieu à la viande)", rank: .sunday, wikipediaTitle: "Jugement dernier"),
-        -50: MovableDay(title: "Samedi de la Tyrophagie — saints moines et moniales", rank: .ordinary, wikipediaTitle: nil),
-        -49: MovableDay(title: "Dimanche de la Tyrophagie — dimanche du Pardon, expulsion d'Adam du Paradis", rank: .sunday, wikipediaTitle: "Dimanche du Pardon"),
-        -48: MovableDay(title: "Lundi pur — début du Grand Carême", rank: .major, wikipediaTitle: "Lundi pur"),
-        -43: MovableDay(title: "Samedi de saint Théodore le Tiron — miracle des colyves", rank: .ordinary, wikipediaTitle: "Théodore le Conscrit"),
-        -42: MovableDay(title: "Dimanche de l'Orthodoxie — triomphe des saintes icônes", rank: .sunday, wikipediaTitle: "Triomphe de l'Orthodoxie"),
-        -36: MovableDay(title: "Samedi des âmes (2e samedi du Carême)", rank: .ordinary, wikipediaTitle: nil),
-        -35: MovableDay(title: "Dimanche de saint Grégoire Palamas", rank: .sunday, wikipediaTitle: "Grégoire Palamas"),
-        -29: MovableDay(title: "Samedi des âmes (3e samedi du Carême)", rank: .ordinary, wikipediaTitle: nil),
-        -28: MovableDay(title: "Dimanche de la Vénération de la sainte Croix", rank: .sunday, wikipediaTitle: "Vraie Croix"),
-        -22: MovableDay(title: "Samedi des âmes (4e samedi du Carême)", rank: .ordinary, wikipediaTitle: nil),
-        -21: MovableDay(title: "Dimanche de saint Jean Climaque", rank: .sunday, wikipediaTitle: "Jean Climaque"),
-        -18: MovableDay(title: "Mercredi du Grand Canon de saint André de Crète (office du soir)", rank: .ordinary, wikipediaTitle: "André de Crète"),
-        -17: MovableDay(title: "Jeudi du Grand Canon de saint André de Crète", rank: .ordinary, wikipediaTitle: "André de Crète"),
-        -16: MovableDay(title: "Vendredi de l'Hymne acathiste (office du soir)", rank: .ordinary, wikipediaTitle: "Hymne acathiste"),
-        -15: MovableDay(title: "Samedi de l'Acathiste", rank: .ordinary, wikipediaTitle: "Hymne acathiste"),
-        -14: MovableDay(title: "Dimanche de sainte Marie l'Égyptienne", rank: .sunday, wikipediaTitle: "Marie l'Égyptienne"),
-        -8: MovableDay(title: "Samedi de Lazare — résurrection de Lazare", rank: .major, wikipediaTitle: "Résurrection de Lazare"),
-        -7: MovableDay(title: "Dimanche des Rameaux — entrée du Seigneur à Jérusalem", rank: .great, wikipediaTitle: "Entrée de Jésus à Jérusalem"),
-        -6: MovableDay(title: "Grand et Saint Lundi — Joseph le Très-Beau, le figuier desséché", rank: .holyWeek, wikipediaTitle: "Semaine sainte"),
-        -5: MovableDay(title: "Grand et Saint Mardi — parabole des dix vierges", rank: .holyWeek, wikipediaTitle: "Semaine sainte"),
-        -4: MovableDay(title: "Grand et Saint Mercredi — la femme pécheresse, saint Office des Huiles", rank: .holyWeek, wikipediaTitle: "Semaine sainte"),
-        -3: MovableDay(title: "Grand et Saint Jeudi — la Cène mystique, le lavement des pieds", rank: .holyWeek, wikipediaTitle: "Jeudi saint"),
-        -2: MovableDay(title: "Grand et Saint Vendredi — la Passion du Seigneur, l'Épitaphios", rank: .holyWeek, wikipediaTitle: "Vendredi saint"),
-        -1: MovableDay(title: "Grand et Saint Samedi — la mise au tombeau et la descente aux enfers", rank: .holyWeek, wikipediaTitle: "Samedi saint"),
-        0: MovableDay(title: "Sainte et Grande Pâque — la Résurrection du Christ", rank: .pascha, wikipediaTitle: "Pâques"),
-        7: MovableDay(title: "Dimanche de Thomas (Antipascha)", rank: .sunday, wikipediaTitle: "Thomas (apôtre)"),
-        14: MovableDay(title: "Dimanche des saintes Femmes myrrhophores", rank: .sunday, wikipediaTitle: "Myrrhophores"),
-        21: MovableDay(title: "Dimanche du Paralytique", rank: .sunday, wikipediaTitle: nil),
-        24: MovableDay(title: "Mi-Pentecôte", rank: .major, wikipediaTitle: "Mi-Pentecôte"),
-        28: MovableDay(title: "Dimanche de la Samaritaine", rank: .sunday, wikipediaTitle: "Femme samaritaine"),
-        35: MovableDay(title: "Dimanche de l'Aveugle-né", rank: .sunday, wikipediaTitle: nil),
-        38: MovableDay(title: "Apodose (clôture) de Pâques", rank: .major, wikipediaTitle: nil),
-        39: MovableDay(title: "Ascension de notre Seigneur Jésus-Christ", rank: .great, wikipediaTitle: "Ascension (fête)"),
-        42: MovableDay(title: "Dimanche des saints Pères du Ier concile œcuménique (Nicée, 325)", rank: .sunday, wikipediaTitle: "Premier concile de Nicée"),
-        48: MovableDay(title: "Samedi des âmes avant la Pentecôte", rank: .ordinary, wikipediaTitle: nil),
-        49: MovableDay(title: "Sainte Pentecôte — descente du Saint-Esprit", rank: .great, wikipediaTitle: "Pentecôte"),
-        50: MovableDay(title: "Lundi du Saint-Esprit", rank: .major, wikipediaTitle: "Lundi de Pentecôte"),
-        56: MovableDay(title: "Dimanche de Tous les Saints", rank: .sunday, wikipediaTitle: "Toussaint"),
-        63: MovableDay(title: "Dimanche de tous les saints de Grèce (Église de Grèce)", rank: .sunday, wikipediaTitle: nil),
+    static let table: [Int: (FeastRank, String?)] = [
+        -70: (.sunday, nil),
+        -63: (.sunday, "Parabole du fils prodigue"),
+        -57: (.sunday, nil),
+        -56: (.sunday, "Jugement dernier"),
+        -50: (.ordinary, nil),
+        -49: (.sunday, "Dimanche du Pardon"),
+        -48: (.major, "Lundi pur"),
+        -43: (.ordinary, "Théodore le Conscrit"),
+        -42: (.sunday, "Triomphe de l'Orthodoxie"),
+        -36: (.ordinary, nil),
+        -35: (.sunday, "Grégoire Palamas"),
+        -29: (.ordinary, nil),
+        -28: (.sunday, "Vraie Croix"),
+        -22: (.ordinary, nil),
+        -21: (.sunday, "Jean Climaque"),
+        -18: (.ordinary, "André de Crète"),
+        -17: (.ordinary, "André de Crète"),
+        -16: (.ordinary, "Hymne acathiste"),
+        -15: (.ordinary, "Hymne acathiste"),
+        -14: (.sunday, "Marie l'Égyptienne"),
+        -8: (.major, "Résurrection de Lazare"),
+        -7: (.great, "Entrée de Jésus à Jérusalem"),
+        -6: (.holyWeek, "Semaine sainte"),
+        -5: (.holyWeek, "Semaine sainte"),
+        -4: (.holyWeek, "Semaine sainte"),
+        -3: (.holyWeek, "Jeudi saint"),
+        -2: (.holyWeek, "Vendredi saint"),
+        -1: (.holyWeek, "Samedi saint"),
+        0: (.pascha, "Pâques"),
+        7: (.sunday, "Thomas (apôtre)"),
+        14: (.sunday, "Myrrhophores"),
+        21: (.sunday, nil),
+        24: (.major, "Mi-Pentecôte"),
+        28: (.sunday, "Femme samaritaine"),
+        35: (.sunday, nil),
+        38: (.major, nil),
+        39: (.great, "Ascension (fête)"),
+        42: (.sunday, "Premier concile de Nicée"),
+        48: (.ordinary, nil),
+        49: (.great, "Pentecôte"),
+        50: (.major, "Lundi de Pentecôte"),
+        56: (.sunday, "Toussaint"),
+        63: (.sunday, nil),
     ]
 
     /// Dimanches du cycle fixe dépendant de la date (Pères des conciles, Ancêtres…).
     public static func fixedCycleSunday(churchDate c: CivilDate, weekday: Int) -> MovableDay? {
         guard weekday == 1 else { return nil }
+        let entry: (String, String?)?
         switch (c.month, c.day) {
-        case (7, 13...19):
-            return MovableDay(title: "Dimanche des saints Pères du IVe concile œcuménique (Chalcédoine)", rank: .sunday, wikipediaTitle: "Concile de Chalcédoine")
-        case (10, 11...17):
-            return MovableDay(title: "Dimanche des saints Pères du VIIe concile œcuménique (Nicée II, 787)", rank: .sunday, wikipediaTitle: "Deuxième concile de Nicée")
-        case (12, 11...17):
-            return MovableDay(title: "Dimanche des saints Ancêtres du Christ", rank: .sunday, wikipediaTitle: nil)
-        case (12, 18...24):
-            return MovableDay(title: "Dimanche avant la Nativité — de la Généalogie", rank: .sunday, wikipediaTitle: nil)
-        case (12, 26...31):
-            return MovableDay(title: "Dimanche après la Nativité — saints Joseph, David et Jacques", rank: .sunday, wikipediaTitle: nil)
-        case (1, 1...5):
-            return MovableDay(title: "Dimanche avant la Théophanie", rank: .sunday, wikipediaTitle: nil)
-        case (1, 7...13):
-            return MovableDay(title: "Dimanche après la Théophanie", rank: .sunday, wikipediaTitle: nil)
-        case (9, 7...13):
-            return MovableDay(title: "Dimanche avant l'Exaltation de la Croix", rank: .sunday, wikipediaTitle: nil)
-        case (9, 15...21):
-            return MovableDay(title: "Dimanche après l'Exaltation de la Croix", rank: .sunday, wikipediaTitle: nil)
-        default:
-            return nil
+        case (7, 13...19): entry = ("sun.fathers4", "Concile de Chalcédoine")
+        case (10, 11...17): entry = ("sun.fathers7", "Deuxième concile de Nicée")
+        case (12, 11...17): entry = ("sun.forefathers", nil)
+        case (12, 18...24): entry = ("sun.genealogy", nil)
+        case (12, 26...31): entry = ("sun.afterNativity", nil)
+        case (1, 1...5): entry = ("sun.beforeTheophany", nil)
+        case (1, 7...13): entry = ("sun.afterTheophany", nil)
+        case (9, 7...13): entry = ("sun.beforeCross", nil)
+        case (9, 15...21): entry = ("sun.afterCross", nil)
+        default: entry = nil
         }
+        guard let entry else { return nil }
+        return MovableDay(key: entry.0, rank: .sunday, wikipediaTitle: entry.1)
     }
 }

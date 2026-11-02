@@ -6,7 +6,6 @@ struct CalendarScreen: View {
 
     @State private var year: Int
     @State private var month: Int
-    @State private var selected: CivilDate?
 
     init(calendar: ChurchCalendar) {
         self.calendar = calendar
@@ -16,7 +15,8 @@ struct CalendarScreen: View {
     }
 
     private let columns = Array(repeating: GridItem(.flexible(), spacing: 4), count: 7)
-    private let headers = ["L", "M", "M", "J", "V", "S", "D"]
+    /// Semaine commençant le lundi (2) et finissant le dimanche (1).
+    private let headerWeekdays = [2, 3, 4, 5, 6, 7, 1]
 
     private var days: [LiturgicalDay] {
         let count = CivilDate.daysInMonth(year: year, month: month)
@@ -36,27 +36,27 @@ struct CalendarScreen: View {
             VStack(spacing: 14) {
                 header
                 VStack(spacing: 6) {
-                HStack(spacing: 4) {
-                    ForEach(0..<7, id: \.self) { i in
-                        Text(headers[i])
-                            .font(.system(size: 12, weight: .bold))
-                            .foregroundStyle(i == 6 ? Theme.burgundy : Theme.inkSoft)
-                            .frame(maxWidth: .infinity)
-                    }
-                }
-                LazyVGrid(columns: columns, spacing: 4) {
-                    ForEach((0..<leadingBlanks).map { -1 - $0 }, id: \.self) { _ in
-                        Color.clear.frame(height: 54)
-                    }
-                    ForEach(days) { day in
-                        NavigationLink {
-                            DayScreen(date: day.civil, calendar: calendar)
-                        } label: {
-                            DayCell(day: day, isToday: day.civil == today)
+                    HStack(spacing: 4) {
+                        ForEach(headerWeekdays, id: \.self) { wd in
+                            Text(DateText.weekdayShort(wd))
+                                .font(.system(size: 12, weight: .bold))
+                                .foregroundStyle(wd == 1 ? Theme.burgundy : Theme.inkSoft)
+                                .frame(maxWidth: .infinity)
                         }
-                        .buttonStyle(.plain)
                     }
-                }
+                    LazyVGrid(columns: columns, spacing: 4) {
+                        ForEach((0..<leadingBlanks).map { -1 - $0 }, id: \.self) { _ in
+                            Color.clear.frame(height: 54)
+                        }
+                        ForEach(days) { day in
+                            NavigationLink {
+                                DayScreen(date: day.civil, calendar: calendar)
+                            } label: {
+                                DayCell(day: day, isToday: day.civil == today)
+                            }
+                            .buttonStyle(.plain)
+                        }
+                    }
                 }
                 .padding(10)
                 .background(Theme.card, in: RoundedRectangle(cornerRadius: 18, style: .continuous))
@@ -64,10 +64,10 @@ struct CalendarScreen: View {
 
                 Legend()
 
-                SectionCard(title: "Fêtes et temps forts du mois", symbol: "star") {
-                    let notable = days.filter { $0.rank >= .major || ($0.civil.isSunday && $0.title.hasPrefix("Dimanche")) }
+                SectionCard(title: Loc.t("calendar.notable"), symbol: "star") {
+                    let notable = days.filter { $0.rank >= .major || ($0.civil.isSunday && !$0.titleIsSaint) }
                     if notable.isEmpty {
-                        Text("Pas de grande fête ce mois-ci.")
+                        Text(Loc.t("calendar.noFeast"))
                             .font(.system(size: 14))
                             .foregroundStyle(Theme.inkSoft)
                     }
@@ -76,7 +76,7 @@ struct CalendarScreen: View {
                             DayScreen(date: day.civil, calendar: calendar)
                         } label: {
                             HStack(alignment: .top, spacing: 10) {
-                                Text("\(day.civil.day)")
+                                Text(String(day.civil.day))
                                     .font(Theme.titleFont(18, weight: .bold))
                                     .foregroundStyle(day.rank.color)
                                     .frame(width: 30, alignment: .trailing)
@@ -85,7 +85,7 @@ struct CalendarScreen: View {
                                         .font(.system(size: 14, weight: day.rank >= .great ? .semibold : .regular, design: .serif))
                                         .foregroundStyle(Theme.ink)
                                         .multilineTextAlignment(.leading)
-                                    Text(DateText.weekdayNames[day.civil.weekday].capitalized)
+                                    Text(DateText.weekday(day.civil.weekday).capitalized)
                                         .font(.system(size: 11))
                                         .foregroundStyle(Theme.inkSoft)
                                 }
@@ -101,11 +101,11 @@ struct CalendarScreen: View {
             .padding(.bottom, 24)
         }
         .background(Theme.parchment.ignoresSafeArea())
-        .navigationTitle("Calendrier")
+        .navigationTitle(Loc.t("tab.calendar"))
         .navigationBarTitleDisplayMode(.inline)
         .toolbar {
             ToolbarItem(placement: .topBarTrailing) {
-                Button("Aujourd'hui") {
+                Button(Loc.t("tab.today")) {
                     let t = CivilDate.today()
                     year = t.year
                     month = t.month
@@ -117,20 +117,21 @@ struct CalendarScreen: View {
     private var header: some View {
         HStack {
             Button { shift(-1) } label: {
-                Image(systemName: "chevron.left").font(.system(size: 18, weight: .semibold))
+                Image(systemName: "chevron.backward").font(.system(size: 18, weight: .semibold))
             }
             Spacer()
             VStack(spacing: 2) {
                 Text(DateText.monthYear(year: year, month: month))
                     .font(Theme.titleFont(22))
                     .foregroundStyle(Theme.ink)
-                Text("Pâques \(year) : \(DateText.dayMonth(Paschalion.pascha(year: year)))")
+                // String(year) : jamais de séparateur de milliers (« 2026 » et non « 2 026 »).
+                Text(Loc.t("calendar.pascha", ["y": String(year), "d": DateText.dayMonth(Paschalion.pascha(year: year))]))
                     .font(.system(size: 12))
                     .foregroundStyle(Theme.inkSoft)
             }
             Spacer()
             Button { shift(1) } label: {
-                Image(systemName: "chevron.right").font(.system(size: 18, weight: .semibold))
+                Image(systemName: "chevron.forward").font(.system(size: 18, weight: .semibold))
             }
         }
         .padding(.top, 8)
@@ -155,7 +156,7 @@ struct DayCell: View {
 
     var body: some View {
         VStack(spacing: 3) {
-            Text("\(day.civil.day)")
+            Text(String(day.civil.day))
                 .font(.system(size: 16, weight: isToday || day.rank >= .major ? .bold : .regular, design: .serif))
                 .foregroundStyle(numberColor)
                 .frame(width: 30, height: 30)
@@ -199,22 +200,22 @@ struct Legend: View {
                 ForEach(levels, id: \.self) { level in
                     HStack(spacing: 4) {
                         RoundedRectangle(cornerRadius: 2).fill(level.color).frame(width: 14, height: 4)
-                        Text(level.shortTitle).font(.system(size: 11))
+                        Text(level.shortTitle).font(.system(size: 11)).lineLimit(1)
                     }
                 }
             }
             HStack(spacing: 14) {
                 HStack(spacing: 4) {
                     Text("☩").font(.system(size: 11, weight: .bold)).foregroundStyle(Theme.burgundy)
-                    Text("Grande fête").font(.system(size: 11))
+                    Text(Loc.t("legend.great")).font(.system(size: 11))
                 }
                 HStack(spacing: 4) {
                     Circle().fill(Theme.gold).frame(width: 6, height: 6)
-                    Text("Fête importante").font(.system(size: 11))
+                    Text(Loc.t("legend.major")).font(.system(size: 11))
                 }
                 HStack(spacing: 4) {
                     RoundedRectangle(cornerRadius: 3).fill(Theme.gold.opacity(0.2)).frame(width: 14, height: 10)
-                    Text("Sans jeûne").font(.system(size: 11))
+                    Text(Loc.t("legend.fastFree")).font(.system(size: 11))
                 }
             }
         }

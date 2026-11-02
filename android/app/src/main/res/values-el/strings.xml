@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="widget_desc">Ο άγιος της ημέρας με την εικόνα, η εορτή και η νηστεία.</string>
+    <string name="widget_saints_name">Άγιοι της ημέρας</string>
+    <string name="widget_saints_desc">Οι εικόνες των αγίων της ημέρας.</string>
+</resources>

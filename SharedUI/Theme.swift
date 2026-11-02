@@ -25,6 +25,25 @@ enum Theme {
     }
 }
 
+/// Tailles standard des icônes (format portrait 3:4).
+enum IconSize {
+    static let hero = CGSize(width: 150, height: 200)
+    static let gallery = CGSize(width: 96, height: 128)
+    static let row = CGSize(width: 36, height: 48)
+    static let detail = CGSize(width: 210, height: 280)
+    static let widgetSmall = CGSize(width: 42, height: 56)
+    static let widgetMedium = CGSize(width: 84, height: 112)
+    static let widgetLarge = CGSize(width: 96, height: 128)
+    static let widgetTile = CGSize(width: 66, height: 88)
+}
+
+extension View {
+    /// Applique une taille d'icône standard.
+    func iconSize(_ size: CGSize) -> some View {
+        frame(width: size.width, height: size.height)
+    }
+}
+
 extension UIColor {
     convenience init(hex: UInt32) {
         self.init(red: CGFloat((hex >> 16) & 0xFF) / 255,
@@ -69,33 +88,6 @@ extension FeastRank {
     }
 }
 
-// MARK: - Formats de date
-
-enum DateText {
-    static let monthNames = ["janvier", "février", "mars", "avril", "mai", "juin", "juillet",
-                             "août", "septembre", "octobre", "novembre", "décembre"]
-    static let weekdayNames = ["", "dimanche", "lundi", "mardi", "mercredi", "jeudi", "vendredi", "samedi"]
-    static let weekdayShort = ["", "D", "L", "M", "M", "J", "V", "S"]
-
-    static func long(_ d: CivilDate) -> String {
-        "\(weekdayNames[d.weekday].capitalized) \(d.day == 1 ? "1er" : String(d.day)) \(monthNames[d.month - 1]) \(d.year)"
-    }
-
-    static func dayMonth(_ d: CivilDate) -> String {
-        "\(d.day == 1 ? "1er" : String(d.day)) \(monthNames[d.month - 1])"
-    }
-
-    static func monthYear(year: Int, month: Int) -> String {
-        "\(monthNames[month - 1].capitalized) \(year)"
-    }
-
-    /// Date du ménologe pour l'ancien calendrier.
-    static func churchLabel(_ day: LiturgicalDay) -> String? {
-        guard day.calendar == .oldCalendar else { return nil }
-        return "\(dayMonth(day.church)) (calendrier julien)"
-    }
-}
-
 // MARK: - Composants
 
 /// Badge coloré du niveau de jeûne.
@@ -107,6 +99,7 @@ struct FastBadge: View {
         HStack(spacing: 4) {
             Image(systemName: level.symbol)
             Text(compact ? level.shortTitle : level.title)
+                .lineLimit(1)
         }
         .font(.system(size: compact ? 11 : 13, weight: .semibold))
         .padding(.horizontal, compact ? 6 : 10)
@@ -119,7 +112,6 @@ struct FastBadge: View {
 /// Pastilles des aliments permis / interdits.
 struct FoodChips: View {
     let level: FastLevel
-    var showForbiddenOnly = false
 
     private let categories: [FoodCategory] = [.meat, .dairy, .eggs, .fish, .oil, .wine]
 
@@ -141,38 +133,40 @@ struct FoodChips: View {
                         .font(.system(size: 9, weight: .medium))
                         .foregroundStyle(ok ? Theme.ink : Theme.inkSoft.opacity(0.6))
                         .lineLimit(1)
-                        .minimumScaleFactor(0.7)
+                        .minimumScaleFactor(0.6)
                 }
                 .frame(maxWidth: .infinity)
                 .accessibilityElement(children: .ignore)
-                .accessibilityLabel("\(cat.label) : \(ok ? "permis" : "non")")
+                .accessibilityLabel("\(cat.label) : \(Loc.t(ok ? "food.allowed" : "food.forbidden"))")
             }
         }
     }
 }
 
-/// Cadre d'icône : image du saint ou motif de remplacement doré.
+/// Cadre d'icône : l'image remplit exactement la taille donnée par le parent et ne déborde jamais.
 struct IconFrame: View {
     let image: UIImage?
     var initial: String = "☦"
     var cornerRadius: CGFloat = 14
 
     var body: some View {
-        ZStack {
-            if let image {
-                Image(uiImage: image)
-                    .resizable()
-                    .scaledToFill()
-            } else {
-                IconPlaceholder(initial: initial)
+        Color.clear
+            .overlay(alignment: .top) {
+                if let image {
+                    Image(uiImage: image)
+                        .resizable()
+                        .scaledToFill()
+                } else {
+                    IconPlaceholder(initial: initial)
+                }
             }
-        }
-        .clipShape(RoundedRectangle(cornerRadius: cornerRadius, style: .continuous))
-        .overlay(
-            RoundedRectangle(cornerRadius: cornerRadius, style: .continuous)
-                .strokeBorder(LinearGradient(colors: [Theme.goldBright, Theme.gold.opacity(0.6), Theme.goldBright],
-                                             startPoint: .topLeading, endPoint: .bottomTrailing), lineWidth: 2)
-        )
+            .clipShape(RoundedRectangle(cornerRadius: cornerRadius, style: .continuous))
+            .overlay(
+                RoundedRectangle(cornerRadius: cornerRadius, style: .continuous)
+                    .strokeBorder(LinearGradient(colors: [Theme.goldBright, Theme.gold.opacity(0.6), Theme.goldBright],
+                                                 startPoint: .topLeading, endPoint: .bottomTrailing), lineWidth: 2)
+            )
+            .contentShape(RoundedRectangle(cornerRadius: cornerRadius, style: .continuous))
     }
 }
 
@@ -203,8 +197,7 @@ struct IconPlaceholder: View {
 extension Commemoration {
     /// Initiale du nom du saint pour le motif de remplacement.
     var initial: String {
-        let q = searchQuery
-        return q.first.map { String($0).uppercased() } ?? "☦"
+        searchQuery.first.map { String($0).uppercased() } ?? "☦"
     }
 }
 

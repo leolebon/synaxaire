@@ -10,16 +10,25 @@ public struct Commemoration: Codable, Hashable, Identifiable, Sendable {
     public var id: String { en }
     public var isFestal: Bool { t == "f" }
 
+    /// Nom affiché dans la langue courante (français, sinon anglais).
+    public var displayName: String { Loc.language == "fr" ? fr : en }
+
     /// Nom court pour l'affichage compact (avant la première virgule).
-    public var shortName: String {
-        if let r = fr.range(of: ",") { return String(fr[..<r.lowerBound]) }
-        if let r = fr.range(of: " — ") { return String(fr[..<r.lowerBound]) }
-        return fr
+    public var shortName: String { Commemoration.short(displayName) }
+
+    /// Nom court français (sert à la recherche Wikipédia).
+    public var shortFrench: String { Commemoration.short(fr) }
+
+    static func short(_ s: String) -> String {
+        if let r = s.range(of: ",") { return String(s[..<r.lowerBound]) }
+        if let r = s.range(of: " — ") { return String(s[..<r.lowerBound]) }
+        return s
     }
 
     /// Requête de recherche pour Wikipédia (sans « Saint », ni qualificatifs).
     public var searchQuery: String {
-        var s = shortName
+        var s = shortFrench
+        if let r = s.range(of: " (") { s = String(s[..<r.lowerBound]) }
         for prefix in ["Saintes ", "Saints ", "Sainte ", "Saint ", "Les saints ", "Les saintes ", "Le ", "La ", "Les "] {
             if s.hasPrefix(prefix) { s = String(s.dropFirst(prefix.count)); break }
         }

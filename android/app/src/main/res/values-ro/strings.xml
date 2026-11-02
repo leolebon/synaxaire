@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="widget_desc">Sfântul zilei cu icoana, sărbătoarea și postul.</string>
+    <string name="widget_saints_name">Sfinții zilei</string>
+    <string name="widget_saints_desc">Icoanele sfinților zilei.</string>
+</resources>

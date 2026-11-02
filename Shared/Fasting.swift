@@ -13,44 +13,21 @@ public enum FastLevel: Int, Codable, Sendable, Comparable {
 
     public var isFasting: Bool { self >= .dairy }
 
-    public var title: String {
+    /// Nom de clé de traduction.
+    public var key: String {
         switch self {
-        case .noFast: return "Pas de jeûne"
-        case .fastFree: return "Sans jeûne"
-        case .dairy: return "Jeûne de la viande"
-        case .fish: return "Poisson permis"
-        case .wineOil: return "Vin et huile permis"
-        case .strict: return "Jeûne strict"
+        case .noFast: return "noFast"
+        case .fastFree: return "fastFree"
+        case .dairy: return "dairy"
+        case .fish: return "fish"
+        case .wineOil: return "wineOil"
+        case .strict: return "strict"
         }
     }
 
-    public var shortTitle: String {
-        switch self {
-        case .noFast: return "Pas de jeûne"
-        case .fastFree: return "Sans jeûne"
-        case .dairy: return "Sans viande"
-        case .fish: return "Poisson"
-        case .wineOil: return "Vin & huile"
-        case .strict: return "Strict"
-        }
-    }
-
-    public var explanation: String {
-        switch self {
-        case .noFast:
-            return "Aucune restriction alimentaire aujourd'hui."
-        case .fastFree:
-            return "Période sans jeûne : tout est permis, y compris le mercredi et le vendredi."
-        case .dairy:
-            return "On s'abstient de viande. Laitages, œufs, poisson, vin et huile sont permis."
-        case .fish:
-            return "On s'abstient de viande, de laitages et d'œufs. Le poisson, le vin et l'huile sont permis."
-        case .wineOil:
-            return "On s'abstient de viande, de laitages, d'œufs et de poisson. Le vin et l'huile d'olive sont permis."
-        case .strict:
-            return "Xérophagie : on s'abstient de viande, laitages, œufs, poisson, mais aussi d'huile et de vin. Légumes, légumineuses, fruits, pain."
-        }
-    }
+    public var title: String { Loc.t("fast.\(key).title") }
+    public var shortTitle: String { Loc.t("fast.\(key).short") }
+    public var explanation: String { Loc.t("fast.\(key).explain") }
 
     /// Symbole SF Symbols utilisé dans l'interface.
     public var symbol: String {
@@ -80,17 +57,7 @@ public enum FoodCategory: String, CaseIterable, Codable, Sendable, Identifiable 
     case meat, dairy, eggs, fish, oil, wine, shellfish
     public var id: String { rawValue }
 
-    public var label: String {
-        switch self {
-        case .meat: return "Viande"
-        case .dairy: return "Laitages"
-        case .eggs: return "Œufs"
-        case .fish: return "Poisson"
-        case .oil: return "Huile"
-        case .wine: return "Vin"
-        case .shellfish: return "Fruits de mer"
-        }
-    }
+    public var label: String { Loc.t("food.\(rawValue)") }
 
     public var emoji: String {
         switch self {
@@ -122,24 +89,7 @@ public enum FastSeason: String, Codable, Sendable {
     case nativity
     case strictDay
 
-    public var title: String {
-        switch self {
-        case .ordinary: return "Temps ordinaire"
-        case .wednesdayFriday: return "Jeûne du mercredi et du vendredi"
-        case .paschalSeason: return "Temps pascal"
-        case .christmastide: return "Dodécaémeron (de Noël à la Théophanie)"
-        case .publicanWeek: return "Semaine du Publicain et du Pharisien"
-        case .brightWeek: return "Semaine radieuse"
-        case .trinityWeek: return "Semaine de la Pentecôte"
-        case .cheesefare: return "Semaine de la Tyrophagie"
-        case .greatLent: return "Grand Carême"
-        case .holyWeek: return "Semaine sainte"
-        case .apostles: return "Carême des Apôtres"
-        case .dormition: return "Carême de la Dormition"
-        case .nativity: return "Carême de la Nativité"
-        case .strictDay: return "Jour de jeûne strict"
-        }
-    }
+    public var title: String { Loc.t("season.\(rawValue)") }
 
     /// Les grands carêmes, affichés comme « périodes ».
     public var isLent: Bool {
@@ -151,73 +101,8 @@ public enum FastSeason: String, Codable, Sendable {
 
     /// Recommandations spirituelles et pratiques pour la période.
     public var recommendations: [String] {
-        switch self {
-        case .greatLent:
-            return [
-                "Du lundi au vendredi : xérophagie (ni huile ni vin) ; samedi et dimanche : vin et huile.",
-                "Poisson permis à l'Annonciation (25 mars) et au dimanche des Rameaux ; œufs de poisson (tarama) le samedi de Lazare.",
-                "Les trois premiers jours (Lundi pur → mercredi), la tradition recommande une abstinence complète ou très légère jusqu'à la Liturgie des Présanctifiés.",
-                "Offices propres : Grand Canon de saint André (1re semaine), Présanctifiés le mercredi et le vendredi, Salutations à la Mère de Dieu le vendredi soir.",
-                "Le jeûne va avec la prière, l'aumône, la confession et le pardon mutuel ; il s'adapte selon la santé, avec la bénédiction du père spirituel.",
-            ]
-        case .holyWeek:
-            return [
-                "Semaine la plus stricte de l'année : xérophagie chaque jour, vin et huile le Grand Jeudi.",
-                "Le Grand Vendredi, beaucoup ne mangent rien jusqu'à la mise au tombeau (Épitaphios) ; jour d'abstinence totale si possible.",
-                "Le Grand Samedi, jeûne strict ; la tradition admet un peu de vin après la Liturgie de saint Basile.",
-                "Se préparer à la communion pascale par la confession au début de la semaine.",
-            ]
-        case .cheesefare:
-            return [
-                "Dernière semaine avant le Carême : plus de viande, mais laitages, œufs et poisson sont permis tous les jours, même le mercredi et le vendredi.",
-                "Le dimanche du Pardon, on se demande mutuellement pardon aux Vêpres du soir.",
-            ]
-        case .apostles:
-            return [
-                "Selon l'usage grec (GOARCH) : poisson, vin et huile permis tous les jours sauf le mercredi et le vendredi.",
-                "Mercredi et vendredi : jeûne strict, sauf fête (Nativité du Prodrome le 24 juin : poisson).",
-                "Le carême s'achève avec la fête des saints Pierre et Paul (29 juin).",
-            ]
-        case .dormition:
-            return [
-                "Du 1er au 14 août : jeûne strict en semaine, vin et huile le samedi et le dimanche.",
-                "Poisson permis à la Transfiguration (6 août).",
-                "On chante chaque soir la Paraclisis (petite ou grande supplication) à la Mère de Dieu.",
-            ]
-        case .nativity:
-            return [
-                "Du 15 novembre au 11 décembre : poisson, vin et huile permis, sauf le mercredi et le vendredi (jeûne strict, ou vin et huile en cas de fête).",
-                "Du 12 au 24 décembre : plus de poisson ; vin et huile le samedi et le dimanche, jeûne strict en semaine.",
-                "Poisson à l'Entrée au Temple de la Mère de Dieu (21 novembre).",
-                "La veille de Noël (24 décembre) : jeûne strict, traditionnellement jusqu'à la première étoile ou après la Liturgie.",
-            ]
-        case .wednesdayFriday:
-            return [
-                "Le mercredi (trahison du Christ) et le vendredi (Crucifixion) sont jours de jeûne toute l'année, hors périodes sans jeûne.",
-                "Jeûne strict par défaut ; vin et huile, ou poisson, lorsqu'une fête tombe ce jour-là.",
-            ]
-        case .paschalSeason:
-            return [
-                "De Thomas à la Pentecôte, le jeûne du mercredi et du vendredi est adouci : vin et huile permis.",
-                "Poisson à la Mi-Pentecôte et à l'Apodose de Pâques.",
-                "On se salue par « Le Christ est ressuscité ! — En vérité Il est ressuscité ! » jusqu'à l'Ascension.",
-            ]
-        case .christmastide:
-            return ["Du 25 décembre au 4 janvier : aucun jeûne.", "La veille de la Théophanie (5 janvier) est un jour de jeûne strict."]
-        case .publicanWeek:
-            return ["Semaine sans jeûne, pour ne pas imiter l'orgueil du pharisien qui « jeûnait deux fois la semaine »."]
-        case .brightWeek:
-            return ["Toute la semaine est un seul jour de Pâques : aucun jeûne."]
-        case .trinityWeek:
-            return ["Semaine sans jeûne après la Pentecôte. Le Carême des Apôtres commence le lundi suivant le dimanche de Tous les Saints."]
-        case .strictDay:
-            return [
-                "Jour de jeûne strict quel que soit le jour de la semaine (veille de la Théophanie, Décollation du Prodrome, Exaltation de la Croix).",
-                "S'il tombe un samedi ou un dimanche, vin et huile sont permis.",
-            ]
-        case .ordinary:
-            return []
-        }
+        guard self != .ordinary, Loc.has("rec.\(rawValue)") else { return [] }
+        return Loc.t("rec.\(rawValue)").components(separatedBy: "\n").filter { !$0.isEmpty }
     }
 }
 
@@ -225,8 +110,17 @@ public enum FastSeason: String, Codable, Sendable {
 public struct FastingInfo: Sendable {
     public let level: FastLevel
     public let season: FastSeason
-    /// Précision propre au jour (ex. « Œufs de poisson permis »).
-    public let note: String?
+    /// Clé de traduction de la précision propre au jour.
+    public let noteKey: String?
+
+    public init(level: FastLevel, season: FastSeason, note: String?) {
+        self.level = level
+        self.season = season
+        self.noteKey = note
+    }
+
+    /// Précision propre au jour, traduite.
+    public var note: String? { noteKey.map { Loc.t($0) } }
 
     public var summary: String {
         if let note { return "\(level.title) — \(note)" }
@@ -257,7 +151,7 @@ public enum FastingRules {
 
         // 3. Semaine de la Tyrophagie.
         if (-55 ... -49).contains(pd) {
-            return FastingInfo(level: .dairy, season: .cheesefare, note: pd == -49 ? "Dernier jour des laitages avant le Carême" : nil)
+            return FastingInfo(level: .dairy, season: .cheesefare, note: pd == -49 ? "note.cheesefareLast" : nil)
         }
 
         // 4. Grand Carême et Semaine sainte.
@@ -272,7 +166,7 @@ public enum FastingRules {
 
         // 6. Carême de la Dormition : 1er – 14 août.
         if c.month == 8 && c.day <= 14 {
-            if c.day == 6 { return FastingInfo(level: .fish, season: .dormition, note: "Transfiguration : poisson permis") }
+            if c.day == 6 { return FastingInfo(level: .fish, season: .dormition, note: "note.transfiguration") }
             return FastingInfo(level: weekend ? .wineOil : .strict, season: .dormition, note: nil)
         }
 
@@ -283,7 +177,7 @@ public enum FastingRules {
 
         // 8. Carême des Apôtres : lundi après Tous les Saints → 28 juin.
         if pd >= 57 && (c.month < 6 || (c.month == 6 && c.day <= 28)) {
-            if md == "06-24" { return FastingInfo(level: .fish, season: .apostles, note: "Nativité du Prodrome : poisson permis") }
+            if md == "06-24" { return FastingInfo(level: .fish, season: .apostles, note: "note.forerunner") }
             if wedFri {
                 if let lvl = wedFriExceptions[md] { return FastingInfo(level: lvl, season: .apostles, note: nil) }
                 return FastingInfo(level: .strict, season: .apostles, note: nil)
@@ -305,7 +199,7 @@ public enum FastingRules {
         // 10. Mercredi et vendredi ordinaires.
         if let lvl = wedFriExceptions[md] {
             if lvl == .noFast { return FastingInfo(level: .noFast, season: .ordinary, note: nil) }
-            return FastingInfo(level: lvl, season: .wednesdayFriday, note: lvl == .fish ? "Fête : poisson permis" : (lvl == .wineOil ? "Fête : vin et huile permis" : nil))
+            return FastingInfo(level: lvl, season: .wednesdayFriday, note: lvl == .fish ? "note.feastFish" : (lvl == .wineOil ? "note.feastWineOil" : nil))
         }
         return FastingInfo(level: .strict, season: .wednesdayFriday, note: nil)
     }
@@ -315,36 +209,36 @@ public enum FastingRules {
         let holy = pd >= -6
         let season: FastSeason = holy ? .holyWeek : .greatLent
         if md == "03-25" {
-            if pd >= -2 { return FastingInfo(level: .wineOil, season: season, note: "Annonciation") }
-            return FastingInfo(level: .fish, season: season, note: "Annonciation : poisson permis")
+            if pd >= -2 { return FastingInfo(level: .wineOil, season: season, note: "note.annunciation") }
+            return FastingInfo(level: .fish, season: season, note: "note.annunciationFish")
         }
         switch pd {
-        case -1: return FastingInfo(level: .strict, season: .holyWeek, note: "Un peu de vin est d'usage après la Liturgie de saint Basile")
-        case -2: return FastingInfo(level: .strict, season: .holyWeek, note: "Abstinence totale recommandée jusqu'à la mise au tombeau")
-        case -3: return FastingInfo(level: .wineOil, season: .holyWeek, note: "Jeudi de la Cène : vin et huile")
+        case -1: return FastingInfo(level: .strict, season: .holyWeek, note: "note.holySat")
+        case -2: return FastingInfo(level: .strict, season: .holyWeek, note: "note.holyFri")
+        case -3: return FastingInfo(level: .wineOil, season: .holyWeek, note: "note.holyThu")
         case -6 ... -4: return FastingInfo(level: .strict, season: .holyWeek, note: nil)
-        case -7: return FastingInfo(level: .fish, season: .greatLent, note: "Rameaux : poisson permis")
-        case -8: return FastingInfo(level: .wineOil, season: .greatLent, note: "Samedi de Lazare : œufs de poisson (tarama) permis")
-        case -48: return FastingInfo(level: .strict, season: .greatLent, note: "Lundi pur : abstinence complète recommandée jusqu'au soir")
+        case -7: return FastingInfo(level: .fish, season: .greatLent, note: "note.palm")
+        case -8: return FastingInfo(level: .wineOil, season: .greatLent, note: "note.lazarus")
+        case -48: return FastingInfo(level: .strict, season: .greatLent, note: "note.cleanMonday")
         default: break
         }
         if weekend { return FastingInfo(level: .wineOil, season: .greatLent, note: nil) }
-        if pd == -17 { return FastingInfo(level: .wineOil, season: .greatLent, note: "Grand Canon : vin et huile") }
-        if lentWeekdayWineOil.contains(md) { return FastingInfo(level: .wineOil, season: .greatLent, note: "Fête : vin et huile") }
+        if pd == -17 { return FastingInfo(level: .wineOil, season: .greatLent, note: "note.greatCanon") }
+        if lentWeekdayWineOil.contains(md) { return FastingInfo(level: .wineOil, season: .greatLent, note: "note.feastWineOil") }
         return FastingInfo(level: .strict, season: .greatLent, note: nil)
     }
 
     private static func nativityFast(church c: CivilDate, wedFri: Bool, weekend: Bool) -> FastingInfo {
         let md = c.monthDayKey
         if md == "12-24" {
-            return FastingInfo(level: weekend ? .wineOil : .strict, season: .nativity, note: "Veille de Noël (Paramoni)")
+            return FastingInfo(level: weekend ? .wineOil : .strict, season: .nativity, note: "note.paramoni")
         }
-        if md == "11-21" { return FastingInfo(level: .fish, season: .nativity, note: "Entrée au Temple : poisson permis") }
+        if md == "11-21" { return FastingInfo(level: .fish, season: .nativity, note: "note.entryFish") }
         let secondPhase = c.month == 12 && c.day >= 12
         if secondPhase {
             if weekend { return FastingInfo(level: .wineOil, season: .nativity, note: nil) }
             if let lvl = nativityLateWineOil[md], !(wedFri && lvl == .strict) {
-                return FastingInfo(level: lvl, season: .nativity, note: lvl == .wineOil ? "Fête : vin et huile" : nil)
+                return FastingInfo(level: lvl, season: .nativity, note: lvl == .wineOil ? "note.feastWineOil" : nil)
             }
             return FastingInfo(level: .strict, season: .nativity, note: nil)
         }

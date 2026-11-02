@@ -83,28 +83,9 @@ public enum ChurchCalendar: String, Codable, CaseIterable, Identifiable, Sendabl
 
     public var id: String { rawValue }
 
-    public var label: String {
-        switch self {
-        case .newCalendar: return "Nouveau calendrier"
-        case .oldCalendar: return "Ancien calendrier"
-        }
-    }
+    public var label: String { Loc.t(self == .newCalendar ? "cal.new" : "cal.old") }
 
-    public var shortLabel: String {
-        switch self {
-        case .newCalendar: return "N.C."
-        case .oldCalendar: return "A.C."
-        }
-    }
-
-    public var explanation: String {
-        switch self {
-        case .newCalendar:
-            return "Julien révisé : Église de Grèce, Patriarcat œcuménique, Chypre, Roumanie… Noël le 25 décembre."
-        case .oldCalendar:
-            return "Julien : Mont Athos, Jérusalem, Russie, Serbie, vieux-calendaristes grecs… Noël le 7 janvier."
-        }
-    }
+    public var explanation: String { Loc.t(self == .newCalendar ? "cal.new.explain" : "cal.old.explain") }
 
     /// Décalage entre la date civile et la date ecclésiastique (julienne).
     /// 13 jours de 1900 à 2099.

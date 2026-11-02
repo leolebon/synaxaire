@@ -1,0 +1,7 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="app_name">Synaxaire</string>
+    <string name="widget_desc">Le saint du jour avec son icône, la fête et le jeûne.</string>
+    <string name="widget_saints_name">Saints du jour</string>
+    <string name="widget_saints_desc">Les icônes des saints du jour.</string>
+</resources>

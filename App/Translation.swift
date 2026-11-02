@@ -3,7 +3,7 @@ import SwiftUI
 import Translation
 #endif
 
-/// Affiche un texte anglais et, sur iOS 18+, sa traduction française faite sur l'appareil.
+/// Affiche un texte et, sur iOS 18+, sa traduction dans la langue de l'application (faite sur l'appareil).
 struct TranslatableText: View {
     let original: String
     var sourceLanguage = "en"
@@ -14,35 +14,36 @@ struct TranslatableText: View {
     @State private var failed = false
 
     private var paragraphs: [String] { HTMLText.paragraphs(original) }
+    private var needsTranslation: Bool { sourceLanguage != Loc.language }
 
     var body: some View {
         VStack(alignment: .leading, spacing: 12) {
-            if translationSupported && autoTranslate {
-                HStack {
-                    if translated == nil && !failed {
-                        ProgressView().controlSize(.small)
-                        Text("Traduction en français…")
-                    } else if failed {
-                        Image(systemName: "exclamationmark.triangle")
-                        Text("Traduction indisponible — texte original")
-                    } else {
-                        Image(systemName: "character.bubble")
-                        Text(showOriginal ? "Texte original (anglais)" : "Traduit automatiquement de l'anglais")
+            if needsTranslation {
+                if translationSupported && autoTranslate {
+                    HStack {
+                        if translated == nil && !failed {
+                            ProgressView().controlSize(.small)
+                            Text(Loc.t("tr.translating"))
+                        } else if failed {
+                            Image(systemName: "exclamationmark.triangle")
+                            Text(Loc.t("tr.unavailable"))
+                        } else {
+                            Image(systemName: "character.bubble")
+                            Text(Loc.t(showOriginal ? "tr.original" : "tr.auto"))
+                        }
+                        Spacer()
+                        if translated != nil {
+                            Button(Loc.t(showOriginal ? "tr.showTranslation" : "tr.showOriginal")) { showOriginal.toggle() }
+                                .font(.system(size: 13, weight: .semibold))
+                        }
                     }
-                    Spacer()
-                    if translated != nil {
-                        Button(showOriginal ? "Français" : "Original") { showOriginal.toggle() }
-                            .font(.system(size: 13, weight: .semibold))
-                    }
-                }
-                .font(.system(size: 12))
-                .foregroundStyle(Theme.inkSoft)
-            } else if sourceLanguage != "fr" {
-                Text(translationSupported
-                     ? "Texte en anglais (traduction automatique désactivée dans les réglages)."
-                     : "Texte en anglais. La traduction automatique nécessite iOS 18.")
                     .font(.system(size: 12))
                     .foregroundStyle(Theme.inkSoft)
+                } else {
+                    Text(Loc.t(translationSupported ? "tr.disabled" : "tr.needsIOS18"))
+                        .font(.system(size: 12))
+                        .foregroundStyle(Theme.inkSoft)
+                }
             }
 
             let shown = (translated != nil && !showOriginal) ? (translated ?? paragraphs) : paragraphs
@@ -57,7 +58,8 @@ struct TranslatableText: View {
         }
         .modifier(TranslationRunner(paragraphs: paragraphs,
                                     sourceLanguage: sourceLanguage,
-                                    enabled: autoTranslate && sourceLanguage != "fr",
+                                    targetLanguage: Loc.language,
+                                    enabled: autoTranslate && needsTranslation,
                                     onResult: { translated = $0 },
                                     onFailure: { failed = true }))
     }
@@ -72,6 +74,7 @@ struct TranslatableText: View {
 struct TranslationRunner: ViewModifier {
     let paragraphs: [String]
     let sourceLanguage: String
+    let targetLanguage: String
     let enabled: Bool
     let onResult: ([String]) -> Void
     let onFailure: () -> Void
@@ -82,6 +85,7 @@ struct TranslationRunner: ViewModifier {
             if enabled {
                 return AnyView(content.modifier(ModernTranslation(paragraphs: paragraphs,
                                                                   sourceLanguage: sourceLanguage,
+                                                                  targetLanguage: targetLanguage,
                                                                   onResult: onResult,
                                                                   onFailure: onFailure)))
             }
@@ -96,6 +100,7 @@ struct TranslationRunner: ViewModifier {
 private struct ModernTranslation: ViewModifier {
     let paragraphs: [String]
     let sourceLanguage: String
+    let targetLanguage: String
     let onResult: ([String]) -> Void
     let onFailure: () -> Void
 
@@ -107,7 +112,7 @@ private struct ModernTranslation: ViewModifier {
                 if configuration == nil {
                     configuration = TranslationSession.Configuration(
                         source: Locale.Language(identifier: sourceLanguage),
-                        target: Locale.Language(identifier: "fr"))
+                        target: Locale.Language(identifier: targetLanguage))
                 }
             }
             .translationTask(configuration) { session in
@@ -145,7 +150,7 @@ struct StoryScreen: View {
                     .foregroundStyle(Theme.burgundy)
                     .fixedSize(horizontal: false, vertical: true)
                 TranslatableText(original: story.text)
-                Text("Source : orthocal.info — synaxaire de la tradition grecque.")
+                Text(Loc.t("story.source"))
                     .font(.system(size: 12))
                     .foregroundStyle(Theme.inkSoft)
                     .padding(.top, 8)
